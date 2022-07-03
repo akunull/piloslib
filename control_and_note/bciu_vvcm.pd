@@ -1,0 +1,8 @@
+#N canvas 0 0 450 279 10;
+#X obj 100 181 outlet;
+#X obj 100 151 / 127;
+#X text 207 156 Bus Control In to Unipolar (0-127 to 0-1);
+#X obj 100 120 bci_sel_vvcm \$1;
+#X connect 1 0 0 0;
+#X connect 3 0 1 0;
+#X coords 0 -1 1 1 65 40 1 100 100;

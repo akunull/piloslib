@@ -1,0 +1,12 @@
+#N canvas 0 50 450 514 10;
+#X obj 102 261 outlet;
+#X obj 72 169 sel 0;
+#X obj 102 199 b;
+#X obj 167 119 tgl_hide_vvc \$1 toggle;
+#X text 227 176 Bus Control In to toggle;
+#X obj 102 119 bci_sel_vvcm \$1_ci;
+#X connect 1 1 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 0 0;
+#X connect 5 0 1 0;
+#X coords 0 -1 1 1 110 70 1 100 100;

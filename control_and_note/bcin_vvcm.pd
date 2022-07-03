@@ -1,0 +1,10 @@
+#N canvas 92 50 450 514 10;
+#X obj 92 241 outlet;
+#X obj 92 181 sel 0;
+#X obj 112 211 b;
+#X text 227 146 Bus Control In baNg on non-zero;
+#X obj 100 120 bci_sel_vvcm \$1;
+#X connect 1 1 2 0;
+#X connect 2 0 0 0;
+#X connect 4 0 1 0;
+#X coords 0 -1 1 1 66 40 1 100 100;

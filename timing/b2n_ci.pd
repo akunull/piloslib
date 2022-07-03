@@ -1,0 +1,14 @@
+#N canvas 0 50 450 300 10;
+#X obj 37 37 inlet;
+#X obj 37 128 sel 1;
+#X obj 37 97 == 0;
+#X obj 37 155 outlet;
+#X obj 87 37 inlet;
+#X obj 37 67 b2u_ci \$1;
+#X text 162 75 beat to baNg;
+#X text 162 95 with Clock Input;
+#X connect 0 0 5 0;
+#X connect 1 0 3 0;
+#X connect 2 0 1 0;
+#X connect 4 0 5 1;
+#X connect 5 0 2 0;

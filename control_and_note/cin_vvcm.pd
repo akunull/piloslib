@@ -1,0 +1,15 @@
+#N canvas 92 50 450 514 10;
+#X obj 100 120 ci_sel_vvcm \$1;
+#X obj 100 221 outlet;
+#X obj 100 161 sel 0;
+#X obj 100 191 b;
+#X text 103 49 \$1 name;
+#X text 103 29 midi Control In baNg on non-zero;
+#X text 103 79 or view INTRO.pd in root directory and click [pd midi]
+;
+#X text 103 69 vFor full explaination right click and open object below
+;
+#X connect 0 0 2 0;
+#X connect 2 1 3 0;
+#X connect 3 0 1 0;
+#X coords 0 -1 1 1 66 40 1 100 100;

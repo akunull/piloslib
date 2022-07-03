@@ -1,0 +1,12 @@
+#N canvas 0 50 450 300 12;
+#X obj 100 90 r \$1_vel;
+#X obj 250 90 r \$1_gate;
+#X obj 170 90 r \$1_rate;
+#X obj 50 90 inlet;
+#X obj 50 150 f2nv;
+#X obj 50 180 outlet;
+#X connect 0 0 4 1;
+#X connect 1 0 4 3;
+#X connect 2 0 4 2;
+#X connect 3 0 4 0;
+#X connect 4 0 5 0;

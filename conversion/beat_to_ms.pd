@@ -1,0 +1,14 @@
+#N canvas 791 91 307 311 10;
+#X obj 22 149 outlet;
+#X obj 22 59 inlet;
+#X text 22 43 Beats;
+#X obj 22 89 neg2frac;
+#X obj 92 59 r global_tempo_ms;
+#X obj 92 89 * 24;
+#X obj 22 119 ttbf;
+#X connect 1 0 3 0;
+#X connect 3 0 6 0;
+#X connect 4 0 5 0;
+#X connect 5 0 6 1;
+#X connect 6 0 0 0;
+#X coords 0 311 1 310 354 70 0;

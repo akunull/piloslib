@@ -1,0 +1,15 @@
+#N canvas 1015 284 265 262 10;
+#X obj 62 191 outlet;
+#X obj 62 158 dtbf;
+#X obj 22 48 inlet;
+#X text 25 32 Freq;
+#X obj 62 48 r global_tempo;
+#X obj 22 78 * 60;
+#X text 39 226 frequency in hz to beat;
+#X obj 113 112 s global_send_tempo;
+#X obj 113 82 loadbang;
+#X connect 1 0 0 0;
+#X connect 2 0 5 0;
+#X connect 4 0 1 0;
+#X connect 5 0 1 1;
+#X connect 8 0 7 0;

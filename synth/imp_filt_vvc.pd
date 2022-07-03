@@ -1,0 +1,12 @@
+#N canvas 0 50 949 522 10;
+#X obj 290 120 hslxnbx_4m_vvc \$1 \$2_mod 3 0.5;
+#X obj 490 120 hslxnbx_4m_vvc \$1 \$2_amp 1 1;
+#X obj 110 240 hsl_vvc \$1 \$2_pitch_follow 1;
+#X obj 110 120 hslxnbx_4m_vvc \$1 \$2_freq;
+#X obj 110 310 ar_ppa_vvc_mqu \$1 \$2_env;
+#X obj 290 240 nbx_vvc \$1 \$2_poles 4;
+#X text 436 279 0: bandpass;
+#X text 436 289 1: lowpass;
+#X obj 430 240 nbx_vvc \$1 \$2_type;
+#X text 296 279 1-4;
+#X coords 0 -1 1 1 630 470 1 100 100;

@@ -1,0 +1,14 @@
+#N canvas 288 138 450 350 10;
+#X obj 61 16 inlet;
+#X text 58 1 Append;
+#X obj 61 76 outlet;
+#X obj 150 130 tgl_hide_vvc \$1 record 1;
+#X obj 110 130 tgl_hide_vvc \$1 play 1;
+#X obj 110 180 tgl_hide_vvc \$1 thru 1;
+#X obj 200 180 vv_file_sm_vvc \$1;
+#X obj 61 46 record_replay_vv \$1;
+#X obj 200 130 nbx_hide_vvc \$1 length 1;
+#X obj 150 180 bng_hide_vvc \$1 clear;
+#X connect 0 0 7 0;
+#X connect 7 0 2 0;
+#X coords 0 -1 1 1 190 140 1 100 100;

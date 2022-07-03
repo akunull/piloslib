@@ -1,0 +1,11 @@
+#N canvas 3 54 450 300 10;
+#X obj 110 130 bng 30 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 111 114 Save;
+#X obj 160 130 bng 30 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 161 114 Load;
+#X obj 110 180 vv_file \$1;
+#X connect 0 0 4 0;
+#X connect 2 0 4 1;
+#X coords 0 -1 1 1 100 60 1 100 100;

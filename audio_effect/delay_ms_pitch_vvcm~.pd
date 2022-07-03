@@ -1,0 +1,13 @@
+#N canvas 0 50 653 300 10;
+#X obj 100 10 inlet~;
+#X obj 100 70 outlet~;
+#X obj 390 170 hslxnbx_vvc \$1 ms 1000 1;
+#X obj 390 120 nbx_vvc \$1 pitch;
+#X obj 100 40 delay_ms_pitch_vv~ \$1;
+#X obj 250 170 hsl_vvc \$1 preamp 1 1;
+#X obj 110 120 hsl_vvc \$1 dry 0.75;
+#X obj 110 170 hsl_vvc \$1 wet 0.25;
+#X obj 250 120 hsl_vvc \$1 fdbk 0.75;
+#X connect 0 0 4 0;
+#X connect 4 0 1 0;
+#X coords 0 -1 1 1 450 140 1 100 100;

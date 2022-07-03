@@ -1,0 +1,13 @@
+#N canvas 634 280 647 407 10;
+#X obj 37 37 inlet;
+#X obj 37 97 * 6.28319;
+#X obj 37 127 sin;
+#X obj 37 157 outlet;
+#X obj 107 37 inlet;
+#X obj 37 67 b2u_m \$1 \$2;
+#X text 182 55 beat to sine;
+#X connect 0 0 5 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 4 0 5 1;
+#X connect 5 0 1 0;

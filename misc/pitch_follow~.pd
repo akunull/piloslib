@@ -1,0 +1,28 @@
+#N canvas 0 50 449 315 10;
+#X obj 77 197 tline~;
+#X obj 77 227 +~ 1;
+#X obj 77 77 / -127;
+#X obj 77 107 + 1;
+#X obj 77 137 -;
+#X obj 137 77 moses 1;
+#X obj 187 127 b;
+#X obj 187 157 f 1;
+#X obj 77 47 inlet;
+#X obj 137 47 inlet;
+#X text 74 33 Pitch;
+#X text 134 33 Follow;
+#X obj 77 257 outlet~;
+#X text 18 279 Takes pitch and an amount and outputs the amp (0 to
+1);
+#X connect 0 0 1 0;
+#X connect 1 0 12 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 4 0 0 0;
+#X connect 5 0 4 1;
+#X connect 5 1 6 0;
+#X connect 6 0 7 0;
+#X connect 7 0 4 1;
+#X connect 8 0 2 0;
+#X connect 9 0 5 0;
+#X connect 9 0 0 1;

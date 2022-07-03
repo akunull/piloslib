@@ -1,0 +1,14 @@
+#N canvas 269 50 534 392 10;
+#X obj 69 46 b2n 4;
+#X obj 100 100 bng 250 111 10 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 350 100 bng 250 111 10 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 119 46 b2n \$1;
+#X obj 69 366 outlet;
+#X obj 119 366 outlet;
+#X connect 0 0 1 0;
+#X connect 1 0 4 0;
+#X connect 2 0 5 0;
+#X connect 3 0 2 0;
+#X coords 0 -1 1 1 500 250 1 100 100;

@@ -1,0 +1,14 @@
+#N canvas 0 50 563 300 10;
+#X obj 37 37 inlet~;
+#X obj 37 97 tline~;
+#X obj 37 127 outlet~;
+#X obj 177 97 tline~;
+#X obj 177 127 outlet~;
+#X obj 57 67 vv_mhx \$1 \$2_dry \$3;
+#X obj 197 67 vv_mhx \$1 \$2_filt \$3;
+#X connect 0 0 1 0;
+#X connect 0 0 3 0;
+#X connect 1 0 2 0;
+#X connect 3 0 4 0;
+#X connect 5 0 1 1;
+#X connect 6 0 3 1;

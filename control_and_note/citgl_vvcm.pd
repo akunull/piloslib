@@ -1,0 +1,18 @@
+#N canvas 0 50 581 514 10;
+#X obj 102 261 outlet;
+#X obj 72 169 sel 0;
+#X obj 102 199 b;
+#X obj 167 119 tgl_hide_vvc \$1 toggle;
+#X obj 102 119 ci_sel_vvcm \$1_ci;
+#X text 103 49 \$1 name;
+#X text 103 19 Control In ToGgLe - a non-zero ci/ni will toggle between
+0 and 1 output;
+#X text 103 79 or view INTRO.pd in root directory and click [pd midi]
+;
+#X text 103 69 vFor full explaination right click and open object below
+;
+#X connect 1 1 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 0 0;
+#X connect 4 0 1 0;
+#X coords 0 -1 1 1 110 70 1 100 100;

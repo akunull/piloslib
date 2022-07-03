@@ -1,0 +1,5 @@
+#N canvas 4 50 1101 665 10;
+#X obj 110 180 nbx_vvc \$1 transpose;
+#X obj 110 120 load_vvc \$1 filename;
+#X obj 110 280 nbx_vvc \$1 offset;
+#X coords 0 -1 1 1 160 130 1 100 100;

@@ -1,0 +1,6 @@
+#N canvas 0 50 669 401 10;
+#X obj 110 120 hsl_6m_vvc \$1 dry 1;
+#X obj 110 230 hsl_6m_vvc \$1 wet;
+#X obj 350 230 hslxnbx_6m_vvc \$1 ms 125 1;
+#X obj 350 120 hsl_6m_vvc \$1 fdbk 0.75;
+#X coords 0 -1 1 1 480 280 1 100 100;

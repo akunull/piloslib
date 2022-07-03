@@ -1,0 +1,10 @@
+#N canvas 204 278 508 376 10;
+#X obj 110 10 inlet~;
+#X obj 110 70 outlet~;
+#X obj 110 120 hslxnbx_vvc \$1 bits 32 1;
+#X obj 110 40 bit_red_vv~ \$1;
+#X obj 260 120 hslxnbx_vvc \$1 dry 1 0.5;
+#X obj 260 180 hslxnbx_vvc \$1 wet 1 0.5;
+#X connect 0 0 3 0;
+#X connect 3 0 1 0;
+#X coords 0 -1 1 1 320 150 1 100 100;

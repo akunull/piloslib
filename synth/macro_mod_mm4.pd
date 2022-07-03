@@ -1,0 +1,15 @@
+#N canvas 0 50 450 300 10;
+#X obj 77 177 f;
+#X obj 97 147 r \$1_macro\$3;
+#X text 207 118 \$1 parent;
+#X text 207 138 \$2 voice;
+#X text 207 158 \$3 macro;
+#X obj 77 117 b;
+#X obj 77 57 r \$1_\$2_nv;
+#X obj 77 87 stripnote;
+#X obj 77 207 cmm4_mod \$1 macro\$3 \$2;
+#X connect 0 0 8 0;
+#X connect 1 0 0 1;
+#X connect 5 0 0 0;
+#X connect 6 0 7 0;
+#X connect 7 0 5 0;

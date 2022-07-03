@@ -1,0 +1,12 @@
+#N canvas 169 122 508 300 10;
+#X obj 110 10 inlet~;
+#X obj 110 70 outlet~;
+#X obj 110 120 tgl_vvc \$1 on;
+#X obj 200 160 nbx_vvc \$1 speed 1;
+#X obj 200 120 nbx_vvc \$1 window 1;
+#X obj 110 170 tgl_vvc \$1 rev;
+#X obj 110 220 nbx_vvc \$1 length 2;
+#X obj 110 40 retrig_vv~ \$1;
+#X connect 0 0 7 0;
+#X connect 7 0 1 0;
+#X coords 0 -1 1 1 230 170 1 100 100;

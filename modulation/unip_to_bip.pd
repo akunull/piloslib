@@ -1,0 +1,9 @@
+#N canvas 518 105 311 231 10;
+#X obj 110 44 inlet;
+#X obj 110 134 outlet;
+#X obj 110 104 * 2;
+#X obj 110 74 + -0.5;
+#X text 40 19 unipolar (0 to 1) to bipolar (-1 to 1);
+#X connect 0 0 3 0;
+#X connect 2 0 1 0;
+#X connect 3 0 2 0;

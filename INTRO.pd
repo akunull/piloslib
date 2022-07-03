@@ -1,0 +1,820 @@
+#N canvas -8 -8 1280 677 10;
+#X declare -path ./vv;
+#X declare -path ./synth;
+#X declare -path ./shortcut;
+#X declare -path ./sampler;
+#X declare -path ./oscillator;
+#X declare -path ./modulation;
+#X declare -path ./misc;
+#X declare -path ./conversion;
+#X declare -path ./audio_routing;
+#X declare -path ./audio_effect;
+#X declare -path ./control_and_note;
+#X declare -path ./seq;
+#X declare -path ./timing;
+#X declare -path ../audio_effect;
+#X declare -path ../audio_routing;
+#X declare -path ../control_and_note;
+#X declare -path ../conversion;
+#X declare -path ../misc;
+#X declare -path ../modulation;
+#X declare -path ../oscillator;
+#X declare -path ../sampler;
+#X declare -path ../seq;
+#X declare -path ../shortcut;
+#X declare -path ../synth;
+#X declare -path ../timing;
+#X declare -path ../vv;
+#X obj 302 139 bng 45 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 202 199 s global_save;
+#X obj 202 139 bng 45 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 302 199 s global_load;
+#X obj 302 109 loadbang;
+#X obj 392 139 sl_control;
+#N canvas 665 208 450 300 msgbx 0;
+#X obj 43 13 inlet;
+#X msg 43 38 \; load_send test_vni 10 \; load_send test_ci -1 0 \;
+load_send test_ci -1 0 \; load_send test_ni -1 0 \; load_send example_reducer
+wet 0.5 1 \; load_send example_reducer dry 1 1 \; load_send example_reducer
+bits 1 32 \; load_send bitred2 wet 0.5 1 \; load_send bitred2 dry 0.5
+1 \; load_send bitred2 bits 1 32 \; load_send synmono fm 0 1 \; load_send
+synmono osc_a_amp 1 \; load_send synmono osc_b_amp 0 \; load_send synmono
+osc_b_pitch 12 \; load_send synmono amp_pitch_follow 1 \; load_send
+synmono osc_b_reset 0 \; load_send synmono osc_a_reset 0 \; load_send
+synmono osc_a_pitch 0 \; load_send synmono noise_dry_amp 0 \; load_send
+synmono pitch 0 \; load_send synmono amp_env_amount 1 \; load_send
+synmono amp_env_pow 3 \; load_send synmono amp_env_ms 1000 \; load_send
+synmono amp_env_a 0 \; load_send synmono amp_env_r 0.5 \; load_send
+synmono amp_env_d 0.5 \; load_send synmono amp_env_s 0 \; load_send
+samp offset 0 \; load_send samp filename \; load_send samp transpose
+0 \; load_send samp_chan master 1 \; load_send samp_chan amp_R 1 \;
+load_send samp_chan amp_L 1 \; load_send samp_chan amp 1 \; load_send
+samp_chan on 1 \; load_send syn2_chan master 1 \; load_send syn2_chan
+amp_R 1 \; load_send syn2_chan amp_L 1 \; load_send syn2_chan amp 1
+\; load_send syn2_chan on 1 \; load_send syn1_chan master 1 \; load_send
+syn1_chan amp_R 1 \; load_send syn1_chan amp_L 1 \; load_send syn1_chan
+amp 1 \; load_send syn1_chan on 1 \; load_send syn2 filt2_freq 1 555
+0 0 0 0 \; load_send syn2 dry_amp 1 1 0 0 0 0 \; load_send syn2 filt1_to_filt2
+1 1 0 0 0 0 \; load_send syn2 filt2_pitch_follow 1 \; load_send syn2
+amp_env_ms 1000 0 0 0 0 \; load_send syn2 amp_env_pow 3 0 0 0 0 \;
+load_send syn2 amp_env_s 0.5 0 0 0 0 \; load_send syn2 amp_env_d 0.5
+0 0 0 0 \; load_send syn2 amp_env_r 0.5 0 0 0 0 \; load_send syn2 amp_env_amount
+1 0 0 0 0 \; load_send syn2 amp_env_a 0 0 0 0 0 \; load_send syn2 amp_pitch_follow
+1 0 0 0 0 \; load_send syn2 filt2_amp 1 1 0 0 0 0 \; load_send syn2
+filt1_type 1 \; load_send syn2 filt1_poles 4 \; load_send syn2 filt1_env_r
+0.5 0 0 0 0 \; load_send syn2 filt1_env_a 0 0 0 0 0 \; load_send syn2
+filt1_env_ms 500 0 0 0 0 \; load_send syn2 filt1_env_pow_a -3 0 0 0
+0 \; load_send syn2 filt1_env_pow_b 3 0 0 0 0 \; load_send syn2 filt1_env_amount
+1 0 0 0 0 \; load_send syn2 filt1_freq 0 1 0 0 0 0 \; load_send syn2
+filt1_pitch_follow 1 \; load_send syn2 filt1_amp 1 1 0 0 0 0 \; load_send
+syn2 filt1_mod 0.5 3 0 0 0 0 \; load_send syn2 pitch_env_amount 1 0
+0 0 0 \; load_send syn2 pitch_env_pow 3 0 0 0 0 \; load_send syn2 pitch_env_ms
+1000 0 0 0 0 \; load_send syn2 pitch_env_r 0.5 0 0 0 0 \; load_send
+syn2 pitch_env_a 0 0 0 0 0 \; load_send syn2 noise_noenv 0 0 0 0 0
+\; load_send syn2 noise_dry 0 0 0 0 0 \; load_send syn2 noise_filt1
+0 0 0 0 0 \; load_send syn2 noise_filt2 0 0 0 0 0 \; load_send syn2
+noise_ds_pitch_env 0 0 0 0 0 \; load_send syn2 noise_env_r 0.5 0 0
+0 0 \; load_send syn2 noise_env_a 0 0 0 0 0 \; load_send syn2 noise_env_ms
+500 0 0 0 0 \; load_send syn2 noise_env_pow_a -3 0 0 0 0 \; load_send
+syn2 noise_env_pow_b 3 0 0 0 0 \; load_send syn2 noise_env_amount 1
+0 0 0 0 \; load_send syn2 noise_ds 0 0 0 0 0 \; load_send syn2 osc_a_nomod
+0 0 0 0 0 \; load_send syn2 osc_a_sync 1 0 0 0 0 \; load_send syn2
+osc_a_pitch_env 0 1 0 0 0 0 \; load_send syn2 osc_a_freq 0 0 0 0 0
+\; load_send syn2 osc_a_pitch 0 0 0 0 0 \; load_send syn2 osc_a_pitched
+1 \; load_send syn2 osc_a_phase_start 0 \; load_send syn2 osc_a_type
+1 \; load_send syn2 osc_a_glide 0 0 0 0 0 \; load_send syn2 osc_a_reset
+1 \; load_send syn2 osc_a_noenv 0 1 0 0 0 0 \; load_send syn2 osc_a_asym
+0 0 0 0 0 \; load_send syn2 osc_a_wet 1 0 0 0 0 \; load_send syn2 osc_a_mod_env_amount
+1 0 0 0 0 \; load_send syn2 osc_a_mod_env_pow 3 0 0 0 0 \; load_send
+syn2 osc_a_mod_env_ms 1000 0 0 0 0 \; load_send syn2 osc_a_mod_env_r
+0.5 0 0 0 0 \; load_send syn2 osc_a_mod_env_a 0 0 0 0 0 \; load_send
+syn2 osc_a_env_r 0.5 0 0 0 0 \; load_send syn2 osc_a_env_a 0 0 0 0
+0 \; load_send syn2 osc_a_env_ms 500 0 0 0 0 \; load_send syn2 osc_a_env_pow_a
+-3 0 0 0 0 \; load_send syn2 osc_a_env_pow_b 3 0 0 0 0 \; load_send
+syn2 osc_a_env_amount 1 0 0 0 0 \; load_send syn2 osc_a_filt1 0 0 0
+0 0 \; load_send syn2 osc_a_filt2 0 0 0 0 0 \; load_send syn2 osc_a_dry
+1 0 0 0 0 \; load_send syn2 osc_a_mod 0 0 0 0 0 \; load_send syn2 osc_b_freq
+0 0 0 0 0 \; load_send syn2 osc_b_pitched 1 \; load_send syn2 osc_b_noenv
+0 0 0 0 0 \; load_send syn2 osc_b_mod_env_amount 1 0 0 0 0 \; load_send
+syn2 osc_b_mod_env_pow 3 0 0 0 0 \; load_send syn2 osc_b_mod_env_ms
+1000 0 0 0 0 \; load_send syn2 osc_b_mod_env_r 0.5 0 0 0 0 \; load_send
+syn2 osc_b_mod_env_a 0 0 0 0 0 \; load_send syn2 osc_b_phase_start
+0 \; load_send syn2 osc_b_type 1 \; load_send syn2 osc_b_pitch_env
+0 1 0 0 0 0 \; load_send syn2 osc_b_env_r 0.5 0 0 0 0 \; load_send
+syn2 osc_b_env_a 0 0 0 0 0 \; load_send syn2 osc_b_env_ms 500 0 0 0
+0 \; load_send syn2 osc_b_env_pow_a -3 0 0 0 0 \; load_send syn2 osc_b_env_pow_b
+3 0 0 0 0 \; load_send syn2 osc_b_env_amount 1 0 0 0 0 \; load_send
+syn2 osc_b_filt1 0 0 0 0 0 \; load_send syn2 osc_b_filt2 0 0 0 0 0
+\; load_send syn2 osc_b_dry 1 0 0 0 0 \; load_send syn2 osc_b_sync
+1 0 0 0 0 \; load_send syn2 osc_b_glide 0 0 0 0 0 \; load_send syn2
+osc_b_mod 0 0 0 0 0 \; load_send syn2 osc_b_reset 1 \; load_send syn2
+osc_b_pitch 0 0 0 0 0 \; load_send syn2 fm 0 1 0 0 0 0 \; load_send
+syn2 pitch 0 0 0 0 0 \; load_send syn1 fm 0 1 \; load_send syn1 osc_a_amp
+1 \; load_send syn1 osc_b_amp 0 \; load_send syn1 osc_b_pitch 12 \;
+load_send syn1 amp_pitch_follow 1 \; load_send syn1 osc_b_reset 0 \;
+load_send syn1 osc_a_reset 0 \; load_send syn1 osc_a_pitch 0 \; load_send
+syn1 noise_dry_amp 0 \; load_send syn1 pitch 0 \; load_send syn1 amp_env_amount
+1 \; load_send syn1 amp_env_pow 3 \; load_send syn1 amp_env_ms 1000
+\; load_send syn1 amp_env_a 0 \; load_send syn1 amp_env_r 0.5 \; load_send
+syn1 amp_env_d 0.5 \; load_send syn1 amp_env_s 0 \; load_send fullseq
+14 15 \; load_send fullseq 13 0 \; load_send fullseq 12 0 \; load_send
+fullseq 11 0 \; load_send fullseq 10 0 \; load_send fullseq 9 0 \;
+load_send fullseq 8 9 \; load_send fullseq 6 7 \; load_send fullseq
+5 6 \; load_send fullseq 4 5 \; load_send fullseq 3 4 \; load_send
+fullseq 2 3 \; load_send fullseq 1 2 \; load_send fullseq 0 1 \; load_send
+fullseq 7 8 \; load_send fullseq 15 16 \; load_send 0 0 0 \; load_send
+fullseq rate 1 \; load_send fullseq length 16 \; load_send fullseq
+offset 0 \; load_send fullseq steps 16 \; load_send seq2_3 14 0 \;
+load_send seq2_3 13 0 \; load_send seq2_3 12 0 \; load_send seq2_3
+11 0 \; load_send seq2_3 10 0 \; load_send seq2_3 9 0 \; load_send
+seq2_3 8 0 \; load_send seq2_3 15 0 \; load_send seq2_3 6 0 \; load_send
+seq2_3 5 0 \; load_send seq2_3 4 0 \; load_send seq2_3 3 0 \; load_send
+seq2_3 2 0 \; load_send seq2_3 1 0 \; load_send seq2_3 0 15 \; load_send
+seq2_3 7 0 \; load_send seq2_2 14 0 \; load_send seq2_2 13 0 \; load_send
+seq2_2 12 0 \; load_send seq2_2 11 0 \; load_send seq2_2 10 0 \; load_send
+seq2_2 9 0 \; load_send seq2_2 8 0 \; load_send seq2_2 6 0 \; load_send
+seq2_2 5 0 \; load_send seq2_2 4 0 \; load_send seq2_2 3 0 \; load_send
+seq2_2 2 0 \; load_send seq2_2 1 0 \; load_send seq2_2 0 7 \; load_send
+seq2_2 7 0 \; load_send seq2_2 15 0 \; load_send seq2_1 14 0 \; load_send
+seq2_1 13 0 \; load_send seq2_1 12 0 \; load_send seq2_1 11 0 \; load_send
+seq2_1 10 0 \; load_send seq2_1 9 0 \; load_send seq2_1 8 0 \; load_send
+seq2_1 6 0 \; load_send seq2_1 5 0 \; load_send seq2_1 4 0 \; load_send
+seq2_1 3 0 \; load_send seq2_1 2 0 \; load_send seq2_1 1 0 \; load_send
+seq2_1 0 -34 \; load_send seq2_1 7 0 \; load_send seq2_1 15 0 \; load_send
+seq2_0 14 0 \; load_send seq2_0 13 0 \; load_send seq2_0 12 0 \; load_send
+seq2_0 11 0 \; load_send seq2_0 10 0 \; load_send seq2_0 9 0 \; load_send
+seq2_0 8 0 \; load_send seq2_0 6 0 \; load_send seq2_0 5 0 \; load_send
+seq2_0 4 0 \; load_send seq2_0 3 0 \; load_send seq2_0 2 0 \; load_send
+seq2_0 1 0 \; load_send seq2_0 0 -4 \; load_send seq2_0 7 0 \; load_send
+seq2_0 15 0 \; load_send seq2 rate 1 \; load_send seq2 length 16 \;
+load_send seq2 offset 0 \; load_send seq2 steps 16 \; load_send seq
+14 0 \; load_send seq 13 0 \; load_send seq 12 0 \; load_send seq 11
+0 \; load_send seq 10 0 \; load_send seq 9 0 \; load_send seq 8 0 \;
+load_send seq 6 0.2 \; load_send seq 5 0.1 \; load_send seq 4 0 \;
+load_send seq 3 0.7 \; load_send seq 2 0.8 \; load_send seq 1 0.9 \;
+load_send seq 0 1 \; load_send seq 7 0.3 \; load_send seq 15 0 \; load_send
+seq rate 1 \; load_send seq length 16 \; load_send seq offset 0 \;
+load_send seq steps 16 \; load_send 0 0 0 1 \; load_send global tempo
+120 \;;
+#X connect 0 0 1 0;
+#X restore 392 169 pd msgbx;
+#X obj 542 409 catcher~ master;
+#X obj 542 459 tanhx~;
+#X obj 602 459 tanhx~;
+#X obj 32 139 metronome_60;
+#X obj 312 529 writesf_global~ 2;
+#X obj 542 489 hip~ 3;
+#X obj 602 489 hip~ 3;
+#X obj 542 629 dac~;
+#X obj 542 599 tline~;
+#X obj 602 599 tline~;
+#X obj 107 531 hsl 180 40 0 1 0 1 empty empty empty -2 -8 0 10 -262144
+-1 -1 17900 0;
+#X text 107 515 ||||||||||||||||||||||||||||;
+#X obj 312 469 tgl 40 1 empty empty empty 17 7 0 10 -262144 -36352
+-1 0 1;
+#X text 54 113 Metronome;
+#X text 44 123 Bars;
+#X text 104 123 Beats;
+#X obj 192 229 bar_readout;
+#X text 204 83 (1.);
+#X text 34 363 (2.);
+#N canvas 0 50 450 300 dspon 0;
+#X obj 37 37 inlet;
+#X msg 37 59 dsp 1;
+#X obj 37 81 s pd;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X restore 52 589 pd dspon;
+#X text 184 73 -----------------------------------------------;
+#X text 184 83 |;
+#X text 184 93 |;
+#X text 184 103 |;
+#X text 184 113 |;
+#X text 184 123 |;
+#X text 184 133 |;
+#X text 184 143 |;
+#X text 184 153 |;
+#X text 184 163 |;
+#X text 184 173 |;
+#X text 184 183 |;
+#X text 184 193 |;
+#X text 464 83 |;
+#X text 464 93 |;
+#X text 464 103 |;
+#X text 464 113 |;
+#X text 464 123 |;
+#X text 464 133 |;
+#X text 464 143 |;
+#X text 464 153 |;
+#X text 464 163 |;
+#X text 464 173 |;
+#X text 464 183 |;
+#X text 464 193 |;
+#N canvas 383 89 666 351 global_variables 0;
+#X obj 282 239 r global_clk;
+#X obj 282 269 nbx 7 20 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
+11 -262144 -1 -1 757 256;
+#X text 302 290 a clock takes place 24 times every beat \, aka each
+1/96 note which follows the standard midi timing;
+#X text 94 23 Timing variables:;
+#X obj 92 139 s global_play_r;
+#X obj 92 119 s global_stop_r;
+#X obj 92 99 s global_reset_r;
+#X obj 92 79 s global_tempo_r;
+#X obj 432 89 r global_tempo;
+#X obj 382 109 r global_reset;
+#X obj 332 129 r global_stop;
+#X obj 282 149 r global_play;
+#X obj 282 169 bng 45 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 332 169 bng 45 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 382 169 bng 45 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 432 169 bng 45 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 92 179 s global_repl_r;
+#X text 95 164 Both reset and play:;
+#X text 284 63 To receive from global_transport object:;
+#X text 24 63 To send to global_transport receiver:;
+#X obj 432 139 nbx 7 20 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
+11 -262144 -1 -1 120 256;
+#X obj 158 234 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X connect 0 0 1 0;
+#X connect 8 0 20 0;
+#X connect 9 0 14 0;
+#X connect 10 0 13 0;
+#X connect 11 0 12 0;
+#X connect 20 0 15 0;
+#X connect 21 0 6 0;
+#X restore 862 409 pd global_variables;
+#X text 364 223 |;
+#X text 364 233 |;
+#X text 364 243 |;
+#X text 364 253 |;
+#X text 364 263 |;
+#X text 364 273 |;
+#X text 364 283 |;
+#X text 364 293 |;
+#X text 364 303 |;
+#X text 364 313 |;
+#X text 364 323 |;
+#X text 364 333 |;
+#X text 364 343 |;
+#X text 364 353 |;
+#X text 364 363 |;
+#X text 364 373 |;
+#X text 364 383 |;
+#X text 364 393 |;
+#X text 364 403 |;
+#X text 364 413 |;
+#X text 364 423 |;
+#X text 234 213 ---------------------------------------;
+#X text 24 433 ---------------------------------------;
+#X text 258 433 ------------------;
+#X text 44 473 (3.);
+#X text 34 493 sends value on load and turns dsp on;
+#X text 34 483 Master volume slider:;
+#X text 294 443 (4.);
+#X text 194 213 -------;
+#X text 644 403 Receive global audio sends;
+#X text 644 453 non-linear compressor;
+#X text 484 93 Important!!!;
+#X obj 32 229 global_transport;
+#N canvas 0 50 719 572 beat 0;
+#X obj 22 129 b2n 0.5;
+#X obj 22 159 bng 30 50 20 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 22 301 vsl 30 65 0 1 0 1 empty empty empty 0 -9 0 10 -262144
+-1 -1 5726 1;
+#X obj 22 541 vsl 30 65 0 1 0 1 empty empty empty 0 -9 0 10 -262144
+-1 -1 6400 1;
+#X obj 61 421 vsl 30 65 0 1 0 1 empty empty empty 0 -9 0 10 -262144
+-1 -1 1600 1;
+#X obj 382 361 vsl 30 65 0 1 0 1 empty empty empty 0 -9 0 10 -262144
+-1 -1 2377 1;
+#X obj 452 129 r global_clk;
+#X obj 382 219 bng 30 50 20 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 382 100 follow other clock signal;
+#X obj 382 189 b2n_ci 0.75;
+#X obj 452 159 % 96;
+#X obj 382 329 b2u_m 1.5 4;
+#X obj 22 709 bng 30 50 20 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 22 630 Every Other Beat to baNg):;
+#X obj 22 679 eob2n 0.5;
+#X obj 22 269 b2u 4;
+#X text 60 405 width;
+#X text 22 70 you can output a bang every \$1 beats (quarter notes)
+with b2n (Beat to baNg):;
+#X obj 32 29 bng 30 50 20 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 22 10 Press play for output:;
+#X obj 72 49 s global_play_r;
+#X text 382 280 reset every \$2 beats with Modulus;
+#X text 22 380 or jump from 0 to 1 in between every \$1 beats in a
+pulse with width \$2 (default 0.5) with b2p (Beat to Pulse):;
+#X obj 492 359 bng 30 50 20 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 492 329 b2n_m 1.5 4;
+#X obj 22 509 b2p 4 0.25;
+#X obj 22 1019 bng 30 50 20 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 22 989 b2n;
+#X text 22 970 Beats are always one by default;
+#X text 22 210 or move from 0 to 1 every \$1 beats with b2u (Beat to
+Unipolar):;
+#X obj 152 1021 vsl 30 65 0 1 0 1 empty empty empty 0 -9 0 10 -262144
+-1 -1 6400 1;
+#X obj 152 989 b2p;
+#X obj 62 1019 bng 30 50 20 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 62 989 b2pack 24 24;
+#X obj 22 819 b2pack 24 127 2;
+#X obj 22 849 unpack;
+#X floatatom 22 880 5 0 0 0 - - -;
+#X floatatom 62 900 5 0 0 0 - - -;
+#X obj 22 909 bng 30 50 20 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 22 770 Send a packed pair of values set by \$1 and \$2 every
+\$3 beats;
+#X floatatom 22 99 5 0 0 0 - - -;
+#X floatatom 22 239 5 0 0 0 - - -;
+#X floatatom 22 479 5 0 0 0 - - -;
+#X floatatom 22 649 5 0 0 0 - - -;
+#X floatatom 22 789 5 0 0 0 - - -;
+#X floatatom 62 789 5 0 0 0 - - -;
+#X floatatom 112 789 5 0 0 0 - - -;
+#X floatatom 382 159 5 0 0 0 - - -;
+#X floatatom 382 299 5 0 0 0 - - -;
+#X floatatom 492 299 5 0 0 0 - - -;
+#X floatatom 442 299 5 0 0 0 - - -;
+#X floatatom 552 299 5 0 0 0 - - -;
+#X connect 0 0 1 0;
+#X connect 4 0 25 1;
+#X connect 6 0 10 0;
+#X connect 9 0 7 0;
+#X connect 10 0 9 1;
+#X connect 11 0 5 0;
+#X connect 14 0 12 0;
+#X connect 15 0 2 0;
+#X connect 18 0 20 0;
+#X connect 24 0 23 0;
+#X connect 25 0 3 0;
+#X connect 27 0 26 0;
+#X connect 31 0 30 0;
+#X connect 33 0 32 0;
+#X connect 34 0 35 0;
+#X connect 35 0 36 0;
+#X connect 35 1 37 0;
+#X connect 36 0 38 0;
+#X connect 40 0 0 0;
+#X connect 41 0 15 0;
+#X connect 42 0 25 0;
+#X connect 43 0 14 0;
+#X connect 44 0 34 0;
+#X connect 45 0 34 1;
+#X connect 46 0 34 2;
+#X connect 47 0 9 0;
+#X connect 48 0 11 0;
+#X connect 49 0 24 0;
+#X connect 50 0 11 1;
+#X connect 51 0 24 1;
+#X restore 862 289 pd beat;
+#N canvas 0 50 956 572 syntactic_sugar 0;
+#X obj 422 159 bng 45 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 422 99 neg2frac;
+#X obj 422 69 lb -3;
+#X floatatom 482 69 5 0 0 0 - - -;
+#X floatatom 482 129 5 0 0 0 - - -;
+#X obj 12 179 ptbf;
+#X obj 62 179 ttbf;
+#X obj 102 179 packtbf;
+#X obj 152 179 packtbf3;
+#X text 152 200 through;
+#X obj 152 219 packtbf11;
+#X obj 12 209 powtbf;
+#X text 12 150 Math and pack with all hot inlets:;
+#X text 12 260 Autometro:;
+#X text 112 260 With snapshot (SnapShotAutoMetro):;
+#X obj 112 319 ssam~;
+#X floatatom 112 350 5 0 0 0 - - -;
+#X obj 112 289 sig~ 4;
+#X text 252 290 With readout:;
+#X obj 252 319 ssam_itf~;
+#X text 422 240 ReRoute (same as [t a] or [+~];
+#X obj 422 269 rr;
+#X obj 452 269 rr~;
+#X obj 62 209 dtbf;
+#X obj 12 469 linesc;
+#X obj 12 499 vlinesc~;
+#X obj 12 559 sig~ 5;
+#X obj 12 619 ssam_itf~;
+#X text 102 550 \$1 multiply by;
+#X obj 422 129 b2n;
+#X text 102 490 Convenient for converting directly to audio without
+sharp movements;
+#X text 102 530 Multiplying audio by control value:;
+#X text 462 390 hsl x nbx = multiply an hsl and nbx value together
+(_vvc suffix explained later);
+#X obj 462 419 hslxnbx_vvc;
+#X floatatom 462 484 5 0 0 0 - - -;
+#X obj 12 319 bng 45 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 12 289 autometro 2000;
+#X floatatom 12 100 5 0 0 0 - - -;
+#X floatatom 62 100 5 0 0 0 - - -;
+#X obj 62 79 lb 0 3;
+#X obj 12 79 lb 3;
+#X floatatom 12 530 5 0 0 0 - - -;
+#X obj 12 589 tline~ 3;
+#X text 102 570 \$2 line ms;
+#X text 12 20 lb sends a value on loadbang. If the first parameter
+is 0 \, it will bang out a default value set by the second parameter.
+;
+#X floatatom 112 100 5 0 0 0 - - -;
+#X obj 112 79 lb \$1 3;
+#X text 422 20 Convert negative number to positive recipricol \, in
+other words make n => 1/abs(n) ie -3 => 1/3. Useful for values that
+will always be positive like time lengths so you can easily get accurate
+fractions;
+#X text 12 410 Line ShortCut: Objects with line that you can just feed
+the value in instead of packing. \$1 to set the line length in ms;
+#X connect 1 0 4 0;
+#X connect 1 0 29 0;
+#X connect 2 0 1 0;
+#X connect 3 0 1 0;
+#X connect 15 0 16 0;
+#X connect 17 0 15 0;
+#X connect 17 0 19 0;
+#X connect 26 0 42 0;
+#X connect 29 0 0 0;
+#X connect 33 0 34 0;
+#X connect 36 0 35 0;
+#X connect 39 0 38 0;
+#X connect 40 0 37 0;
+#X connect 41 0 26 0;
+#X connect 42 0 27 0;
+#X connect 46 0 45 0;
+#X restore 862 379 pd syntactic_sugar;
+#X text 644 483 hipass for offset removal;
+#N canvas 0 50 956 572 seq 1;
+#X obj 12 219 seq_count_vv seq;
+#X obj 12 359 f_16x seq;
+#X floatatom 12 389 5 0 0 0 - - -;
+#X obj 122 219 seq_count_vvc seq;
+#X obj 452 219 nbx_16x_vvc seq;
+#X text 10 779 seq_constructor contains the typical objects used for
+sequencing defined by parameters passed;
+#X floatatom 12 840 5 0 0 0 - - -;
+#X obj 12 459 seq_count_vvcm seq2;
+#X obj 12 679 seq_scene seq2 0 f 16 nbx;
+#X obj 182 679 seq_scene seq2 1 f 16 nbx;
+#X obj 352 679 seq_scene seq2 2 f 16 nbx;
+#X obj 12 719 rr;
+#X floatatom 12 749 5 0 0 0 - - -;
+#X obj 692 559 s seq2_scene;
+#X obj 692 519 hradio 30 1 1 4 empty empty empty 0 -8 0 10 -262144
+-1 -1 3;
+#X obj 522 679 seq_scene seq2 3 f 16 tgl;
+#X obj 12 819 seq_constructor fullseq f 16 nbx;
+#X text 380 119 Lengths that are greater than steps start playing from
+the beginning after the last step. So a step count of 8 and a length
+of 12 would play the first 8 steps \, then play the first four steps
+and repeat.;
+#X floatatom 22 240 5 0 0 0 - - -;
+#X text 450 189 This is a series of number boxes named seq so it sends
+the floats named "seq" seen to the lower left ([f_16x seq]).;
+#X obj 32 59 bng 30 50 20 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 22 40 Press play for output:;
+#X obj 72 79 s global_play_r;
+#X text 220 819 \$1 name;
+#X text 220 879 \$4 interface type (nbx \, vsl \, vslxnbx \, hsl \,
+list);
+#X text 220 859 \$3 steps;
+#X text 220 839 \$2 data stored (f for float or list);
+#X text 20 439 Sequencer scenes/patterns;
+#X text 300 519 [seq_scene] outputs when a variable named \$1_scene
+is equal to its scene number \, By default all scenes output \, but
+if it receives a number that isn't its scene number \, it won't output
+;
+#X text 440 589 \$2 scene;
+#X text 440 629 \$4 steps;
+#X text 440 649 \$5 interface (a control ending in _vvc);
+#X text 440 609 \$3 data stored (f for float);
+#X text 440 569 Other args:;
+#X text 10 189 A seq_count controls the step count of a sequencer starting
+at 0;
+#X text 80 359 Each of the step values are sent from f_16x upon receiving
+its step number and set by the nbx_16x_vvc to the right;
+#X connect 0 0 1 0;
+#X connect 0 0 18 0;
+#X connect 1 0 2 0;
+#X connect 7 0 15 0;
+#X connect 7 0 8 0;
+#X connect 7 0 9 0;
+#X connect 7 0 10 0;
+#X connect 8 0 11 0;
+#X connect 9 0 11 0;
+#X connect 10 0 11 0;
+#X connect 11 0 12 0;
+#X connect 14 0 13 0;
+#X connect 15 0 11 0;
+#X connect 16 0 6 0;
+#X connect 20 0 22 0;
+#X restore 862 319 pd seq;
+#X text 284 453 Record wav file synced with play/stop;
+#N canvas 0 50 847 572 synth_and_samplers 0;
+#X obj 22 169 sysk_nv_vvcm~ 5 osciano syn1;
+#X obj 22 529 s syn1_fm_r;
+#X text 22 470 Variables in synths can be accessed the same way you
+would with any _vv or _vvc.;
+#X text 232 510 To synth:;
+#X obj 232 529 s syn1_fm;
+#X obj 22 759 sysk_nv_vvcm~ 5 imp syn2;
+#X obj 402 379 vv_file_vvc syn1;
+#X obj 412 739 s syn2_macro;
+#X obj 412 661 vsl 30 65 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X text 402 640 Macro takes a value and holds it when a voice begins
+a note;
+#X obj 22 199 chan_1x2_vvcm~ syn1_chan;
+#X obj 102 139 spigot;
+#X obj 192 89 tgl 30 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 122 90 Test synth:;
+#X obj 102 699 b2pack 36 127;
+#X obj 102 729 spigot;
+#X obj 192 679 tgl 30 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 122 680 Test synth:;
+#X obj 22 789 chan_1x2_vvcm~ syn2_chan;
+#X obj 102 1039 b2pack 36 127;
+#X obj 102 1069 spigot;
+#X obj 192 1019 tgl 30 0 empty empty empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 22 1129 chan_1x2_vvcm~ samp_chan;
+#X obj 22 1099 sysk_nv_vvcm~ 3 sampler samp;
+#X obj 402 239 sysk_voice_vvcm~ osciano synmono;
+#X obj 22 1019 bng 30 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 112 1020 Test sampler:;
+#X obj 462 709 nbx 7 20 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
+11 -262144 -1 -1 0 256;
+#X text 202 170 5 voices of the synth osciano named syn1;
+#X text 402 360 A vv_file_vvc that will save the preset for syn1;
+#X text 22 360 To save and load presets \, use the vv_file_vvc inside
+the synth. You can create a new vv_file_vvc with the matching name
+for the synth if it doesn't contain one. Presets of different types
+of synths can be loaded \, and if there are any matching parameters
+\, they'll be applied. The file type should be the synthesizer name.
+;
+#X text 22 510 To vvc:;
+#X text 22 970 Create voiced samplers the same way as a synth;
+#X text 22 10 A synth is created with a combination of a voice(s) and
+a vvc. To create multiple voices and a vvc \, a sysk_nv_vvc~ is used.
+This creates a synth with \$1 voices. \$2 sets the type of synth object
+used and \$3 sets the name of the current instance of the synth for
+saving/loading. Voices are triggered by packed note+velocity pairs.
+;
+#X obj 102 109 b2pack 72 127;
+#X text 402 220 Doing a single voiced synth:;
+#X text 22 570 Some synths have more controls for each parameter that
+are different for each voice to enable per voice values for each parameter
+;
+#X text 402 820 These are the built in modulation types:;
+#X text 402 840 The mqu modulation type adds four modulators to each
+control to change based on pitch \, velocity \, random \, and macro
+;
+#X text 402 870 The mhx modulation type adds six modulators to each
+control to change based on pitch \, velocity \, random \, macro \,
+envelope \, and lfo;
+#X text 22 990 Play sample with bang or note (requires you to load
+a sample toi hear anything here);
+#X connect 0 0 10 0;
+#X connect 5 0 18 0;
+#X connect 8 0 7 0;
+#X connect 11 0 0 0;
+#X connect 12 0 11 1;
+#X connect 14 0 15 0;
+#X connect 15 0 5 0;
+#X connect 16 0 15 1;
+#X connect 19 0 20 0;
+#X connect 20 0 23 0;
+#X connect 21 0 20 1;
+#X connect 23 0 22 0;
+#X connect 25 0 23 0;
+#X connect 27 0 7 0;
+#X connect 34 0 11 0;
+#X restore 542 289 pd synth_and_samplers;
+#X text 464 203 |;
+#X text 184 203 |;
+#N canvas 319 156 415 280 copying_from_plate_to_plate 0;
+#X text 12 70 To copy from one plate (plate_A) to another plate (plate
+B):;
+#X text 12 90 !. Have only plate_A open. Make sure you have hit the
+save button.;
+#X text 12 120 2 Disconnect [sl_control] from [pd msg] (to the right
+of the save/load buttons.);
+#X text 12 150 3 Load plate_B and copy whatever you want to plate_A
+;
+#X text 12 30 Right now \, only one plate can be open at a time. To
+copy from plate to plate:;
+#X text 12 170 4 Hit the load button at the top of either patch;
+#X text 12 190 5 Exit plate_B;
+#X text 12 210 6 Connect [sl_control] to [pd msg] and press save;
+#X restore 862 259 pd copying_from_plate_to_plate;
+#X text 32 20 ||| INTRO |||;
+#N canvas 0 50 989 572 vv/c_basics 0;
+#X text 402 20 To summarize:;
+#X obj 12 199 bit_red~;
+#X text 12 230 Add _vv(~) to the end and give it a name to set up receive
+variables to send to the object;
+#X text 12 20 Creating controls and saving and loading them with _vv/_vvc/_vvcm/_vvc~
+;
+#X text 12 170 Take a simple object with three inlets for controls:
+;
+#X text 192 260 Sending values to any object named bitred with the
+control bits \, dry \, or wet:;
+#X obj 12 679 bit_red_vvcm~ bitred2;
+#X text 422 750 bit_red_vvc would send values to bit_red_vv~ which
+contains bit_red~. bit_red_vvc~ would be virtual value controllers
+(bit_red_vvc) with the virtual values (bit_red_vv~) controlling the
+bit_red~ in one patch. For audio objects \, the naming system would
+be similar to adsr_vvcm but instead is adsr_vvc~ instead of _vvcm \,
+adsr to adsr~ \, adsr_vv to adsr_vv~ \, and adsr_vvc staying the same
+as there are no audio objects in _vvcs;
+#X text 402 70 _vvc = virtual value controller - controls object by
+sending data to any receives and handles saving/loading/presets;
+#X text 402 40 _vv(~) = virtual value - contains object to control
+and receive variables;
+#X text 402 170 an object that ends in _vvc is a virtual value controller
+\, meant to send \, save \, and load a value or values to a receive
+variable (usually contained in an object that ends in _vv) with the
+same name. If it ends in _vvcm or _vvc~ \, it has the vvc and the object
+it controls;
+#X text 12 350 Vvcs are used to control that _vv and save/load your
+settings. An object that ends in _vvc is a virtual value controller
+\, meant to send \, save \, and load values to a receive variable with
+the same name.;
+#X text 12 580 A vvc will send to any _vv of the same name. Duplicate
+the _vv~ for stereo if you want the channels to be controlled by the
+vvc of the same name;
+#X obj 12 419 bit_red_vvc example_reducer;
+#X obj 12 259 bit_red_vv~ example_reducer;
+#X obj 192 289 s example_reducer_bits;
+#X obj 192 329 s example_reducer_wet;
+#X obj 192 309 s example_reducer_dry;
+#X obj 142 619 bit_red_vv~ bitred2;
+#X obj 12 619 bit_red_vv~ bitred2;
+#X text 402 100 _vvcm/_vvcm~ = virtual value controller+model - the
+object \, its virtual value receivers (_vv) and virtual value controller
+(_vvc) \, so everything needed to save \, load \, and use the object
+;
+#X text 12 650 Objects that end in _vvcm(~) contain both the vvc and
+the vv;
+#X text 12 840 Make sure to save (explained at the top of the parent
+patch) to make sure values are saved and loaded accurately;
+#X coords 0 0 30 1 0 0 0;
+#X restore 542 259 pd vv/c_basics;
+#N canvas 0 50 956 572 midi 0;
+#X floatatom 22 390 5 0 0 0 - - -;
+#X text 22 10 Midi object naming:;
+#X text 22 50 ni - Note in;
+#X text 22 30 ci - Control in;
+#X text 22 90 u - output is transferred from 0-127 to unipolar (0-1)
+;
+#X text 22 110 n - baNg on non-zero value/velocity;
+#X text 22 230 To listen for a note/control \, press the button;
+#X obj 22 339 niv_vvcm test_ni;
+#X floatatom 132 390 5 0 0 0 - - -;
+#X obj 132 339 civ_vvcm test_ci;
+#X text 22 130 v - (0-127) velocity (note) or value (control);
+#X text 22 70 Suffixes determine output:;
+#X text 402 70 Optional prefixes determine different sources for information
+other than midi:;
+#X text 22 250 Select the channel and note/control via boxes or press
+button to assign to the next midi control signal received. It is automatically
+assigned to first midi control signal received after creation unless
+selected via the numberboxes or loading previously saved settings.
+Note that channel is 0-15 unlike pd's typical way of seperating midi
+channels by controller;
+#X floatatom 242 400 5 0 0 0 - - -;
+#X obj 242 339 ctlin;
+#X floatatom 252 380 5 0 0 0 - - -;
+#X floatatom 272 360 5 0 0 0 - - -;
+#X floatatom 312 400 5 0 0 0 - - -;
+#X floatatom 322 380 5 0 0 0 - - -;
+#X floatatom 342 360 5 0 0 0 - - -;
+#X obj 312 339 notein;
+#X floatatom 402 210 5 0 0 0 - - -;
+#X floatatom 652 210 5 0 0 0 - - -;
+#X obj 652 159 bciv_vvcm test_ci;
+#X obj 402 159 vniv_vvcm vni_chan test_vni;
+#X obj 402 269 s vni_chan;
+#X msg 402 239 10 127;
+#X msg 452 239 10 64;
+#X obj 652 329 s bctl;
+#X obj 652 299 packtbf3;
+#X floatatom 652 240 5 0 0 0 - - -;
+#X floatatom 672 260 5 0 0 0 - - -;
+#X floatatom 692 280 5 0 0 0 - - -;
+#X text 22 150 o-on/off - send a 0 for 0 or a 1 for a non-zero value/velocity
+;
+#X text 22 180 tgl-toggle - a non-zero ci/ni will toggle between 0
+and 1 output;
+#X text 402 100 v - virtual - channel is from a variable set by \$1
+(currently just for note signals);
+#X text 402 130 b - bus - signal is from a variable named bctl (currently
+just for control signals);
+#X obj 752 269 lb 12;
+#X obj 772 289 lb 40;
+#X connect 7 0 0 0;
+#X connect 9 0 8 0;
+#X connect 15 0 14 0;
+#X connect 15 1 16 0;
+#X connect 15 2 17 0;
+#X connect 21 0 18 0;
+#X connect 21 1 19 0;
+#X connect 21 2 20 0;
+#X connect 24 0 23 0;
+#X connect 25 0 22 0;
+#X connect 27 0 26 0;
+#X connect 28 0 26 0;
+#X connect 30 0 29 0;
+#X connect 31 0 30 0;
+#X connect 32 0 30 1;
+#X connect 33 0 30 2;
+#X connect 38 0 32 0;
+#X connect 39 0 33 0;
+#X restore 862 349 pd midi;
+#X text 24 373 Controls timing events and song flow;
+#X text 194 93 Saves and loads state of vvc(m) objects;
+#X text 538 241 (5.) Starting;
+#X text 32 30 This is plate.pd with added explainations and tutorials.
+plate.pd is a set of objects to be built on top of to control objects
+in this library. It handles the global clock \, saving/loading parameters
+\, and audio output;
+#X text 858 241 (6.) More;
+#X text 484 113 Saving is a two step process \, first for the interface
+objects (sliders \, numberboxes \, etc) then for the patch itself that
+those values save into. Click save button to the left before saving
+the pd patch;
+#N canvas 0 50 499 502 declares 0;
+#X obj 42 436 declare -path ./vv;
+#X obj 42 376 declare -path ./synth;
+#X obj 42 346 declare -path ./shortcut;
+#X obj 42 286 declare -path ./sampler;
+#X obj 42 256 declare -path ./oscillator;
+#X obj 42 226 declare -path ./modulation;
+#X obj 42 196 declare -path ./misc;
+#X obj 42 166 declare -path ./conversion;
+#X obj 42 106 declare -path ./audio_routing;
+#X obj 42 76 declare -path ./audio_effect;
+#X obj 42 136 declare -path ./control_and_note;
+#X obj 42 316 declare -path ./seq;
+#X obj 42 406 declare -path ./timing;
+#X text 39 61 For when in root:;
+#X text 249 61 For when in a subdirectory:;
+#X obj 252 76 declare -path ../audio_effect;
+#X obj 252 106 declare -path ../audio_routing;
+#X obj 252 136 declare -path ../control_and_note;
+#X obj 252 166 declare -path ../conversion;
+#X obj 252 196 declare -path ../misc;
+#X obj 252 226 declare -path ../modulation;
+#X obj 252 256 declare -path ../oscillator;
+#X obj 252 286 declare -path ../sampler;
+#X obj 252 316 declare -path ../seq;
+#X obj 252 346 declare -path ../shortcut;
+#X obj 252 376 declare -path ../synth;
+#X obj 252 406 declare -path ../timing;
+#X obj 252 436 declare -path ../vv;
+#X text 29 11 Includes necessary directories. Only works if patch is
+in root or a subdirectory of root. To have this located elsewhere \,
+include PilosLib directories in pd's search path;
+#X restore 392 199 pd declares;
+#X connect 0 0 3 0;
+#X connect 2 0 1 0;
+#X connect 4 0 0 0;
+#X connect 5 0 6 0;
+#X connect 7 0 8 0;
+#X connect 7 1 9 0;
+#X connect 8 0 12 0;
+#X connect 9 0 13 0;
+#X connect 12 0 11 0;
+#X connect 12 0 15 0;
+#X connect 13 0 11 1;
+#X connect 13 0 16 0;
+#X connect 15 0 14 0;
+#X connect 16 0 14 1;
+#X connect 17 0 26 0;
+#X connect 17 0 16 1;
+#X connect 17 0 15 1;
+#X connect 19 0 11 2;

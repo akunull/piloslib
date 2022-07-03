@@ -1,0 +1,7 @@
+#N canvas 0 50 654 605 10;
+#X obj 210 273 hslxnbx_4m_vvc \$1 lfo_saw;
+#X obj 10 453 hslxnbx_4m_vvc \$1 lfo_pow 1 1;
+#X obj 10 383 tgl_vvc \$1 lfo_note_reset;
+#X obj 210 403 hslxnbx_4m_vvc \$1 lfo_sin;
+#X obj 10 13 ar_ppa_vvc_mqu \$1 mod_env 1 1;
+#X obj 10 273 nbx_4m_vvc \$1 lfo_rate 1;

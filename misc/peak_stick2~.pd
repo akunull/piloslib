@@ -1,0 +1,15 @@
+#N canvas 280 86 450 300 10;
+#X obj 20 40 inlet~;
+#X obj 20 100 outlet;
+#X obj 113 100 hsl 190 10 0 1 0 1 empty empty empty -2 -8 0 10 -262144
+-1 -1 18900 0;
+#X obj 20 70 peak_read~;
+#X obj 100 100 tgl 10 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 19 162 Reads peak from a signal. Toggle to activate. Fairly
+inefficient on the cpu.;
+#X connect 0 0 3 0;
+#X connect 3 0 1 0;
+#X connect 3 0 2 0;
+#X connect 4 0 3 1;
+#X coords 0 -1 1 1 205 10 2 100 100;

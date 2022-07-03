@@ -1,0 +1,17 @@
+#N canvas 449 36 740 604 10;
+#X obj 52 28 inlet;
+#X text 44 13 Note Vel;
+#X text 125 13 Open Samp;
+#X obj 52 118 outlet~;
+#X text 239 13 Transp;
+#X obj 137 28 r \$1_filename;
+#X obj 242 28 r \$1_transpose;
+#X obj 52 88 sampler~ 0 0 0 0 0 0 0;
+#X obj 342 28 r \$1_offset;
+#X text 339 13 Offset;
+#X connect 0 0 7 0;
+#X connect 5 0 7 1;
+#X connect 6 0 7 2;
+#X connect 7 0 3 0;
+#X connect 8 0 7 3;
+#X coords 0 0 1 1 85 60 0;

@@ -1,0 +1,9 @@
+#N canvas 0 0 450 300 10;
+#X obj 117 47 loadbang;
+#X obj 117 107 s \$1_save;
+#X obj 117 137 r \$1_save_send;
+#X obj 117 167 s \$1_load_send;
+#X obj 117 77 del 100;
+#X connect 0 0 4 0;
+#X connect 2 0 3 0;
+#X connect 4 0 1 0;

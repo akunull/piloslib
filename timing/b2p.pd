@@ -1,0 +1,25 @@
+#N canvas 606 149 513 268 10;
+#X obj 34 161 outlet;
+#X obj 34 41 inlet;
+#X obj 34 131 change;
+#X obj 94 41 inlet;
+#X text 37 26 Beat;
+#X text 95 26 Width;
+#X obj 174 71 lb \$2 0.5;
+#X obj 94 101 r global_repl;
+#X obj 34 101 >= 0.5;
+#X obj 94 71 * 1.00001;
+#X obj 34 71 b2u \$1;
+#X text 122 145 beat to pulse (0-1);
+#X text 122 200 jump from 0 to 1 in between every \$1 beats in a pulse
+fashion with \$2 width;
+#X text 122 165 \$1 beat;
+#X text 122 185 \$2 width (0-1);
+#X connect 1 0 10 0;
+#X connect 2 0 0 0;
+#X connect 3 0 9 0;
+#X connect 6 0 8 1;
+#X connect 7 0 2 0;
+#X connect 8 0 2 0;
+#X connect 9 0 8 1;
+#X connect 10 0 8 0;

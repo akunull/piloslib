@@ -1,0 +1,12 @@
+#N canvas 598 305 453 260 10;
+#X obj 137 37 inlet;
+#X obj 137 97 outlet~;
+#X obj 137 67 sysk_\$1v~ \$2 \$3;
+#X obj 47 37 \$2_vvc \$3;
+#X text 38 165 \$1 voices;
+#X text 38 205 \$3 name;
+#X text 38 185 \$2 synth;
+#X text 38 135 SYnth/sampler SKeleton n-voice- Hold a synth/sampler's
+vvc and n amount of voices;
+#X connect 0 0 2 0;
+#X connect 2 0 1 0;

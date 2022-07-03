@@ -1,0 +1,8 @@
+#N canvas 0 50 450 300 10;
+#X obj 72 29 inlet~;
+#X obj 132 29 r \$1_amount;
+#X obj 72 69 downsample~;
+#X obj 72 99 outlet~;
+#X connect 0 0 2 0;
+#X connect 1 0 2 1;
+#X connect 2 0 3 0;

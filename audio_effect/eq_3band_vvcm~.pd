@@ -1,0 +1,12 @@
+#N canvas 613 195 508 376 10;
+#X obj 110 0 inlet~;
+#X obj 110 60 outlet~;
+#X obj 110 30 eq_3band_vv~ \$1;
+#X obj 280 130 nbx_vvc \$1 low_freq 220;
+#X obj 280 170 nbx_vvc \$1 high_freq 1000;
+#X obj 110 130 hslxnbx_vvc \$1 low_amp 1 1;
+#X obj 110 190 hslxnbx_vvc \$1 mid_amp 1 1;
+#X obj 110 250 hslxnbx_vvc \$1 high_amp 1 1;
+#X connect 0 0 2 0;
+#X connect 2 0 1 0;
+#X coords 0 -1 1 1 350 220 1 100 100;

@@ -1,0 +1,17 @@
+#N canvas 0 50 464 346 10;
+#X obj 118 44 inlet;
+#X obj 118 113 moses;
+#X obj 118 263 outlet;
+#X obj 118 233 * -1;
+#X obj 118 143 swap 1;
+#X obj 118 173 /;
+#X text 207 87 negative numbers become fractions;
+#X text 207 127 for instance -3 becomes 1/3;
+#X text 207 107 so n becomes 1/|n|;
+#X connect 0 0 1 0;
+#X connect 1 0 4 0;
+#X connect 1 1 2 0;
+#X connect 3 0 2 0;
+#X connect 4 0 5 0;
+#X connect 4 1 5 1;
+#X connect 5 0 3 0;

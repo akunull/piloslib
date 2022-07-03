@@ -1,0 +1,5 @@
+#N canvas 0 0 450 514 10;
+#X obj -148 351 outlet;
+#X obj 100 120 vni_sel_vvcm \$1 \$2;
+#X connect 1 0 0 0;
+#X coords 0 -1 1 1 65 40 1 100 100;

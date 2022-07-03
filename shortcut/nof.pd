@@ -1,0 +1,16 @@
+#N canvas 0 0 581 300 10;
+#X obj 62 60 route list;
+#X obj 62 150 stripnote;
+#X obj 62 180 outlet;
+#X obj 62 30 inlet;
+#X obj 112 120 f \$1;
+#X obj 112 90 b;
+#X text 185 103 \$1 float;
+#X text 185 73 Note or float: if it's not a packed list (assuming note/vel
+pair) bang out a float;
+#X connect 0 0 1 0;
+#X connect 0 1 5 0;
+#X connect 1 0 2 0;
+#X connect 3 0 0 0;
+#X connect 4 0 2 0;
+#X connect 5 0 4 0;

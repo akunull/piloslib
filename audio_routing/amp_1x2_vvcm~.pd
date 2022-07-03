@@ -1,0 +1,14 @@
+#N canvas 448 67 450 300 10;
+#X obj 7 207 inlet~;
+#X obj 7 247 tline~;
+#X obj 7 277 outlet~;
+#X obj 100 120 hslj_vvc \$1 amp;
+#X obj 67 247 tline~;
+#X obj 67 277 outlet~;
+#X connect 0 0 1 0;
+#X connect 0 0 4 0;
+#X connect 1 0 2 0;
+#X connect 3 0 1 1;
+#X connect 3 0 4 1;
+#X connect 4 0 5 0;
+#X coords 0 -1 1 1 200 90 1 100 100;

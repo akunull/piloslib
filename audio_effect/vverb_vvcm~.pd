@@ -1,0 +1,16 @@
+#N canvas 3 54 557 317 10;
+#X obj 100 0 inlet~;
+#X obj 100 60 outlet~;
+#X obj 200 0 inlet~;
+#X obj 200 60 outlet~;
+#X obj 250 170 nbx_hide_vvc \$1 roomsize 0.85;
+#X obj 250 120 nbx_hide_vvc \$1 damping 0.5;
+#X obj 110 120 hsl_vvc \$1 dry 0.85;
+#X obj 110 170 hsl_vvc \$1 wet 0.2;
+#X obj 100 30 vverb_vv~ \$1;
+#X obj 330 120 hsl_vvc \$1 preamp 1;
+#X connect 0 0 8 0;
+#X connect 2 0 8 1;
+#X connect 8 0 1 0;
+#X connect 8 1 3 0;
+#X coords 0 -1 1 1 380 130 1 100 100;

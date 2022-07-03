@@ -1,0 +1,15 @@
+#N canvas 0 0 450 300 10;
+#X obj 37 127 outlet;
+#X obj 87 37 inlet;
+#X obj 37 37 inlet;
+#X obj 37 97 f \$2;
+#X text 211 56 beat to float;
+#X obj 37 67 b2n \$1;
+#X text 211 96 \$2 float;
+#X text 211 76 \$1 beat;
+#X text 34 23 beat;
+#X text 84 23 float;
+#X connect 1 0 3 1;
+#X connect 2 0 5 0;
+#X connect 3 0 0 0;
+#X connect 5 0 3 0;

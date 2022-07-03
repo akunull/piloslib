@@ -1,0 +1,17 @@
+#N canvas 0 50 450 300 10;
+#X obj 45 161 wrap~;
+#X obj 44 75 inlet~;
+#X obj 104 75 inlet;
+#X obj 154 75 inlet;
+#X obj 45 191 outlet~;
+#X obj 44 105 phasor~ \$1;
+#X text 43 59 Hz;
+#X text 103 59 phase;
+#X text 153 59 multiple;
+#X obj 45 132 tline~ 1;
+#X connect 0 0 4 0;
+#X connect 1 0 5 0;
+#X connect 2 0 5 1;
+#X connect 3 0 9 1;
+#X connect 5 0 9 0;
+#X connect 9 0 0 0;

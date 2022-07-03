@@ -1,0 +1,13 @@
+#N canvas 0 50 450 300 10;
+#X obj 37 37 inlet;
+#X obj 37 128 sel 1;
+#X obj 37 97 == 0;
+#X obj 37 155 outlet;
+#X obj 37 67 b2u \$1;
+#X text 144 53 beat to baNg;
+#X text 144 73 \$1 beat;
+#X text 34 23 beat;
+#X connect 0 0 4 0;
+#X connect 1 0 3 0;
+#X connect 2 0 1 0;
+#X connect 4 0 2 0;

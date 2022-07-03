@@ -1,0 +1,16 @@
+#N canvas 0 0 662 615 10;
+#X obj 40 60 inlet;
+#X obj 40 450 outlet;
+#X obj 110 130 record_replay_2d_vvcm \$1_unit_1;
+#X obj 310 130 record_replay_2d_vvcm \$1_unit_2;
+#X obj 310 280 record_replay_2d_vvcm \$1_unit_4;
+#X obj 110 280 record_replay_2d_vvcm \$1_unit_3;
+#X connect 0 0 2 0;
+#X connect 0 0 3 0;
+#X connect 0 0 4 0;
+#X connect 0 0 5 0;
+#X connect 2 0 1 0;
+#X connect 3 0 1 0;
+#X connect 4 0 1 0;
+#X connect 5 0 1 0;
+#X coords 0 -1 1 1 410 330 1 100 100;

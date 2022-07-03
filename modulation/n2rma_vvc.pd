@@ -1,0 +1,7 @@
+#N canvas 468 119 508 376 10;
+#X obj 110 170 hslxnbx_vvc \$1 mult 1 1;
+#X obj 110 230 hslxnbx_vvc \$1 add;
+#X obj 110 120 bng_vvc \$1 trig;
+#X obj 94 81 inlet;
+#X connect 3 0 2 0;
+#X coords 0 -1 1 1 160 200 1 100 100;

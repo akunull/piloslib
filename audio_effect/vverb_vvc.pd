@@ -1,0 +1,6 @@
+#N canvas 3 54 557 317 10;
+#X obj 250 170 nbx_hide_vvc \$1 roomsize 0.85;
+#X obj 250 120 nbx_hide_vvc \$1 damping 0.5;
+#X obj 110 120 hsl_vvc \$1 dry 0.85;
+#X obj 110 170 hsl_vvc \$1 wet 0.2;
+#X coords 0 -1 1 1 240 130 1 100 100;

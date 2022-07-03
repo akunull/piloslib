@@ -1,0 +1,19 @@
+#N canvas 355 93 875 435 10;
+#X obj 22 29 seq_count_vv \$1;
+#X obj 172 29 seq_count_vvc \$1;
+#X text 470 59 \$1 name;
+#X obj 22 119 outlet;
+#X obj 12 149 \$4_vvc;
+#X text 470 119 \$4 interface type (nbx \, vsl \, vslxnbx \, hsl \,
+list);
+#X obj 92 89 outlet;
+#X obj 22 89 \$2_\$3x \$1;
+#X text 470 99 \$3 steps;
+#X obj 172 169 \$4_\$3x_vvc \$1;
+#X text 470 79 \$2 data stored (f for float);
+#X text 470 29 Create a sequencer with \$3 steps of \$2 types of elements
+and \$4 to control them;
+#X connect 0 0 6 0;
+#X connect 0 0 7 0;
+#X connect 7 0 3 0;
+#X connect 7 0 4 0;

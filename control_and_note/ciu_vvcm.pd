@@ -1,0 +1,13 @@
+#N canvas 0 0 532 279 10;
+#X obj 100 120 ci_sel_vvcm \$1;
+#X obj 100 210 outlet;
+#X obj 100 180 / 127;
+#X text 103 49 \$1 name;
+#X text 103 79 or view INTRO.pd in root directory and click [pd midi]
+;
+#X text 103 29 Control In Unipolar (0-1);
+#X text 103 69 vFor full explaination right click and open object below
+;
+#X connect 0 0 2 0;
+#X connect 2 0 1 0;
+#X coords 0 -1 1 1 65 40 1 100 100;

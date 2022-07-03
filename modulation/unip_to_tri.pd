@@ -1,0 +1,15 @@
+#N canvas 0 0 324 296 10;
+#X obj 59 80 + 0.5;
+#X obj 59 110 wrap;
+#X obj 59 140 + -0.5;
+#X obj 59 168 abs;
+#X obj 59 196 * 2;
+#X obj 59 52 inlet;
+#X obj 59 226 outlet;
+#X text 50 29 unipolar (0 to 1) to triangle wave;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 4 0 6 0;
+#X connect 5 0 0 0;

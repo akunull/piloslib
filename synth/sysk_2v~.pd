@@ -1,0 +1,18 @@
+#N canvas 0 50 1278 607 10;
+#X obj 181 393 pack f f f;
+#X obj 181 53 inlet;
+#X text 173 38 Note Vel;
+#X obj 181 543 outlet~;
+#X obj 181 483 \$1_voice~ \$2 0;
+#X obj 281 483 \$1_voice~ \$2 1;
+#X obj 181 363 poly 2 1;
+#X obj 181 423 route 1 2;
+#X connect 0 0 7 0;
+#X connect 1 0 6 0;
+#X connect 4 0 3 0;
+#X connect 5 0 3 0;
+#X connect 6 0 0 0;
+#X connect 6 1 0 1;
+#X connect 6 2 0 2;
+#X connect 7 0 4 0;
+#X connect 7 1 5 0;

@@ -1,0 +1,46 @@
+#N canvas 691 68 483 514 10;
+#X obj -78 171 spigot;
+#X obj -28 141 lb 1;
+#X msg -18 171 0;
+#X obj -78 201 unpack;
+#X obj 100 100 bng 20 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X floatatom 121 100 3 0 0 0 - - -;
+#X msg 32 311 set \$1;
+#X obj -78 261 rr;
+#X obj -148 291 route;
+#X obj -78 141 rr;
+#X obj -148 351 outlet;
+#X obj -78 351 outlet;
+#X obj -28 351 outlet;
+#X obj -78 111 r \$1;
+#X obj -28 71 r \$2_reset;
+#X obj -138 201 sll \$2;
+#X obj -28 111 r global_load;
+#X text -135 386 Virtual Note In select - Output a specific note signal
+according to an internal pd variable set by \$1 and note number. Press
+button to assign to the next note signal received. It is automatically
+assigned to the first note signal received after creation unless selected
+via numberboxes or loading previously saved settings.;
+#X text 50 95 assign:;
+#X text 120 115 note;
+#X connect 0 0 2 0;
+#X connect 0 0 3 0;
+#X connect 1 0 0 1;
+#X connect 2 0 0 1;
+#X connect 3 0 7 0;
+#X connect 4 0 1 0;
+#X connect 5 0 7 0;
+#X connect 6 0 5 0;
+#X connect 7 0 6 0;
+#X connect 7 0 8 1;
+#X connect 7 0 11 0;
+#X connect 7 0 15 0;
+#X connect 8 0 10 0;
+#X connect 9 0 0 0;
+#X connect 9 0 8 0;
+#X connect 13 0 9 0;
+#X connect 14 0 4 0;
+#X connect 15 0 0 0;
+#X connect 16 0 1 0;
+#X coords 0 -1 1 1 44 20 2 100 100;

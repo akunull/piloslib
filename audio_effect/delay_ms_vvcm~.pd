@@ -1,0 +1,11 @@
+#N canvas 0 50 472 297 10;
+#X obj 110 10 inlet~;
+#X obj 110 70 outlet~;
+#X obj 110 120 hsl_vvc \$1 dry 0.75;
+#X obj 110 170 hsl_vvc \$1 wet 0.25;
+#X obj 260 170 hslxnbx_vvc \$1 ms 1 1000;
+#X obj 260 120 hsl_vvc \$1 fdbk 0.75;
+#X obj 110 40 delay_ms_vv~ \$1;
+#X connect 0 0 6 0;
+#X connect 6 0 1 0;
+#X coords 0 -1 1 1 340 130 1 100 100;

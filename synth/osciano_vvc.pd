@@ -1,0 +1,13 @@
+#N canvas 130 78 962 505 10;
+#X obj 597 47 vv_file_vvc \$1;
+#X obj 17 287 adsr_pa_vvc \$1 amp_env;
+#X obj 387 47 nbx_vvc \$1 pitch;
+#X obj 387 217 hsl_vvc \$1 noise_dry_amp;
+#X obj 17 47 nbx_vvc \$1 osc_a_pitch;
+#X obj 17 97 tgl_vvc \$1 osc_a_reset;
+#X obj 17 217 tgl_vvc \$1 osc_b_reset;
+#X obj 487 287 hsl_vvc \$1 amp_pitch_follow 1;
+#X obj 17 167 nbx_vvc \$1 osc_b_pitch 12;
+#X obj 207 167 hsl_vvc \$1 osc_b_amp;
+#X obj 207 47 hsl_vvc \$1 osc_a_amp 1;
+#X obj 387 127 hslxnbx_vvc \$1 fm;

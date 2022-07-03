@@ -1,0 +1,12 @@
+#N canvas 0 0 450 300 10;
+#X obj 117 77 bit_red~;
+#X obj 117 47 inlet~;
+#X obj 117 107 outlet~;
+#X obj 167 47 r \$1_bits;
+#X obj 237 47 r \$1_dry;
+#X obj 307 47 r \$1_wet;
+#X connect 0 0 2 0;
+#X connect 1 0 0 0;
+#X connect 3 0 0 1;
+#X connect 4 0 0 2;
+#X connect 5 0 0 3;

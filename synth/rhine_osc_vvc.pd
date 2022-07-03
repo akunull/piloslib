@@ -1,0 +1,17 @@
+#N canvas 0 50 949 522 10;
+#X obj 110 120 nbx_6m_vvc \$1 \$2_pitch;
+#X obj 300 230 tgl_hide_vvc \$1 \$2_reset 1;
+#X obj 500 270 hsl_6m_vvc \$1 \$2_mod;
+#X obj 530 120 nbx_4m_vvc \$1 \$2_glide;
+#X obj 110 250 nbx_6m_vvc \$1 \$2_sync 1;
+#X obj 110 610 hsl_6m_vvc \$1 \$2_dry 1;
+#X obj 550 610 hsl_6m_vvc \$1 \$2_filt2;
+#X obj 330 610 hsl_6m_vvc \$1 \$2_filt1;
+#X obj 110 380 ar_pa_vvc_mhx \$1 \$2_mod_env;
+#X obj 300 120 hsl_6m_vvc \$1 \$2_pitch_env 1;
+#X obj 300 290 nbx_vvc \$1 \$2_type 1;
+#X text 531 207 monophony only;
+#X text 294 350 0: Sine<->Square;
+#X text 294 360 1: Triangle<->Saw;
+#X text 294 330 Osc wave mod type;
+#X coords 0 -1 1 1 680 620 1 100 100;

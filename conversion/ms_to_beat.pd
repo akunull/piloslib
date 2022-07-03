@@ -1,0 +1,14 @@
+#N canvas 573 109 252 208 10;
+#X obj 22 153 outlet;
+#X obj 22 32 inlet;
+#X obj 83 32 r global_tempo;
+#X text 30 16 ms;
+#X obj 22 120 / 60000;
+#X obj 22 83 ttbf;
+#X obj 83 92 s global_send_tempo;
+#X obj 83 62 loadbang;
+#X connect 1 0 5 0;
+#X connect 2 0 5 1;
+#X connect 4 0 0 0;
+#X connect 5 0 4 0;
+#X connect 7 0 6 0;

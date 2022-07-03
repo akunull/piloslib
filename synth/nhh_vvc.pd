@@ -1,0 +1,17 @@
+#N canvas 0 50 1067 525 10;
+#X obj 177 17 hslxnbx_vvc \$1 fm;
+#X obj 447 157 nbx_vvc \$1 osc_a_freq 1111;
+#X obj 447 347 nbx_vvc \$1 osc_b_freq 1111;
+#X obj 447 207 nbx_vvc \$1 a_amp 50;
+#X obj 7 17 hslxnbx_vvc \$1 amp 1 0.25;
+#X obj 177 87 hsl_vvc \$1 random_pitch;
+#X obj 7 157 adsr_pa_vvc \$1 osc_a_env;
+#X obj 7 347 adsr_pa_vvc \$1 osc_b_env;
+#X obj 617 157 adsr_pa_vvc \$1 noise_env;
+#X obj 447 257 hslxnbx_vvc \$1 osc_a 1 1;
+#X obj 447 447 hslxnbx_vvc \$1 osc_b 1 0.1;
+#X obj 447 397 nbx_vvc \$1 b_amp 50;
+#X obj 337 17 vv_file_vvc \$1;
+#X obj 7 77 hslxnbx_vvc \$1 freq;
+#X text 5 139 Osc Type: Sine;
+#X text 5 329 Osc Type: Sine;

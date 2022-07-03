@@ -1,0 +1,98 @@
+#N canvas 629 114 509 526 10;
+#X obj 200 260 r save_trig;
+#X obj 200 -20 r load_send;
+#X obj 200 360 s save_send;
+#X obj 390 260 r \$1_save;
+#X obj 390 360 s \$1_save_send;
+#X obj 280 -20 r \$1_load_send;
+#X obj 200 10 route \$1;
+#X obj 200 40 route \$2;
+#X obj 200 330 list2p \$1 \$2;
+#X obj 390 330 listp \$2;
+#X obj 20 280 s \$1_\$2;
+#X obj 0 40 rr;
+#X obj 110 -20 r \$1_\$2_r;
+#X obj 200 300 list;
+#X obj 390 300 list;
+#X obj 20 310 s \$1_\$2_mod1;
+#X obj 20 340 s \$1_\$2_mod2;
+#X obj 20 370 s \$1_\$2_mod3;
+#X obj 110 139 nbx 7 20 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
+11 -262144 -1 -262144 1 256;
+#X obj 100 159 nbx 7 20 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
+11 -262144 -1 -262144 0 256;
+#X obj 190 159 nbx 7 20 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
+11 -262144 -1 -262144 0 256;
+#X obj 100 189 nbx 7 20 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
+11 -262144 -1 -262144 0 256;
+#X obj 103 120 hsl 165 20 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -192512 0 1;
+#X obj 20 250 ttbf;
+#X obj 20 10 lb \$4;
+#X obj 0 -20 lb \$3 1;
+#X obj 190 189 nbx 7 20 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
+11 -262144 -1 -262144 0 256;
+#X obj 100 219 nbx 7 20 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
+11 -262144 -1 -262144 0 256;
+#X obj 190 219 nbx 7 20 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
+11 -262144 -1 -262144 0 256;
+#X obj 120 70 unpack f f f f f f f f;
+#X obj 20 400 s \$1_\$2_mod4;
+#X obj 20 430 s \$1_\$2_mod5;
+#X obj 20 460 s \$1_\$2_mod6;
+#X obj 280 260 packtbf8 0 0 0 0;
+#X obj 110 310 packtbf;
+#X text 382 105 \$1 parent name;
+#X text 382 125 \$2 name;
+#X text 251 85 hsl x nbx = multiply an hsl and nbx value together;
+#X obj 110 340 s \$1_\$2_pack;
+#X obj 110 10 unpack;
+#X text 382 145 \$3 default value of number box;
+#X text 382 165 \$4 default value of slider;
+#X connect 0 0 13 0;
+#X connect 1 0 6 0;
+#X connect 3 0 14 0;
+#X connect 5 0 7 0;
+#X connect 6 0 7 0;
+#X connect 7 0 29 0;
+#X connect 8 0 2 0;
+#X connect 9 0 4 0;
+#X connect 11 0 18 0;
+#X connect 12 0 39 0;
+#X connect 13 0 8 0;
+#X connect 14 0 9 0;
+#X connect 18 0 23 1;
+#X connect 18 0 33 1;
+#X connect 18 0 34 1;
+#X connect 19 0 15 0;
+#X connect 19 0 33 2;
+#X connect 20 0 16 0;
+#X connect 20 0 33 3;
+#X connect 21 0 17 0;
+#X connect 21 0 33 4;
+#X connect 22 0 23 0;
+#X connect 22 0 33 0;
+#X connect 22 0 34 0;
+#X connect 23 0 10 0;
+#X connect 24 0 22 0;
+#X connect 25 0 11 0;
+#X connect 26 0 30 0;
+#X connect 26 0 33 5;
+#X connect 27 0 31 0;
+#X connect 27 0 33 6;
+#X connect 28 0 32 0;
+#X connect 28 0 33 7;
+#X connect 29 0 22 0;
+#X connect 29 1 18 0;
+#X connect 29 2 19 0;
+#X connect 29 3 20 0;
+#X connect 29 4 21 0;
+#X connect 29 5 26 0;
+#X connect 29 6 27 0;
+#X connect 29 7 28 0;
+#X connect 33 0 13 1;
+#X connect 33 0 14 1;
+#X connect 34 0 38 0;
+#X connect 39 0 22 0;
+#X connect 39 1 18 0;
+#X coords 0 -1 1 1 170 140 1 100 100;

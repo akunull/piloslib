@@ -1,0 +1,11 @@
+#N canvas 0 0 789 619 10;
+#X obj 110 120 ar_pa_vvc \$1 pitch_env;
+#X obj 420 120 ar_pa_vvc \$1 noise_env;
+#X obj 110 290 hsl_vvc \$1 mod;
+#X obj 110 340 hsl_vvc \$1 glide;
+#X obj 110 470 vv_file_vvc \$1;
+#X obj 280 290 adsr_pa_vvc \$1 amp_env;
+#X obj 110 410 nbx_hide_vvc \$1 preamp 1;
+#X obj 200 410 nbx_hide_vvc \$1 pitch;
+#X text 111 387 monophony only;
+#X coords 0 619 1 618 640 360 0;

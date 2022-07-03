@@ -1,0 +1,6 @@
+#N canvas 0 50 949 522 10;
+#X obj 110 270 hsl_vvc \$1 \$2_pitch_follow 1;
+#X obj 110 120 hslxnbx_6m_vvc \$1 \$2_freq;
+#X obj 290 120 hslxnbx_6m_vvc \$1 \$2_mod 3 0.5;
+#X obj 490 120 hslxnbx_6m_vvc \$1 \$2_amp 1 1;
+#X coords 0 -1 1 1 580 220 1 100 100;

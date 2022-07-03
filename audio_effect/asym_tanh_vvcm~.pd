@@ -1,0 +1,9 @@
+#N canvas 558 189 508 376 10;
+#X obj 110 10 inlet~;
+#X obj 110 70 outlet~;
+#X obj 110 40 asym_tanh_vv~ \$1;
+#X obj 110 160 nbx_vvc \$1 amp 1;
+#X obj 110 120 nbx_vvc \$1 asym;
+#X connect 0 0 2 0;
+#X connect 2 0 1 0;
+#X coords 0 -1 1 1 120 110 1 100 100;

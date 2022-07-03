@@ -1,0 +1,17 @@
+#N canvas 0 0 473 359 10;
+#X text 295 136 s;
+#X text 375 136 b;
+#X text 355 136 t;
+#X text 335 136 a;
+#X text 315 136 c;
+#X text 295 226 a;
+#X text 315 226 e;
+#X text 335 226 i;
+#X text 355 226 o;
+#X text 375 226 u;
+#X obj 110 120 nbx_3m_vvc \$1 \$2_freq;
+#X obj 110 260 nbx_3m_vvc \$1 \$2_glide;
+#X obj 290 120 hrd5_vvc_mm \$1 \$2_voice;
+#X obj 290 210 hrd5_vvc_mm \$1 \$2_vowel;
+#X obj 110 180 hslxnbx_3m_vvc \$1 \$2_q 3 0.5;
+#X coords 0 -1 1 1 380 230 1 100 100;

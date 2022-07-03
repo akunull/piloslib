@@ -1,0 +1,7 @@
+#N canvas 282 238 374 296 10;
+#X obj 61 53 inlet;
+#X text 53 38 Note Vel;
+#X obj 61 113 outlet~;
+#X obj 61 83 \$1_voice~ \$2 0;
+#X connect 0 0 3 0;
+#X connect 3 0 2 0;

@@ -1,0 +1,20 @@
+#N canvas 412 208 484 366 10;
+#X text 102 205 \$1 parent name;
+#X obj 70 170 rr;
+#X text 102 225 \$2 name;
+#X obj 100 120 nbx 7 20 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
+11 -262144 -1 -262144 0 256;
+#X obj 20 270 outlet;
+#X obj 60 -10 inlet;
+#X obj 110 -10 r \$1_\$2;
+#X msg 110 20 set \$1;
+#X obj 70 270 s \$1_\$2_r;
+#X text 102 175 Makes an nbx_vvc whose value is duplicated by the object
+of the same name and can send values like the original;
+#X connect 1 0 4 0;
+#X connect 1 0 8 0;
+#X connect 3 0 1 0;
+#X connect 5 0 3 0;
+#X connect 6 0 7 0;
+#X connect 7 0 3 0;
+#X coords 0 -1 1 1 80 40 1 100 100;

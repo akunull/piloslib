@@ -1,0 +1,64 @@
+#N canvas 264 151 606 376 10;
+#X obj 263 205 clk_control;
+#X obj 140 140 bng 30 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 220 140 bng 30 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 170 210 nbx 7 15 0 1e+037 0 0 empty empty empty 0 -8 0 10 -262144
+-1 -1 1317 256;
+#X msg 110 261 set \$1;
+#X obj 180 140 bng 30 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 103 65 r global_play_r;
+#X obj 213 65 r global_stop_r;
+#X obj 323 65 r global_repl_r;
+#X obj 170 170 nbx_hide_vvc global tempo;
+#X obj 100 140 bng 40 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 443 65 r global_tap_r;
+#X obj 100 200 bng 30 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 130 200 bng 30 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 110 181 -;
+#X obj 332 279 f;
+#X obj 332 339 s global_clk;
+#X obj 332 309 + 1;
+#X obj 232 279 f;
+#X obj 272 229 r global_clk;
+#X obj 232 339 s global_clk;
+#X obj 232 309 - 1;
+#X obj 343 205 s global_repl;
+#X text 141 126 Play;
+#X text 221 126 Stop;
+#X text 102 126 Tap;
+#X text 140 181 +;
+#X obj 250 160 bng 10 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 323 95 r global_reset_r;
+#X text 181 116 Reset+;
+#X text 181 126 Play;
+#X connect 0 0 4 0;
+#X connect 1 0 0 1;
+#X connect 2 0 0 2;
+#X connect 3 0 0 0;
+#X connect 4 0 3 0;
+#X connect 5 0 0 1;
+#X connect 5 0 0 3;
+#X connect 5 0 22 0;
+#X connect 6 0 1 0;
+#X connect 7 0 2 0;
+#X connect 8 0 5 0;
+#X connect 10 0 0 5;
+#X connect 11 0 10 0;
+#X connect 12 0 18 0;
+#X connect 13 0 15 0;
+#X connect 15 0 17 0;
+#X connect 17 0 16 0;
+#X connect 18 0 21 0;
+#X connect 19 0 18 1;
+#X connect 19 0 15 1;
+#X connect 21 0 20 0;
+#X connect 27 0 0 3;
+#X connect 28 0 27 0;
+#X coords 0 -1 1 1 150 130 1 100 100;

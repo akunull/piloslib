@@ -1,0 +1,79 @@
+#N canvas 88 90 480 516 10;
+#X obj 180 360 r save_trig;
+#X obj 200 -20 r load_send;
+#X obj 180 460 s save_send;
+#X text 342 35 \$1 parent name;
+#X obj 350 360 r \$1_save;
+#X obj 350 460 s \$1_save_send;
+#X obj 280 -20 r \$1_load_send;
+#X obj 200 10 route \$1;
+#X obj 200 40 route \$2;
+#X text 342 55 \$2 name;
+#X obj 180 430 list2p \$1 \$2;
+#X obj 350 430 listp \$2;
+#X obj 20 250 s \$1_\$2;
+#X obj 170 70 rr;
+#X obj 110 -20 r \$1_\$2_r;
+#X text 342 75 \$3 default value;
+#X obj 180 400 list;
+#X obj 350 400 list;
+#X obj 100 119 nbx 7 20 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
+11 -262144 -1 -262144 0 256;
+#X obj 110 139 nbx 7 20 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
+11 -262144 -1 -262144 0 256;
+#X obj 200 139 nbx 7 20 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
+11 -262144 -1 -262144 0 256;
+#X obj 110 169 nbx 7 20 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
+11 -262144 -1 -262144 0 256;
+#X obj 200 169 nbx 7 20 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
+11 -262144 -1 -262144 0 256;
+#X obj 20 290 s \$1_\$2_mod1;
+#X obj 20 320 s \$1_\$2_mod2;
+#X obj 20 350 s \$1_\$2_mod3;
+#X obj 20 380 s \$1_\$2_mod4;
+#X obj 40 -20 lb \$3;
+#X obj 110 199 nbx 7 20 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
+11 -262144 -1 -262144 0 256;
+#X obj 200 199 nbx 7 20 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
+11 -262144 -1 -262144 0 256;
+#X obj 260 360 packtbf7 0 0 0 0;
+#X obj 20 70 unpack f f f f f f f;
+#X obj 20 410 s \$1_\$2_mod5;
+#X obj 20 440 s \$1_\$2_mod6;
+#X connect 0 0 16 0;
+#X connect 1 0 7 0;
+#X connect 4 0 17 0;
+#X connect 6 0 8 0;
+#X connect 7 0 8 0;
+#X connect 8 0 31 0;
+#X connect 10 0 2 0;
+#X connect 11 0 5 0;
+#X connect 13 0 18 0;
+#X connect 14 0 13 0;
+#X connect 16 0 10 0;
+#X connect 17 0 11 0;
+#X connect 18 0 12 0;
+#X connect 18 0 30 0;
+#X connect 19 0 23 0;
+#X connect 19 0 30 1;
+#X connect 20 0 24 0;
+#X connect 20 0 30 2;
+#X connect 21 0 25 0;
+#X connect 21 0 30 3;
+#X connect 22 0 26 0;
+#X connect 22 0 30 4;
+#X connect 27 0 13 0;
+#X connect 28 0 30 5;
+#X connect 28 0 32 0;
+#X connect 29 0 30 6;
+#X connect 29 0 33 0;
+#X connect 30 0 16 1;
+#X connect 30 0 17 1;
+#X connect 31 0 18 0;
+#X connect 31 1 19 0;
+#X connect 31 2 20 0;
+#X connect 31 3 21 0;
+#X connect 31 4 22 0;
+#X connect 31 5 28 0;
+#X connect 31 6 29 0;
+#X coords 0 -1 1 1 180 120 1 100 100;

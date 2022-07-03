@@ -1,0 +1,18 @@
+#N canvas 412 208 484 366 10;
+#X text 312 85 \$1 parent name;
+#X obj 100 170 rr;
+#X text 312 105 \$2 name;
+#X obj 100 270 s \$1_\$2;
+#X obj 100 80 rr;
+#X obj 100 50 r \$1_\$2_r;
+#X obj 50 270 outlet;
+#X obj 100 120 bng 30 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 80 20 inlet;
+#X connect 1 0 3 0;
+#X connect 1 0 6 0;
+#X connect 4 0 7 0;
+#X connect 5 0 4 0;
+#X connect 7 0 1 0;
+#X connect 8 0 4 0;
+#X coords 0 -1 1 1 30 50 1 100 100;

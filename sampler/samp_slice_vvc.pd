@@ -1,0 +1,7 @@
+#N canvas 400 176 726 378 10;
+#X obj 112 121 nbx_vvc \$1 root 36;
+#X obj 112 161 nbx_vvc \$1 slices 8;
+#X obj 112 241 load_vvc \$1 file;
+#X obj 112 201 nbx_vvc \$1 transpose;
+#X obj 262 121 adsr_pa_vvc \$1 amp_env 1;
+#X coords 0 -1 1 1 620 210 1 100 100;

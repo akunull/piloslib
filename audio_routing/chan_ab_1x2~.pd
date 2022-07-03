@@ -1,0 +1,16 @@
+#N canvas 0 50 450 300 10;
+#X obj 30 40 inlet~;
+#X obj 30 160 outlet~;
+#X obj 110 160 outlet~;
+#X obj 40 130 thrower_2x2~ \$1 a;
+#X obj 170 130 thrower_2x2~ \$1 b;
+#X obj 30 70 chan_1x2~ \$1;
+#X text 84 39 channel with sends to catchers/channels a and b with
+1in x 2outs;
+#X connect 0 0 5 0;
+#X connect 5 0 1 0;
+#X connect 5 0 3 0;
+#X connect 5 0 4 0;
+#X connect 5 1 2 0;
+#X connect 5 1 3 1;
+#X connect 5 1 4 1;

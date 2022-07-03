@@ -1,0 +1,12 @@
+#N canvas 0 50 867 379 10;
+#X floatatom 12 89 5 0 0 0 - - -;
+#X obj 12 29 seq_count_vv \$1;
+#X obj 122 29 seq_count_vvc \$1;
+#X obj 12 59 \$3_\$2x \$1;
+#X obj 122 169 \$4_\$2x_vvc \$1;
+#X text 460 59 \$1 name;
+#X text 460 79 \$2 steps;
+#X text 460 99 \$3 data stored (f for float or list);
+#X text 460 119 \$4 interface type (nbx \, vsl \, vslxnbx \, hsl);
+#X connect 1 0 3 0;
+#X connect 3 0 0 0;

@@ -1,0 +1,33 @@
+#N canvas 2 54 670 367 10;
+#X obj 103 120 hsl 120 20 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -192512 4600 1;
+#X text 382 105 \$1 parent name;
+#X text 382 125 \$2 name;
+#X obj 101 140 nbx 7 20 -1e+037 1e+037 0 1 empty empty empty 0 -8 0
+11 -262144 -1 -1 1 256;
+#X obj 50 200 ttbf;
+#X obj 50 300 outlet;
+#X text 251 55 hsl x nbx = multiply an hsl and nbx value together;
+#X obj 120 -10 r \$1_\$2_pack;
+#X obj 120 20 unpack;
+#X msg 120 50 set \$1;
+#X msg 170 80 set \$1;
+#X obj 100 300 s \$1_\$2_r;
+#X text 252 75 Makes a hslxnbx_vvc whose value is duplicated by the
+object of the same name and can send values like the original;
+#X obj 90 200 pack;
+#X text 382 145 \$3 default value of number box;
+#X text 382 165 \$4 default value of slider;
+#X connect 0 0 4 0;
+#X connect 0 0 13 0;
+#X connect 3 0 4 1;
+#X connect 3 0 13 1;
+#X connect 4 0 5 0;
+#X connect 7 0 8 0;
+#X connect 8 0 9 0;
+#X connect 8 1 10 0;
+#X connect 8 1 13 1;
+#X connect 9 0 0 0;
+#X connect 10 0 3 0;
+#X connect 13 0 11 0;
+#X coords 0 -1 1 1 130 60 1 100 100;

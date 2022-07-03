@@ -1,0 +1,28 @@
+#N canvas 426 54 646 479 10;
+#X obj -40 70 inlet~;
+#X obj 40 70 inlet~;
+#X obj 310 120 tgl_hide_vvc \$1 on 1;
+#X obj 110 120 vsl_hide_vvc \$1 amp 1;
+#X obj 150 120 vsl_hide_vvc \$1 amp_L 1;
+#X obj 200 120 vsl_hide_vvc \$1 amp_R 1;
+#X obj 150 260 vsl_hide_vvc \$1 a_L 1;
+#X obj 180 260 vsl_hide_vvc \$1 a_R 1;
+#X obj 270 260 vsl_hide_vvc \$1 b_L 1;
+#X obj 300 260 vsl_hide_vvc \$1 b_R 1;
+#X obj 260 120 vsl_hide_vvc \$1 master 1;
+#X obj 230 260 vsl_hide_vvc \$1 b;
+#X obj 110 260 vsl_hide_vvc \$1 a;
+#X obj -40 130 outlet~;
+#X obj 40 130 outlet~;
+#X obj 230 140 peak_stick~ \$1_R_out~;
+#X obj 180 140 peak_stick~ \$1_L_out~;
+#X obj -40 100 chan_ab_2x2~ \$1;
+#X text 94 39 channel with sends to catchers/channels a and b with
+2in x 2outs;
+#X connect 0 0 17 0;
+#X connect 1 0 17 1;
+#X connect 17 0 13 0;
+#X connect 17 0 16 0;
+#X connect 17 1 14 0;
+#X connect 17 1 15 0;
+#X coords 0 -1 1 1 260 290 1 100 100;

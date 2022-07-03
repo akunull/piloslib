@@ -1,0 +1,22 @@
+#N canvas 2 54 654 367 10;
+#X obj 103 120 hsl 120 30 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -192512 0 1;
+#X text 302 85 \$1 parent name;
+#X obj 100 170 rr;
+#X text 302 105 \$2 name;
+#X obj 80 80 rr;
+#X obj 50 200 outlet;
+#X obj 10 -10 inlet;
+#X text 252 45 Makes a hsl_vvc whose value is duplicated by the object
+of the same name and can send values like the original;
+#X msg 110 50 set \$1;
+#X obj 100 270 s \$1_\$2_r;
+#X obj 110 -10 r \$1_\$2;
+#X connect 0 0 2 0;
+#X connect 2 0 5 0;
+#X connect 2 0 9 0;
+#X connect 4 0 0 0;
+#X connect 6 0 4 0;
+#X connect 8 0 0 0;
+#X connect 10 0 8 0;
+#X coords 0 -1 1 1 130 50 1 100 100;

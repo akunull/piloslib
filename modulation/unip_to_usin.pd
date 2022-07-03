@@ -1,0 +1,13 @@
+#N canvas 711 149 505 328 10;
+#X obj 64 61 inlet;
+#X obj 64 91 + 0.5;
+#X obj 64 151 cos;
+#X obj 64 211 outlet;
+#X obj 64 181 bip_to_unip;
+#X text 50 29 unipolar (0 to 1) to unipolar sine wave (0 to 1);
+#X obj 64 121 * 6.28319;
+#X connect 0 0 1 0;
+#X connect 1 0 6 0;
+#X connect 2 0 4 0;
+#X connect 4 0 3 0;
+#X connect 6 0 2 0;

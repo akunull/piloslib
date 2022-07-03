@@ -1,0 +1,20 @@
+#N canvas 0 50 427 359 10;
+#X obj 37 107 realtime;
+#X msg 37 167 seed \$1;
+#X obj 97 197 random 999999;
+#X obj 97 17 inlet;
+#X obj 97 257 outlet;
+#X obj 97 227 / 999999;
+#X obj 97 47 b;
+#X obj 37 77 loadbang;
+#X obj 37 137 * 1000;
+#X text 18 292 "Real" Random - seeded random with a part of the load
+time;
+#X connect 0 0 8 0;
+#X connect 1 0 2 0;
+#X connect 2 0 5 0;
+#X connect 3 0 6 0;
+#X connect 5 0 4 0;
+#X connect 6 0 2 0;
+#X connect 7 0 0 1;
+#X connect 8 0 1 0;

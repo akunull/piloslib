@@ -1,0 +1,16 @@
+#N canvas 0 0 450 300 10;
+#X obj 63 59 inlet~;
+#X obj 113 59 inlet~;
+#X obj 63 179 outlet~;
+#X obj 63 149 /~;
+#X obj 63 119 -~;
+#X text 62 238 thanks to Matt Barber \, Francois Martineau \, and Dario
+Sanfilippo for these audio relational operators;
+#X obj 83 89 min~;
+#X connect 0 0 4 0;
+#X connect 0 0 6 0;
+#X connect 1 0 6 1;
+#X connect 3 0 2 0;
+#X connect 4 0 3 0;
+#X connect 4 0 3 1;
+#X connect 6 0 4 1;

@@ -1,0 +1,15 @@
+#N canvas 0 0 450 369 10;
+#X obj 100 171 sel 0;
+#X obj 130 201 b;
+#X obj 130 231 f 1;
+#X obj 100 231 f 0;
+#X obj 100 261 outlet;
+#X text 227 146 Bus Control In On (1) on non-zero;
+#X obj 100 120 bci_sel_vvcm \$1;
+#X connect 0 0 3 0;
+#X connect 0 1 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 4 0;
+#X connect 3 0 4 0;
+#X connect 6 0 0 0;
+#X coords 0 -1 1 1 65 40 1 100 100;

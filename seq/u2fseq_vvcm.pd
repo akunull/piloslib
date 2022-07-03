@@ -1,0 +1,70 @@
+#N canvas 114 14 882 648 10;
+#X obj 10 310 inlet;
+#X obj 70 710 outlet;
+#X obj 100 420 *;
+#X obj 140 320 swap \$2;
+#X obj 140 350 -;
+#X obj 100 560 +;
+#X obj 110 470 spigot \$3;
+#X obj 110 500 swap 1;
+#X obj 110 530 /;
+#X obj 140 380 / \$2;
+#X obj 100 590 * \$2;
+#X obj 100 620 int;
+#X obj 10 355 moses 1e-005;
+#X text 388 245 Zero lock sends the 1st value at only zero then the
+rest of the floats are spaced between. If one lock is enabled \, the
+last float will only send its value at 1 and the rest of the floats
+are spaced evenly.;
+#X obj 70 680 f_8x \$1;
+#X obj 140 290 ptbf \$4;
+#X obj 130 150 nbx_vvc \$1 floats 5;
+#X obj 270 320 rr;
+#X obj 10 20 nbx_8x_vvc \$1;
+#X obj 10 150 tgl_hide_vvc \$1 zero_lock;
+#X obj 70 150 tgl_hide_vvc \$1 one_lock;
+#X obj 257 167 nbx 7 20 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
+11 -262144 -1 -1 0 256;
+#X obj 70 650 change -1;
+#X obj 403 563 rr;
+#X obj 130 225 t b b a;
+#X obj 130 710 outlet;
+#X obj 10 680 b;
+#X text 388 185 Unipolar to float sequence - Get a float in a sequence
+depending on where you are from zero to one. So 0 would give the first
+float and 1 would give the last float. Floats are spaced evenly unless
+you enable zero lock or one lock;
+#X connect 0 0 12 0;
+#X connect 2 0 5 0;
+#X connect 3 0 4 0;
+#X connect 3 1 4 1;
+#X connect 4 0 9 0;
+#X connect 5 0 10 0;
+#X connect 6 0 7 0;
+#X connect 7 0 8 0;
+#X connect 7 1 8 1;
+#X connect 8 0 5 1;
+#X connect 9 0 2 1;
+#X connect 10 0 11 0;
+#X connect 11 0 22 0;
+#X connect 12 0 22 0;
+#X connect 12 0 26 0;
+#X connect 12 1 2 0;
+#X connect 14 0 1 0;
+#X connect 14 0 23 0;
+#X connect 15 0 3 0;
+#X connect 16 0 24 0;
+#X connect 17 0 3 1;
+#X connect 17 0 9 1;
+#X connect 17 0 10 1;
+#X connect 17 0 6 0;
+#X connect 19 0 6 1;
+#X connect 19 0 15 0;
+#X connect 20 0 15 1;
+#X connect 22 0 14 0;
+#X connect 23 0 21 0;
+#X connect 24 0 2 0;
+#X connect 24 1 15 0;
+#X connect 24 2 17 0;
+#X connect 26 0 25 0;
+#X coords 0 -1 1 1 350 210 1 0 0;

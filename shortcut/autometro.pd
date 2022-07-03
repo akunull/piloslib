@@ -1,0 +1,13 @@
+#N canvas 0 0 450 300 10;
+#X obj 191 54 loadbang;
+#X obj 159 140 outlet;
+#X obj 111 54 inlet;
+#X obj 151 54 inlet;
+#X text 160 36 ms;
+#X text 108 25 start/;
+#X text 113 36 stop;
+#X obj 159 112 metro \$1 \$2 \$3;
+#X connect 0 0 7 0;
+#X connect 2 0 7 0;
+#X connect 3 0 7 1;
+#X connect 7 0 1 0;

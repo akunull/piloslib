@@ -1,0 +1,9 @@
+#N canvas 245 25 780 600 10;
+#X obj 240 120 nbx_vvc \$1 steps 16;
+#X obj 240 170 nbx_vvc \$1 offset;
+#X obj 110 120 nbx_vvc \$1 length 16;
+#X obj 110 170 nbx_vvc \$1 rate 1;
+#X obj 2 119 outlet;
+#X obj 2 89 seq_count_vv \$1;
+#X connect 5 0 4 0;
+#X coords 0 -1 1 1 270 120 1 100 100;

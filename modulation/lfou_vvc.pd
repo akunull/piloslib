@@ -1,0 +1,16 @@
+#N canvas 284 127 649 376 10;
+#X obj 60 30 inlet;
+#X obj 110 130 nbx_vvc \$1 rate 1;
+#X obj 260 130 hslxnbx_vvc \$1 saw;
+#X obj 260 190 hslxnbx_vvc \$1 sqr;
+#X obj 260 250 hslxnbx_vvc \$1 sin;
+#X obj 410 190 hslxnbx_vvc \$1 mult 1 1;
+#X obj 410 250 hslxnbx_vvc \$1 add;
+#X obj 410 130 hslxnbx_vvc \$1 pow 1 1;
+#X obj 110 240 hslxnbx_vvc \$1 sync;
+#X obj 60 60 b;
+#X obj 110 180 bng_hide_vvc \$1 reset;
+#X obj 150 180 tgl_hide_vvc \$1 rev 0;
+#X connect 0 0 9 0;
+#X connect 9 0 10 0;
+#X coords 0 -1 1 1 450 220 1 100 100;

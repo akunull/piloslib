@@ -1,0 +1,14 @@
+#N canvas 128 122 450 301 10;
+#X obj 12 12 inlet;
+#X obj 12 72 outlet~;
+#X obj 12 42 samp_slice~ \$1;
+#X obj 62 12 r \$1_root;
+#X obj 132 12 r \$1_slices;
+#X obj 212 12 r \$1_file;
+#X obj 282 12 r \$1_transpose;
+#X connect 0 0 2 0;
+#X connect 2 0 1 0;
+#X connect 3 0 2 1;
+#X connect 4 0 2 2;
+#X connect 5 0 2 3;
+#X connect 6 0 2 4;

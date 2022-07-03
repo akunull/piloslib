@@ -1,0 +1,18 @@
+#N canvas 178 108 323 325 10;
+#X obj 102 236 outlet;
+#X obj 102 203 dtbf;
+#X obj 22 53 inlet;
+#X text 22 37 Beats;
+#X obj 102 53 r global_tempo;
+#X obj 62 53 inlet;
+#X text 62 37 Tempo;
+#X obj 22 128 * 60;
+#X obj 193 92 s global_send_tempo;
+#X obj 193 62 loadbang;
+#X connect 1 0 0 0;
+#X connect 2 0 7 0;
+#X connect 4 0 1 0;
+#X connect 5 0 1 0;
+#X connect 7 0 1 1;
+#X connect 9 0 8 0;
+#X coords 0 325 1 324 354 70 0;

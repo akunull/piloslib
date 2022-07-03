@@ -1,0 +1,12 @@
+#N canvas 0 0 450 300 10;
+#X obj 82 128 outlet;
+#X obj 82 38 inlet;
+#X text 82 22 Samp;
+#X obj 82 68 swap 44100;
+#X obj 82 98 /;
+#X obj 153 38 r global_sample_rate;
+#X connect 1 0 3 0;
+#X connect 3 0 4 0;
+#X connect 3 1 4 1;
+#X connect 4 0 0 0;
+#X connect 5 0 3 1;
