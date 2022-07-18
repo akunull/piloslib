@@ -1,6 +1,6 @@
 #N canvas 660 289 388 285 10;
 #X obj 127 117 vv_file_vvc \$1;
-#N canvas 232 7 1019 665 osc 0;
+#N canvas 232 7 1019 665 osc 1;
 #X obj 17 377 sentinel_osc_vvc \$1 osc_a;
 #X obj 207 17 ar_pa_vvc_mhx \$1 pitch_env;
 #X obj 247 257 hsl_6m_vvc \$1 noise_dry;
@@ -16,6 +16,7 @@
 #X obj 7 237 adsr_pa_vvc_mhx \$1 amp_env 0.75;
 #X obj 247 7 sentinel_filt_vvc \$1 filt;
 #X text 155 9 vcf~ bandpass;
+#X text 155 19 2 pole;
 #X restore 227 77 pd filt+amp;
 #X obj 57 77 mhx_engine_vvc \$1;
 #X text 49 122 4-macro;
