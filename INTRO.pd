@@ -1,4 +1,4 @@
-#N canvas -8 -8 1280 677 10;
+#N canvas 392 154 1280 677 10;
 #X declare -path ./vv;
 #X declare -path ./synth;
 #X declare -path ./shortcut;
@@ -25,6 +25,19 @@
 #X declare -path ../synth;
 #X declare -path ../timing;
 #X declare -path ../vv;
+#X declare -path piloslib/audio_effect;
+#X declare -path piloslib/audio_routing;
+#X declare -path piloslib/control_and_note;
+#X declare -path piloslib/conversion;
+#X declare -path piloslib/misc;
+#X declare -path piloslib/modulation;
+#X declare -path piloslib/oscillator;
+#X declare -path piloslib/sampler;
+#X declare -path piloslib/seq;
+#X declare -path piloslib/shortcut;
+#X declare -path piloslib/synth;
+#X declare -path piloslib/timing;
+#X declare -path piloslib/vv;
 #X obj 302 139 bng 45 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 202 199 s global_save;
@@ -216,7 +229,7 @@ load_send seq steps 16 \; load_send 0 0 0 1 \; load_send global tempo
 #N canvas 383 89 666 351 global_variables 0;
 #X obj 282 239 r global_clk;
 #X obj 282 269 nbx 7 20 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
-11 -262144 -1 -1 757 256;
+11 -262144 -1 -1 0 256;
 #X text 302 290 a clock takes place 24 times every beat \, aka each
 1/96 note which follows the standard midi timing;
 #X text 94 23 Timing variables:;
@@ -464,7 +477,7 @@ the value in instead of packing. \$1 to set the line length in ms;
 #X connect 46 0 45 0;
 #X restore 862 379 pd syntactic_sugar;
 #X text 644 483 hipass for offset removal;
-#N canvas 0 50 956 572 seq 1;
+#N canvas 0 50 956 572 seq 0;
 #X obj 12 219 seq_count_vv seq;
 #X obj 12 359 f_16x seq;
 #X floatatom 12 389 5 0 0 0 - - -;
@@ -767,38 +780,53 @@ in this library. It handles the global clock \, saving/loading parameters
 objects (sliders \, numberboxes \, etc) then for the patch itself that
 those values save into. Click save button to the left before saving
 the pd patch;
-#N canvas 0 50 499 502 declares 0;
-#X obj 42 436 declare -path ./vv;
-#X obj 42 376 declare -path ./synth;
-#X obj 42 346 declare -path ./shortcut;
-#X obj 42 286 declare -path ./sampler;
-#X obj 42 256 declare -path ./oscillator;
-#X obj 42 226 declare -path ./modulation;
-#X obj 42 196 declare -path ./misc;
-#X obj 42 166 declare -path ./conversion;
-#X obj 42 106 declare -path ./audio_routing;
-#X obj 42 76 declare -path ./audio_effect;
-#X obj 42 136 declare -path ./control_and_note;
-#X obj 42 316 declare -path ./seq;
-#X obj 42 406 declare -path ./timing;
-#X text 39 61 For when in root:;
-#X text 249 61 For when in a subdirectory:;
-#X obj 252 76 declare -path ../audio_effect;
-#X obj 252 106 declare -path ../audio_routing;
-#X obj 252 136 declare -path ../control_and_note;
-#X obj 252 166 declare -path ../conversion;
-#X obj 252 196 declare -path ../misc;
-#X obj 252 226 declare -path ../modulation;
-#X obj 252 256 declare -path ../oscillator;
-#X obj 252 286 declare -path ../sampler;
-#X obj 252 316 declare -path ../seq;
-#X obj 252 346 declare -path ../shortcut;
-#X obj 252 376 declare -path ../synth;
-#X obj 252 406 declare -path ../timing;
-#X obj 252 436 declare -path ../vv;
+#N canvas 0 50 794 502 declares 0;
+#X obj 42 456 declare -path ./vv;
+#X obj 42 396 declare -path ./synth;
+#X obj 42 366 declare -path ./shortcut;
+#X obj 42 306 declare -path ./sampler;
+#X obj 42 276 declare -path ./oscillator;
+#X obj 42 246 declare -path ./modulation;
+#X obj 42 216 declare -path ./misc;
+#X obj 42 186 declare -path ./conversion;
+#X obj 42 126 declare -path ./audio_routing;
+#X obj 42 96 declare -path ./audio_effect;
+#X obj 42 156 declare -path ./control_and_note;
+#X obj 42 336 declare -path ./seq;
+#X obj 42 426 declare -path ./timing;
+#X text 39 81 For when in root:;
+#X text 249 81 For when in a subdirectory:;
+#X obj 252 96 declare -path ../audio_effect;
+#X obj 252 126 declare -path ../audio_routing;
+#X obj 252 156 declare -path ../control_and_note;
+#X obj 252 186 declare -path ../conversion;
+#X obj 252 216 declare -path ../misc;
+#X obj 252 246 declare -path ../modulation;
+#X obj 252 276 declare -path ../oscillator;
+#X obj 252 306 declare -path ../sampler;
+#X obj 252 336 declare -path ../seq;
+#X obj 252 366 declare -path ../shortcut;
+#X obj 252 396 declare -path ../synth;
+#X obj 252 426 declare -path ../timing;
+#X obj 252 456 declare -path ../vv;
+#X obj 472 96 declare -path piloslib/audio_effect;
+#X obj 472 126 declare -path piloslib/audio_routing;
+#X obj 472 156 declare -path piloslib/control_and_note;
+#X obj 472 186 declare -path piloslib/conversion;
+#X obj 472 216 declare -path piloslib/misc;
+#X obj 472 246 declare -path piloslib/modulation;
+#X obj 472 276 declare -path piloslib/oscillator;
+#X obj 472 306 declare -path piloslib/sampler;
+#X obj 472 336 declare -path piloslib/seq;
+#X obj 472 366 declare -path piloslib/shortcut;
+#X obj 472 396 declare -path piloslib/synth;
+#X obj 472 426 declare -path piloslib/timing;
+#X obj 472 456 declare -path piloslib/vv;
+#X text 469 81 For when in a folder called piloslib:;
 #X text 29 11 Includes necessary directories. Only works if patch is
 in root or a subdirectory of root. To have this located elsewhere \,
-include PilosLib directories in pd's search path;
+include PilosLib directories in pd's search path. Can also be placed
+in a folder called piloslib with the primary patch.;
 #X restore 392 199 pd declares;
 #X connect 0 0 3 0;
 #X connect 2 0 1 0;
