@@ -1,4 +1,4 @@
-#N canvas 662 90 450 300 10;
+#N canvas 662 90 533 300 10;
 #X obj 201 74 r global_load;
 #X obj 41 74 r save_send;
 #X obj 41 134 list prepend add;
@@ -12,6 +12,11 @@
 #X obj 291 164 s save_trig;
 #X text 350 116 Clear msgbox;
 #X text 20 36 Save/Load control;
+#X obj 381 14 lb 5;
+#X obj 381 44 pack f 3;
+#X obj 381 74 savestate;
+#X obj 461 74 rrandom;
+#X obj 449 105 print;
 #X connect 0 0 6 0;
 #X connect 1 0 4 0;
 #X connect 2 0 3 0;
@@ -22,3 +27,9 @@
 #X connect 8 0 10 0;
 #X connect 8 1 9 0;
 #X connect 9 0 5 0;
+#X connect 13 0 14 0;
+#X connect 14 0 15 0;
+#X connect 15 1 16 0;
+#X connect 15 1 8 0;
+#X connect 15 1 17 0;
+#X connect 16 0 14 1;

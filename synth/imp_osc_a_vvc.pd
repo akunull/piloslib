@@ -10,7 +10,6 @@
 #X obj 550 940 hslxnbx_4m_vvc \$1 \$2_noenv;
 #X obj 290 190 tgl_hide_vvc \$1 \$2_reset 1;
 #X obj 460 210 nbx_4m_vvc \$1 \$2_glide;
-#X obj 110 260 nbx_vvc \$1 \$2_type 1;
 #X obj 290 250 hsl_vvc \$1 \$2_phase_start;
 #X obj 450 110 hsl_vvc \$1 \$2_pitched 1;
 #X obj 600 110 nbx_4m_vvc \$1 \$2_pitch;
@@ -19,7 +18,4 @@
 #X obj 110 170 nbx_4m_vvc \$1 \$2_sync 1;
 #X obj 110 340 nbx_4m_vvc \$1 \$2_nomod;
 #X text 461 297 monophony only;
-#X text 112 317 0: Sine<->Square;
-#X text 112 327 1: Triangle<->Saw;
-#X text 112 297 Osc wave mod type;
 #X coords 0 -1 1 1 860 980 1 100 100;
