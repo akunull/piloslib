@@ -20,8 +20,9 @@
 #X text 312 125 \$3 default value;
 #X obj 60 -10 lb \$3;
 #X obj 100 120 nbx 7 20 -1e+037 1e+037 0 0 empty empty \$2 1 -8 0 10
--262144 -1 -1 0 256;
+-262144 -1 -1 20 256;
 #X obj 60 270 outlet;
+#X obj 20 -10 inlet;
 #X connect 0 0 13 0;
 #X connect 1 0 0 0;
 #X connect 2 0 10 0;
@@ -40,4 +41,5 @@
 #X connect 17 0 16 0;
 #X connect 19 0 16 0;
 #X connect 20 0 6 0;
+#X connect 22 0 16 0;
 #X coords 0 -1 1 1 75 40 2 100 100;

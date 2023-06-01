@@ -1,0 +1,14 @@
+#N canvas -1 50 451 300 10;
+#X obj 52 96 pulse_gate;
+#X obj 52 126 outlet;
+#X obj 52 66 r \$1_rate;
+#X obj 122 66 r \$1_reset;
+#X obj 192 66 r \$1_width;
+#X obj 262 66 r \$1_amp_a;
+#X obj 332 66 r \$1_amp_b;
+#X connect 0 0 1 0;
+#X connect 2 0 0 0;
+#X connect 3 0 0 1;
+#X connect 4 0 0 2;
+#X connect 5 0 0 3;
+#X connect 6 0 0 4;

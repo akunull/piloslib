@@ -1,4 +1,4 @@
-#N canvas 0 0 583 300 10;
+#N canvas 0 0 797 346 10;
 #X obj 37 37 inlet~;
 #X obj 87 38 r \$1_on;
 #X obj 167 38 r \$1_length;
@@ -6,7 +6,9 @@
 #X obj 367 38 r \$1_speed;
 #X obj 37 127 outlet~;
 #X obj 467 38 r \$1_rev;
-#X obj 37 97 retrig~;
+#X obj 37 97 retrig~, f 89;
+#X obj 527 38 r \$1_length_mult;
+#X obj 647 38 r \$1_dry_amp;
 #X connect 0 0 7 0;
 #X connect 1 0 7 1;
 #X connect 2 0 7 2;
@@ -14,3 +16,5 @@
 #X connect 4 0 7 4;
 #X connect 6 0 7 5;
 #X connect 7 0 5 0;
+#X connect 8 0 7 6;
+#X connect 9 0 7 7;

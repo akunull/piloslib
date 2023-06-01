@@ -1,0 +1,10 @@
+#N canvas 288 121 945 454 10;
+#X obj 110 130 hsl_vvc \$1 \$2_a;
+#X obj 110 180 hsl_vvc \$1 \$2_s;
+#X obj 240 180 hsl_vvc \$1 \$2_r 0.5;
+#X obj 240 130 hsl_vvc \$1 \$2_d 0.5;
+#X obj 260 240 nbx_vvc \$1 \$2_ms 1000;
+#X obj 110 240 nbx_vvc \$1 \$2_pow_a -3;
+#X obj 110 280 nbx_vvc \$1 \$2_pow_b 3;
+#X obj 260 280 nbx_vvc \$1 \$2_amount 1;
+#X coords 0 -1 1 1 310 230 1 100 100;

@@ -1,0 +1,11 @@
+#N canvas 270 11 450 514 10;
+#X obj 90 320 outlet;
+#X obj 110 120 vnip_shift_vvcm \$1 \$2_0;
+#X obj 260 120 vnip_shift_vvcm \$1 \$2_1;
+#X obj 110 200 vnip_shift_vvcm \$1 \$2_2;
+#X obj 260 200 vnip_shift_vvcm \$1 \$2_3;
+#X connect 1 0 0 0;
+#X connect 2 0 0 0;
+#X connect 3 0 0 0;
+#X connect 4 0 0 0;
+#X coords 0 -1 1 1 310 190 1 100 100;

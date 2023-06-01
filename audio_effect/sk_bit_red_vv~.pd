@@ -13,9 +13,10 @@
 #X obj 32 39 inlet~;
 #X obj 32 99 outlet~;
 #X obj 82 249 s \$1_wet;
-#X obj 82 129 r \$1_amt;
+#X obj 92 129 r \$1_amt;
 #X obj 82 159 clip 0 1;
 #X text 121 93 single knob bit reduction;
+#X obj 82 39 inlet;
 #X connect 0 0 7 0;
 #X connect 1 0 0 0;
 #X connect 2 0 6 0;
@@ -30,3 +31,4 @@
 #X connect 11 0 10 0;
 #X connect 14 0 15 0;
 #X connect 15 0 3 0;
+#X connect 17 0 15 0;

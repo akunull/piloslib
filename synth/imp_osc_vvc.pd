@@ -8,7 +8,6 @@
 #X obj 770 850 hsl_4m_vvc \$1 \$2_filt2;
 #X obj 770 750 hsl_4m_vvc \$1 \$2_filt1;
 #X obj 110 590 ar_ppa_vvc_mqu \$1 \$2_env;
-#X obj 750 110 hslxnbx_4m_vvc \$1 \$2_pitch_env 1;
 #X obj 110 270 nbx_vvc \$1 \$2_type 1;
 #X obj 300 250 hsl_vvc \$1 \$2_phase_start;
 #X obj 110 350 ar_pa_vvc_mqu \$1 \$2_mod_env;
@@ -19,4 +18,5 @@
 #X text 112 327 0: Sine<->Square;
 #X text 112 337 1: Triangle<->Saw;
 #X text 112 307 Osc wave mod type;
+#X obj 750 110 hslxnbx_4m_vvc \$1 \$2_pitch_env;
 #X coords 0 -1 1 1 910 840 1 100 100;

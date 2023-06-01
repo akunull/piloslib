@@ -1,5 +1,5 @@
 #N canvas 660 289 388 285 10;
-#X obj 127 117 vv_file_vvc \$1;
+#X obj 197 117 vv_file_vvc \$1;
 #N canvas 232 7 1019 665 osc 1;
 #X obj 17 377 sentinel_osc_vvc \$1 osc_a;
 #X obj 207 17 ar_pa_vvc_mhx \$1 pitch_env;
@@ -19,9 +19,9 @@
 #X text 155 19 2 pole;
 #X restore 227 77 pd filt+amp;
 #X obj 57 77 mhx_engine_vvc \$1;
-#X text 49 122 4-macro;
-#X text 49 102 2-velocity;
-#X text 49 112 3-random;
-#X text 49 92 1-pitch;
-#X text 49 132 5-AR Env;
-#X text 49 142 6-LFO;
+#X text 59 122 4-macro;
+#X text 59 102 2-velocity;
+#X text 59 92 1-pitch;
+#X text 59 132 5-AR Env;
+#X text 59 142 6-LFO;
+#X text 59 112 3-random (per voice);

@@ -1,20 +1,21 @@
 # Pilos Lib
 ![PilosLib logo](https://akunull.com/pilosliblogo.jpeg)
 
-## Description:
+## Description
 Multi-platform open-source library of audio and modulation tools that focus on synthesis, live electronic music, interconnection, probability, unique sounds, and intuitive interfacing built by Akunull in Pure Data starting in 2014.
 
-## Required:
+## Required
 [Pure Data](https://puredata.info)
 
-## Recommended skills:
+## Recommended skills
 Basic Pure Data
+
 Basic electronic music concepts
 
-## Getting Started:
+## Getting Started
 See intro.pd in root folder or watch the [intro video](https://www.youtube.com/watch?v=Mv9c8uUxwkk). You must have the objects in plate.pd to use the library.
 
-## What is in the library:
+## What is in the library
 Vanilla only patches without expr(~) editable in pd
 
 Syntactic sugar to make Pure Data programming more efficient
@@ -33,7 +34,7 @@ Model-(View)-Controller programming architecture
 
 An assortment of synths and audio effects capable of some classic sounds and many strange ones
 
-## Ideas behind the library:
+## Ideas behind the library
 Readable, encapsulated code with intuitive interfacing and ease of use in mind
 
 Simple code, commenting, and intro tutorial instead of help files
@@ -41,7 +42,7 @@ Simple code, commenting, and intro tutorial instead of help files
 Portability through naming conventions and no externals
 
 
-## Synths:
+## Synths
 **rhine**-2 osc synth with 2 filters and mhx modulation system 
 
 **sentinel**-2 osc synth with variable pole lp/bp filter and mhx modulation system 
@@ -64,7 +65,7 @@ Portability through naming conventions and no externals
 
 **nsn**-Simple snare synth
 
-## Audio Effects:
+## Audio Effects
 **asym_tanh**-Asymmetry and tanh(x) for non-linear compression, distortion, tape-like saturation
 
 **bellmid_3band**-3 band eq with tanh(x) (non-linear compressor) with the middle channel also including the low and high
@@ -81,11 +82,18 @@ Portability through naming conventions and no externals
 
 **hip_mix**-hipass filter with dry/wet mixing controls
 
+
 **vcf_mix**-bandpass filter with dry/wet mixing controls
 
 **vcf_np**-vcf (bandpass filter) with variable amount of poles
 
 **vcf_npnp**-vcf~ (“voltage controlled” filter) with variable amount of poles and variable “low-pass” or band-pass
+
+**vcf_npnp_mix**-vcf~ (“voltage controlled” filter) with variable amount of poles and variable “low-pass” or band-pass with dry/wet mixing controls
+
+**multi_vcf**-vcf_npnp~ or bob~
+
+**multi_vcf_mix**-vcf_npnp~ or bob~ with dry/wet mixing controls
 
 **formant_filter**-Formant (vowel) filter with 5 formants
 

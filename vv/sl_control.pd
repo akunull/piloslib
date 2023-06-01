@@ -16,7 +16,7 @@
 #X obj 381 44 pack f 3;
 #X obj 381 74 savestate;
 #X obj 461 74 rrandom;
-#X obj 449 105 print;
+#X obj 461 44 b;
 #X connect 0 0 6 0;
 #X connect 1 0 4 0;
 #X connect 2 0 3 0;
@@ -32,4 +32,5 @@
 #X connect 15 1 16 0;
 #X connect 15 1 8 0;
 #X connect 15 1 17 0;
-#X connect 16 0 14 1;
+#X connect 16 0 14 0;
+#X connect 17 0 16 0;

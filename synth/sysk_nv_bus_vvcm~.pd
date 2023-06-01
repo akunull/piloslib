@@ -8,7 +8,7 @@
 #X text 38 205 \$2 synth;
 #X text 38 155 SYnth/sampler SKeleton n-voice- Hold a synth/sampler's
 vvc and n amount of voices;
-#X obj 137 97 \$1_bus~ \$3;
+#X obj 137 97 \$2_bus~ \$3;
 #X connect 0 0 2 0;
 #X connect 2 0 8 0;
 #X connect 8 0 1 0;

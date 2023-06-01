@@ -21,6 +21,7 @@
 #X obj 37 137 outlet;
 #X obj 707 37 r \$1_rev;
 #X text 714 21 Rev;
+#X obj 247 137 outlet;
 #X connect 9 0 18 0;
 #X connect 10 0 18 1;
 #X connect 11 0 18 2;
@@ -31,4 +32,5 @@
 #X connect 16 0 18 7;
 #X connect 17 0 18 8;
 #X connect 18 0 19 0;
+#X connect 18 1 22 0;
 #X connect 20 0 18 9;

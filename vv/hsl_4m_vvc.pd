@@ -18,11 +18,11 @@
 #X obj 110 -20 r \$1_\$2_r;
 #X text 312 75 \$3 default value;
 #X obj 60 -20 lb \$3;
-#X obj 103 140 hsl 85 20 -1 1 0 1 empty empty empty 0 -9 0 10 -262144
+#X obj 103 140 hsl 85 20 -1 1 0 1 empty empty empty 0 -9 0 10 -233017
 -1 -192512 4200 1;
-#X obj 213 140 hsl 85 20 -1 1 0 1 empty empty empty 0 -9 0 10 -262144
+#X obj 213 140 hsl 85 20 -1 1 0 1 empty empty empty 0 -9 0 10 -203890
 -1 -192512 4200 1;
-#X obj 103 160 hsl 85 20 -1 1 0 1 empty empty empty 0 -9 0 10 -262144
+#X obj 103 160 hsl 85 20 -1 1 0 1 empty empty empty 0 -9 0 10 -174763
 -1 -192512 4200 1;
 #X obj 190 140 bng 20 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
@@ -38,34 +38,34 @@
 #X obj 20 240 s \$1_\$2_mod1;
 #X obj 20 270 s \$1_\$2_mod2;
 #X obj 20 300 s \$1_\$2_mod3;
-#X obj 10 70 unpack f f f f;
 #X obj 10 -20 inlet;
-#X obj 213 160 hsl 85 20 -1 1 0 1 empty empty empty 0 -9 0 10 -262144
+#X obj 213 160 hsl 85 20 -1 1 0 1 empty empty empty 0 -9 0 10 -145636
 -1 -192512 4200 1;
 #X obj 300 160 bng 20 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X msg 450 130 0;
 #X obj 20 330 s \$1_\$2_mod4;
 #X obj 270 350 packtbf5 0 0 0;
+#X obj 10 70 unpack f f f f f;
 #X connect 0 0 13 0;
-#X connect 0 0 38 0;
+#X connect 0 0 37 0;
 #X connect 1 0 27 0;
 #X connect 2 0 8 0;
 #X connect 5 0 28 0;
 #X connect 7 0 9 0;
 #X connect 8 0 9 0;
-#X connect 9 0 32 0;
+#X connect 9 0 38 0;
 #X connect 11 0 3 0;
 #X connect 12 0 6 0;
 #X connect 14 0 0 0;
 #X connect 15 0 14 0;
 #X connect 17 0 14 0;
 #X connect 18 0 29 0;
-#X connect 18 0 38 1;
+#X connect 18 0 37 1;
 #X connect 19 0 30 0;
-#X connect 19 0 38 2;
+#X connect 19 0 37 2;
 #X connect 20 0 31 0;
-#X connect 20 0 38 3;
+#X connect 20 0 37 3;
 #X connect 21 0 24 0;
 #X connect 22 0 25 0;
 #X connect 23 0 26 0;
@@ -74,15 +74,16 @@
 #X connect 26 0 20 0;
 #X connect 27 0 11 0;
 #X connect 28 0 12 0;
-#X connect 32 0 0 0;
-#X connect 32 1 18 0;
-#X connect 32 2 19 0;
-#X connect 32 3 20 0;
-#X connect 33 0 14 0;
-#X connect 34 0 37 0;
-#X connect 34 0 38 4;
-#X connect 35 0 36 0;
-#X connect 36 0 34 0;
-#X connect 38 0 27 1;
-#X connect 38 0 28 1;
+#X connect 32 0 14 0;
+#X connect 33 0 36 0;
+#X connect 33 0 37 4;
+#X connect 34 0 35 0;
+#X connect 35 0 33 0;
+#X connect 37 0 27 1;
+#X connect 37 0 28 1;
+#X connect 38 0 0 0;
+#X connect 38 1 18 0;
+#X connect 38 2 19 0;
+#X connect 38 3 20 0;
+#X connect 38 4 33 0;
 #X coords 0 -1 1 1 220 80 1 100 100;

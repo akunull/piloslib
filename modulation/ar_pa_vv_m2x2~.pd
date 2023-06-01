@@ -1,0 +1,16 @@
+#N canvas 0 0 735 301 10;
+#X obj 37 167 ar_pa~ 0 0;
+#X obj 37 197 outlet~;
+#X obj 37 77 r \$1_\$3_nv;
+#X obj 57 107 vv_m2 \$1 \$2_a \$3;
+#X obj 177 107 vv_m2 \$1 \$2_r \$3;
+#X obj 297 107 vv_m2 \$1 \$2_ms \$3;
+#X obj 417 107 vv_m2 \$1 \$2_pow \$3;
+#X obj 547 107 vv_m2x2 \$1 \$2_amount \$3;
+#X connect 0 0 1 0;
+#X connect 2 0 0 0;
+#X connect 3 0 0 1;
+#X connect 4 0 0 2;
+#X connect 5 0 0 3;
+#X connect 6 0 0 4;
+#X connect 7 0 0 5;

@@ -54,11 +54,16 @@
 #X obj 312 113 r \$0_length_mult;
 #X obj 122 563 tline~ 1;
 #X obj 652 173 vlinesc~ 3;
+#X obj 182 123 r \$0_dry_amp;
+#X obj 152 153 * 1;
+#X obj 862 53 inlet;
+#X text 857 37 Dry amp;
+#X obj 862 83 s \$0_dry_amp;
 #X connect 0 0 24 0;
 #X connect 0 0 2 0;
 #X connect 2 0 1 0;
 #X connect 3 0 7 0;
-#X connect 4 0 53 1;
+#X connect 4 0 56 0;
 #X connect 5 0 7 0;
 #X connect 5 0 53 0;
 #X connect 8 0 27 0;
@@ -100,3 +105,6 @@
 #X connect 52 0 48 1;
 #X connect 53 0 6 0;
 #X connect 54 0 46 0;
+#X connect 55 0 56 1;
+#X connect 56 0 53 1;
+#X connect 57 0 59 0;

@@ -1,6 +1,6 @@
-#N canvas 2 54 619 367 10;
+#N canvas 591 154 619 367 10;
 #X obj 103 120 hsl 120 20 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -192512 0 1;
+-1 -192512 1968 1;
 #X obj 170 200 r save_trig;
 #X obj 190 -10 r load_send;
 #X obj 170 300 s save_send;
@@ -13,7 +13,7 @@
 #X obj 280 270 listp \$2;
 #X obj 100 300 s \$1_\$2;
 #X obj 100 -10 r \$1_\$2_r;
-#X obj 101 140 nbx 7 20 -1e+037 1e+037 0 1 empty empty empty 0 -8 0
+#X obj 111 140 nbx 7 20 -1e+037 1e+037 0 1 empty empty empty 0 -8 0
 11 -262144 -1 -1 1 256;
 #X obj 50 200 ttbf;
 #X obj 100 80 unpack;
@@ -29,6 +29,8 @@
 #X obj 90 230 s \$1_\$2_pack;
 #X text 382 145 \$3 default value of number box;
 #X text 382 165 \$4 default value of slider;
+#X text 101 145 x;
+#X obj 50 -10 inlet;
 #X connect 0 0 14 0;
 #X connect 0 0 16 0;
 #X connect 1 0 18 0;
@@ -53,4 +55,5 @@
 #X connect 19 0 10 0;
 #X connect 20 0 0 0;
 #X connect 21 0 13 0;
+#X connect 29 0 0 0;
 #X coords 0 -1 1 1 130 60 1 100 100;

@@ -14,8 +14,8 @@
 #X obj 450 110 hsl_vvc \$1 \$2_pitched 1;
 #X obj 600 110 nbx_4m_vvc \$1 \$2_pitch;
 #X obj 780 110 nbx_4m_vvc \$1 \$2_freq;
-#X obj 750 210 hslxnbx_4m_vvc \$1 \$2_pitch_env 1;
 #X obj 110 170 nbx_4m_vvc \$1 \$2_sync 1;
 #X obj 110 340 nbx_4m_vvc \$1 \$2_nomod;
 #X text 461 297 monophony only;
+#X obj 740 210 hslxnbx_4m_vvc \$1 \$2_pitch_env 1 1;
 #X coords 0 -1 1 1 860 980 1 100 100;

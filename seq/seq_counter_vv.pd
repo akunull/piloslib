@@ -1,0 +1,14 @@
+#N canvas 0 50 450 300 10;
+#X obj 10 50 r \$1_rate;
+#X obj 170 50 r \$1_length;
+#X obj 330 50 r \$1_offset;
+#X obj 90 50 r \$1_reset;
+#X obj 10 130 outlet;
+#X obj 250 50 r \$1_extend;
+#X obj 10 100 seq_counter;
+#X connect 0 0 6 0;
+#X connect 1 0 6 2;
+#X connect 2 0 6 4;
+#X connect 3 0 6 1;
+#X connect 5 0 6 3;
+#X connect 6 0 4 0;

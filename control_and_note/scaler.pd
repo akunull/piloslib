@@ -173,7 +173,7 @@
 #X restore 607 507 pd misc;
 #X text 132 20 Note Vel;
 #X text 192 20 Transpose;
-#X text 372 20 0-bypass 1-Ionian 2-Dorian 3-Phrygian 4-Lydian 5-Mixolydian
+#X text 372 60 0-bypass 1-Ionian 2-Dorian 3-Phrygian 4-Lydian 5-Mixolydian
 6-Aeolian 7-Locrian 8-Major Pentatonic 9-Minor Pentatonic 10-Blues
 ;
 #X text 282 20 Mode;

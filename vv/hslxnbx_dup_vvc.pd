@@ -1,9 +1,9 @@
 #N canvas 2 54 670 367 10;
 #X obj 103 120 hsl 120 20 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -192512 4600 1;
+-1 -192512 0 1;
 #X text 382 105 \$1 parent name;
 #X text 382 125 \$2 name;
-#X obj 101 140 nbx 7 20 -1e+037 1e+037 0 1 empty empty empty 0 -8 0
+#X obj 111 140 nbx 7 20 -1e+037 1e+037 0 1 empty empty empty 0 -8 0
 11 -262144 -1 -1 1 256;
 #X obj 50 200 ttbf;
 #X obj 50 300 outlet;
@@ -18,6 +18,7 @@ object of the same name and can send values like the original;
 #X obj 90 200 pack;
 #X text 382 145 \$3 default value of number box;
 #X text 382 165 \$4 default value of slider;
+#X text 101 145 x;
 #X connect 0 0 4 0;
 #X connect 0 0 13 0;
 #X connect 3 0 4 1;

@@ -16,8 +16,9 @@
 #X obj 240 943 hslxnbx_6m_vvc \$1 asym 30;
 #X text 119 62 4-macro;
 #X text 119 42 2-velocity;
-#X text 119 52 3-random;
 #X text 119 32 1-pitch;
 #X text 119 72 5-AR Env;
 #X text 119 82 6-LFO;
+#X obj 10 823 nbx_6m_vvc \$1 sync 1;
+#X text 119 52 3-random (per voice);
 #X coords 0 542 1 541 630 360 0;

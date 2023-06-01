@@ -18,6 +18,8 @@
 #X obj 37 27 inlet~;
 #X text 31 283 TRiangle to sAW oscillator with Control Voltage input
 (0-1);
+#X text 31 13 Phasor;
+#X text 151 13 Tri<->Saw;
 #X connect 1 0 14 0;
 #X connect 2 0 3 0;
 #X connect 3 0 4 0;

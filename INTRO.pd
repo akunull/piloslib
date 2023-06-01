@@ -46,6 +46,8 @@
 #X obj 302 199 s global_load;
 #X obj 302 109 loadbang;
 #X obj 392 139 sl_control;
+#A saved 0.0654511 3;
+#A saved 0.23176 3;
 #N canvas 665 208 450 300 msgbx 0;
 #X obj 43 13 inlet;
 #X msg 43 38 \; load_send test_vni 10 \; load_send test_ci -1 0 \;
@@ -92,56 +94,58 @@ noise_ds_pitch_env 0 0 0 0 0 \; load_send syn2 noise_env_r 0.5 0 0
 0 0 \; load_send syn2 noise_env_a 0 0 0 0 0 \; load_send syn2 noise_env_ms
 500 0 0 0 0 \; load_send syn2 noise_env_pow_a -3 0 0 0 0 \; load_send
 syn2 noise_env_pow_b 3 0 0 0 0 \; load_send syn2 noise_env_amount 1
-0 0 0 0 \; load_send syn2 noise_ds 0 0 0 0 0 \; load_send syn2 osc_a_nomod
-0 0 0 0 0 \; load_send syn2 osc_a_sync 1 0 0 0 0 \; load_send syn2
-osc_a_pitch_env 0 1 0 0 0 0 \; load_send syn2 osc_a_freq 0 0 0 0 0
-\; load_send syn2 osc_a_pitch 0 0 0 0 0 \; load_send syn2 osc_a_pitched
-1 \; load_send syn2 osc_a_phase_start 0 \; load_send syn2 osc_a_type
-1 \; load_send syn2 osc_a_glide 0 0 0 0 0 \; load_send syn2 osc_a_reset
-1 \; load_send syn2 osc_a_noenv 0 1 0 0 0 0 \; load_send syn2 osc_a_asym
-0 0 0 0 0 \; load_send syn2 osc_a_wet 1 0 0 0 0 \; load_send syn2 osc_a_mod_env_amount
-1 0 0 0 0 \; load_send syn2 osc_a_mod_env_pow 3 0 0 0 0 \; load_send
-syn2 osc_a_mod_env_ms 1000 0 0 0 0 \; load_send syn2 osc_a_mod_env_r
-0.5 0 0 0 0 \; load_send syn2 osc_a_mod_env_a 0 0 0 0 0 \; load_send
-syn2 osc_a_env_r 0.5 0 0 0 0 \; load_send syn2 osc_a_env_a 0 0 0 0
-0 \; load_send syn2 osc_a_env_ms 500 0 0 0 0 \; load_send syn2 osc_a_env_pow_a
--3 0 0 0 0 \; load_send syn2 osc_a_env_pow_b 3 0 0 0 0 \; load_send
-syn2 osc_a_env_amount 1 0 0 0 0 \; load_send syn2 osc_a_filt1 0 0 0
-0 0 \; load_send syn2 osc_a_filt2 0 0 0 0 0 \; load_send syn2 osc_a_dry
-1 0 0 0 0 \; load_send syn2 osc_a_mod 0 0 0 0 0 \; load_send syn2 osc_b_freq
-0 0 0 0 0 \; load_send syn2 osc_b_pitched 1 \; load_send syn2 osc_b_noenv
-0 0 0 0 0 \; load_send syn2 osc_b_mod_env_amount 1 0 0 0 0 \; load_send
-syn2 osc_b_mod_env_pow 3 0 0 0 0 \; load_send syn2 osc_b_mod_env_ms
-1000 0 0 0 0 \; load_send syn2 osc_b_mod_env_r 0.5 0 0 0 0 \; load_send
-syn2 osc_b_mod_env_a 0 0 0 0 0 \; load_send syn2 osc_b_phase_start
-0 \; load_send syn2 osc_b_type 1 \; load_send syn2 osc_b_pitch_env
-0 1 0 0 0 0 \; load_send syn2 osc_b_env_r 0.5 0 0 0 0 \; load_send
-syn2 osc_b_env_a 0 0 0 0 0 \; load_send syn2 osc_b_env_ms 500 0 0 0
-0 \; load_send syn2 osc_b_env_pow_a -3 0 0 0 0 \; load_send syn2 osc_b_env_pow_b
-3 0 0 0 0 \; load_send syn2 osc_b_env_amount 1 0 0 0 0 \; load_send
-syn2 osc_b_filt1 0 0 0 0 0 \; load_send syn2 osc_b_filt2 0 0 0 0 0
-\; load_send syn2 osc_b_dry 1 0 0 0 0 \; load_send syn2 osc_b_sync
-1 0 0 0 0 \; load_send syn2 osc_b_glide 0 0 0 0 0 \; load_send syn2
-osc_b_mod 0 0 0 0 0 \; load_send syn2 osc_b_reset 1 \; load_send syn2
-osc_b_pitch 0 0 0 0 0 \; load_send syn2 fm 0 1 0 0 0 0 \; load_send
-syn2 pitch 0 0 0 0 0 \; load_send syn1 fm 0 1 \; load_send syn1 osc_a_amp
-1 \; load_send syn1 osc_b_amp 0 \; load_send syn1 osc_b_pitch 12 \;
-load_send syn1 amp_pitch_follow 1 \; load_send syn1 osc_b_reset 0 \;
-load_send syn1 osc_a_reset 0 \; load_send syn1 osc_a_pitch 0 \; load_send
-syn1 noise_dry_amp 0 \; load_send syn1 pitch 0 \; load_send syn1 amp_env_amount
-1 \; load_send syn1 amp_env_pow 3 \; load_send syn1 amp_env_ms 1000
-\; load_send syn1 amp_env_a 0 \; load_send syn1 amp_env_r 0.5 \; load_send
-syn1 amp_env_d 0.5 \; load_send syn1 amp_env_s 0 \; load_send fullseq
-14 15 \; load_send fullseq 13 0 \; load_send fullseq 12 0 \; load_send
-fullseq 11 0 \; load_send fullseq 10 0 \; load_send fullseq 9 0 \;
-load_send fullseq 8 9 \; load_send fullseq 6 7 \; load_send fullseq
-5 6 \; load_send fullseq 4 5 \; load_send fullseq 3 4 \; load_send
-fullseq 2 3 \; load_send fullseq 1 2 \; load_send fullseq 0 1 \; load_send
-fullseq 7 8 \; load_send fullseq 15 16 \; load_send 0 0 0 \; load_send
-fullseq rate 1 \; load_send fullseq length 16 \; load_send fullseq
-offset 0 \; load_send fullseq steps 16 \; load_send seq2_3 14 0 \;
-load_send seq2_3 13 0 \; load_send seq2_3 12 0 \; load_send seq2_3
-11 0 \; load_send seq2_3 10 0 \; load_send seq2_3 9 0 \; load_send
+0 0 0 0 \; load_send syn2 noise_ds 0 0 0 0 0 \; load_send syn2 osc_a_pitch_env
+0 1 0 0 0 0 \; load_send syn2 osc_a_nomod 0 0 0 0 0 \; load_send syn2
+osc_a_sync 1 0 0 0 0 \; load_send syn2 osc_a_freq 0 0 0 0 0 \; load_send
+syn2 osc_a_pitch 0 0 0 0 0 \; load_send syn2 osc_a_pitched 1 \; load_send
+syn2 osc_a_phase_start 0 \; load_send syn2 osc_a_glide 0 0 0 0 0 \;
+load_send syn2 osc_a_reset 1 \; load_send syn2 osc_a_noenv 0 1 0 0
+0 0 \; load_send syn2 osc_a_asym 0 0 0 0 0 \; load_send syn2 osc_a_wet
+1 0 0 0 0 \; load_send syn2 osc_a_mod_env_amount 1 0 0 0 0 \; load_send
+syn2 osc_a_mod_env_pow 3 0 0 0 0 \; load_send syn2 osc_a_mod_env_ms
+1000 0 0 0 0 \; load_send syn2 osc_a_mod_env_r 0.5 0 0 0 0 \; load_send
+syn2 osc_a_mod_env_a 0 0 0 0 0 \; load_send syn2 osc_a_env_r 0.5 0
+0 0 0 \; load_send syn2 osc_a_env_a 0 0 0 0 0 \; load_send syn2 osc_a_env_ms
+500 0 0 0 0 \; load_send syn2 osc_a_env_pow_a -3 0 0 0 0 \; load_send
+syn2 osc_a_env_pow_b 3 0 0 0 0 \; load_send syn2 osc_a_env_amount 1
+0 0 0 0 \; load_send syn2 osc_a_filt1 0 0 0 0 0 \; load_send syn2 osc_a_filt2
+0 0 0 0 0 \; load_send syn2 osc_a_dry 1 0 0 0 0 \; load_send syn2 osc_a_mod
+0 0 0 0 0 \; load_send syn2 osc_b_pitch_env 0 1 0 0 0 0 \; load_send
+syn2 osc_b_freq 0 0 0 0 0 \; load_send syn2 osc_b_pitched 1 \; load_send
+syn2 osc_b_noenv 0 0 0 0 0 \; load_send syn2 osc_b_mod_env_amount 1
+0 0 0 0 \; load_send syn2 osc_b_mod_env_pow 3 0 0 0 0 \; load_send
+syn2 osc_b_mod_env_ms 1000 0 0 0 0 \; load_send syn2 osc_b_mod_env_r
+0.5 0 0 0 0 \; load_send syn2 osc_b_mod_env_a 0 0 0 0 0 \; load_send
+syn2 osc_b_phase_start 0 \; load_send syn2 osc_b_type 1 \; load_send
+syn2 osc_b_env_r 0.5 0 0 0 0 \; load_send syn2 osc_b_env_a 0 0 0 0
+0 \; load_send syn2 osc_b_env_ms 500 0 0 0 0 \; load_send syn2 osc_b_env_pow_a
+-3 0 0 0 0 \; load_send syn2 osc_b_env_pow_b 3 0 0 0 0 \; load_send
+syn2 osc_b_env_amount 1 0 0 0 0 \; load_send syn2 osc_b_filt1 0 0 0
+0 0 \; load_send syn2 osc_b_filt2 0 0 0 0 0 \; load_send syn2 osc_b_dry
+1 0 0 0 0 \; load_send syn2 osc_b_sync 1 0 0 0 0 \; load_send syn2
+osc_b_glide 0 0 0 0 0 \; load_send syn2 osc_b_mod 0 0 0 0 0 \; load_send
+syn2 osc_b_reset 1 \; load_send syn2 osc_b_pitch 0 0 0 0 0 \; load_send
+syn2 fm 0 1 0 0 0 0 \; load_send syn2 pitch 0 0 0 0 0 \; load_send
+syn1 fm 0 1 \; load_send syn1 osc_a_amp 1 \; load_send syn1 osc_b_amp
+0 \; load_send syn1 osc_b_pitch 12 \; load_send syn1 amp_pitch_follow
+1 \; load_send syn1 osc_b_reset 0 \; load_send syn1 osc_a_reset 0 \;
+load_send syn1 osc_a_pitch 0 \; load_send syn1 noise_dry_amp 0 \; load_send
+syn1 pitch 0 \; load_send syn1 amp_env_amount 1 \; load_send syn1 amp_env_pow
+3 \; load_send syn1 amp_env_ms 1000 \; load_send syn1 amp_env_a 0 \;
+load_send syn1 amp_env_r 0.5 \; load_send syn1 amp_env_d 0.5 \; load_send
+syn1 amp_env_s 0 \; load_send seq2 extend 0 \; load_send seq2 rate
+1 \; load_send seq2 length 16 \; load_send seq2 offset 0 \; load_send
+seq extend 0 \; load_send seq rate 1 \; load_send seq length 16 \;
+load_send seq offset 0 \; load_send fullseq 14 15 \; load_send fullseq
+13 0 \; load_send fullseq 12 0 \; load_send fullseq 11 0 \; load_send
+fullseq 10 0 \; load_send fullseq 9 0 \; load_send fullseq 8 9 \; load_send
+fullseq 6 7 \; load_send fullseq 5 6 \; load_send fullseq 4 5 \; load_send
+fullseq 3 4 \; load_send fullseq 2 3 \; load_send fullseq 1 2 \; load_send
+fullseq 0 1 \; load_send fullseq 7 8 \; load_send fullseq 15 16 \;
+load_send 0 0 0 \; load_send fullseq rate 1 \; load_send fullseq length
+16 \; load_send fullseq offset 0 \; load_send fullseq steps 16 \; load_send
+seq2_3 14 0 \; load_send seq2_3 13 0 \; load_send seq2_3 12 0 \; load_send
+seq2_3 11 0 \; load_send seq2_3 10 0 \; load_send seq2_3 9 0 \; load_send
 seq2_3 8 0 \; load_send seq2_3 15 0 \; load_send seq2_3 6 0 \; load_send
 seq2_3 5 0 \; load_send seq2_3 4 0 \; load_send seq2_3 3 0 \; load_send
 seq2_3 2 0 \; load_send seq2_3 1 0 \; load_send seq2_3 0 15 \; load_send
@@ -161,16 +165,13 @@ seq2_0 11 0 \; load_send seq2_0 10 0 \; load_send seq2_0 9 0 \; load_send
 seq2_0 8 0 \; load_send seq2_0 6 0 \; load_send seq2_0 5 0 \; load_send
 seq2_0 4 0 \; load_send seq2_0 3 0 \; load_send seq2_0 2 0 \; load_send
 seq2_0 1 0 \; load_send seq2_0 0 -4 \; load_send seq2_0 7 0 \; load_send
-seq2_0 15 0 \; load_send seq2 rate 1 \; load_send seq2 length 16 \;
-load_send seq2 offset 0 \; load_send seq2 steps 16 \; load_send seq
-14 0 \; load_send seq 13 0 \; load_send seq 12 0 \; load_send seq 11
-0 \; load_send seq 10 0 \; load_send seq 9 0 \; load_send seq 8 0 \;
-load_send seq 6 0.2 \; load_send seq 5 0.1 \; load_send seq 4 0 \;
-load_send seq 3 0.7 \; load_send seq 2 0.8 \; load_send seq 1 0.9 \;
-load_send seq 0 1 \; load_send seq 7 0.3 \; load_send seq 15 0 \; load_send
-seq rate 1 \; load_send seq length 16 \; load_send seq offset 0 \;
-load_send seq steps 16 \; load_send 0 0 0 1 \; load_send global tempo
-120 \;;
+seq2_0 15 0 \; load_send seq 14 0 \; load_send seq 13 0 \; load_send
+seq 12 0 \; load_send seq 11 0 \; load_send seq 10 0 \; load_send seq
+9 0 \; load_send seq 8 0 \; load_send seq 6 0.2 \; load_send seq 5
+0.1 \; load_send seq 4 0 \; load_send seq 3 0.7 \; load_send seq 2
+0.8 \; load_send seq 1 0.9 \; load_send seq 0 1 \; load_send seq 7
+0.3 \; load_send seq 15 0 \; load_send 0 0 0 1 \; load_send global
+tempo 120 \;;
 #X connect 0 0 1 0;
 #X restore 392 169 pd msgbx;
 #X obj 542 409 catcher~ master;
@@ -302,13 +303,13 @@ load_send seq steps 16 \; load_send 0 0 0 1 \; load_send global tempo
 #X obj 22 159 bng 30 50 20 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 22 301 vsl 30 65 0 1 0 1 empty empty empty 0 -9 0 10 -262144
--1 -1 5592 1;
+-1 -1 2021 1;
 #X obj 22 541 vsl 30 65 0 1 0 1 empty empty empty 0 -9 0 10 -262144
 -1 -1 6400 1;
 #X obj 61 421 vsl 30 65 0 1 0 1 empty empty empty 0 -9 0 10 -262144
 -1 -1 1600 1;
 #X obj 382 361 vsl 30 65 0 1 0 1 empty empty empty 0 -9 0 10 -262144
--1 -1 2011 1;
+-1 -1 5486 1;
 #X obj 452 129 r global_clk;
 #X obj 382 219 bng 30 50 20 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
@@ -477,73 +478,71 @@ the value in instead of packing. \$1 to set the line length in ms;
 #X restore 862 379 pd syntactic_sugar;
 #X text 644 483 hipass for offset removal;
 #N canvas 0 50 956 572 seq 0;
-#X obj 12 219 seq_count_vv seq;
-#X obj 12 359 f_16x seq;
-#X floatatom 12 389 5 0 0 0 - - -;
-#X obj 122 219 seq_count_vvc seq;
-#X obj 452 219 nbx_16x_vvc seq;
-#X text 10 779 seq_constructor contains the typical objects used for
+#X obj 12 319 f_16x seq;
+#X floatatom 12 349 5 0 0 0 - - -;
+#X obj 452 179 nbx_16x_vvc seq;
+#X text 10 739 seq_constructor contains the typical objects used for
 sequencing defined by parameters passed;
-#X floatatom 12 840 5 0 0 0 - - -;
-#X obj 12 459 seq_count_vvcm seq2;
-#X obj 12 679 seq_scene seq2 0 f 16 nbx;
-#X obj 182 679 seq_scene seq2 1 f 16 nbx;
-#X obj 352 679 seq_scene seq2 2 f 16 nbx;
-#X obj 12 719 rr;
-#X floatatom 12 749 5 0 0 0 - - -;
-#X obj 692 559 s seq2_scene;
-#X obj 692 519 hradio 30 1 1 4 empty empty empty 0 -8 0 10 -262144
+#X floatatom 12 800 5 0 0 0 - - -;
+#X obj 12 639 seq_scene seq2 0 f 16 nbx;
+#X obj 182 639 seq_scene seq2 1 f 16 nbx;
+#X obj 352 639 seq_scene seq2 2 f 16 nbx;
+#X obj 12 679 rr;
+#X floatatom 12 709 5 0 0 0 - - -;
+#X obj 692 519 s seq2_scene;
+#X obj 692 479 hradio 30 1 1 4 empty empty empty 0 -8 0 10 -262144
 -1 -1 3;
-#X obj 522 679 seq_scene seq2 3 f 16 tgl;
-#X obj 12 819 seq_constructor fullseq f 16 nbx;
-#X text 380 119 Lengths that are greater than steps start playing from
-the beginning after the last step. So a step count of 8 and a length
-of 12 would play the first 8 steps \, then play the first four steps
-and repeat.;
-#X floatatom 22 240 5 0 0 0 - - -;
-#X text 450 189 This is a series of number boxes named seq so it sends
+#X obj 522 639 seq_scene seq2 3 f 16 tgl;
+#X obj 12 779 seq_constructor fullseq f 16 nbx;
+#X floatatom 22 200 5 0 0 0 - - -;
+#X text 450 149 This is a series of number boxes named seq so it sends
 the floats named "seq" seen to the lower left ([f_16x seq]).;
-#X obj 32 59 bng 30 50 20 0 empty empty empty 17 7 0 10 -262144 -1
+#X obj 32 39 bng 30 50 20 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X text 22 40 Press play for output:;
-#X obj 72 79 s global_play_r;
-#X text 220 819 \$1 name;
-#X text 220 879 \$4 interface type (nbx \, vsl \, vslxnbx \, hsl \,
+#X text 22 20 Press play for output:;
+#X obj 72 59 s global_play_r;
+#X text 220 779 \$1 name;
+#X text 220 839 \$4 interface type (nbx \, vsl \, vslxnbx \, hsl \,
 list);
-#X text 220 859 \$3 steps;
-#X text 220 839 \$2 data stored (f for float or list);
-#X text 20 439 Sequencer scenes/patterns;
-#X text 300 519 [seq_scene] outputs when a variable named \$1_scene
+#X text 220 819 \$3 steps;
+#X text 220 799 \$2 data stored (f for float or list);
+#X text 20 399 Sequencer scenes/patterns;
+#X text 300 479 [seq_scene] outputs when a variable named \$1_scene
 is equal to its scene number \, By default all scenes output \, but
 if it receives a number that isn't its scene number \, it won't output
 ;
-#X text 440 589 \$2 scene;
-#X text 440 629 \$4 steps;
-#X text 440 649 \$5 interface (a control ending in _vvc);
-#X text 440 609 \$3 data stored (f for float);
-#X text 440 569 Other args:;
-#X text 10 189 A seq_count controls the step count of a sequencer starting
-at 0;
-#X text 80 359 Each of the step values are sent from f_16x upon receiving
+#X text 440 549 \$2 scene;
+#X text 440 589 \$4 steps;
+#X text 440 609 \$5 interface (a control ending in _vvc);
+#X text 440 569 \$3 data stored (f for float);
+#X text 440 529 Other args:;
+#X text 80 319 Each of the step values are sent from f_16x upon receiving
 its step number and set by the nbx_16x_vvc to the right;
+#X obj 12 179 seq_counter_vv seq;
+#X obj 132 179 seq_counter_vvc seq;
+#X obj 12 419 seq_counter_vvcm seq2;
+#X text 10 139 Rate is rate of each step. Extend continues the sequence
+from the beginning for n amount of steps;
+#X text 10 109 A seq_counter controls the step count of a sequencer
+starting at 0;
 #X connect 0 0 1 0;
-#X connect 0 0 18 0;
-#X connect 1 0 2 0;
-#X connect 7 0 15 0;
+#X connect 5 0 8 0;
+#X connect 6 0 8 0;
 #X connect 7 0 8 0;
-#X connect 7 0 9 0;
-#X connect 7 0 10 0;
-#X connect 8 0 11 0;
-#X connect 9 0 11 0;
-#X connect 10 0 11 0;
-#X connect 11 0 12 0;
-#X connect 14 0 13 0;
-#X connect 15 0 11 0;
-#X connect 16 0 6 0;
-#X connect 20 0 22 0;
+#X connect 8 0 9 0;
+#X connect 11 0 10 0;
+#X connect 12 0 8 0;
+#X connect 13 0 4 0;
+#X connect 16 0 18 0;
+#X connect 31 0 0 0;
+#X connect 31 0 14 0;
+#X connect 33 0 12 0;
+#X connect 33 0 5 0;
+#X connect 33 0 6 0;
+#X connect 33 0 7 0;
 #X restore 862 319 pd seq;
 #X text 284 453 Record wav file synced with play/stop;
-#N canvas 0 50 847 572 synth_and_samplers 1;
+#N canvas 0 50 847 572 synth_and_samplers 0;
 #X obj 22 169 sysk_nv_vvcm~ 5 osciano syn1;
 #X obj 22 529 s syn1_fm_r;
 #X text 22 470 Variables in synths can be accessed the same way you
@@ -638,7 +637,6 @@ copy from plate to plate:;
 #X text 12 190 5 Exit plate_B;
 #X text 12 210 6 Connect [sl_control] to [pd msg] and press save;
 #X restore 862 259 pd copying_from_plate_to_plate;
-#X text 32 20 ||| INTRO |||;
 #N canvas 0 50 989 572 vv/c_basics 0;
 #X text 402 20 To summarize:;
 #X obj 12 199 bit_red~;
@@ -765,10 +763,6 @@ just for control signals);
 #X text 24 373 Controls timing events and song flow;
 #X text 194 93 Saves and loads state of vvc(m) objects;
 #X text 538 241 (5.) Starting;
-#X text 32 30 This is plate.pd with added explainations and tutorials.
-plate.pd is a set of objects to be built on top of to control objects
-in this library. It handles the global clock \, saving/loading parameters
-\, and audio output;
 #X text 858 241 (6.) More;
 #N canvas 0 50 794 502 declares 0;
 #X obj 42 456 declare -path ./vv;
@@ -818,10 +812,14 @@ in this library. It handles the global clock \, saving/loading parameters
 library is in searchpath (automatic when installed via deken) or the
 patch is in the root of the library or a subdirectory of the root;
 #X restore 392 199 pd declares;
+#X text 32 20 ___||| INTRO |||___;
+#X text 32 30 This is plate.pd with added explainations and tutorials.
+plate.pd is a set of objects required to use piloslib. It handles the
+global clock \, saving/loading parameters \, and audio output;
 #X text 484 113 Saving and loading happen on patch save and load \,
 but you can still do each with patch open. To preserve state across
-plates \, see instructions below under (6.) More [pd copying_from_plate_to_plate]
-;
+plates and duplicate settings \, see instructions below under (6.)
+More [pd copying_from_plate_to_plate];
 #X connect 0 0 3 0;
 #X connect 2 0 1 0;
 #X connect 4 0 0 0;

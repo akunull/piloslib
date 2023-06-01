@@ -46,28 +46,118 @@
 #X obj 312 129 s global_load;
 #X obj 312 39 loadbang;
 #X obj 402 69 sl_control;
+#A saved 0.233433 3;
+#A saved 0.021746 3;
 #N canvas 665 208 450 300 msgbx 0;
 #X obj 43 13 inlet;
-#X msg 43 38 \; load_send form asym 0.680672 1 \; load_send form_freq_lfo
-rev 0 \; load_send form_freq_lfo sync 0 1 \; load_send form_freq_lfo
-pow 0.521008 4 \; load_send form_freq_lfo add 1 1 \; load_send form_freq_lfo
-mult 0.0544743 434 \; load_send form_freq_lfo sin 1 1 \; load_send
-form_freq_lfo sqr 0 1 \; load_send form_freq_lfo saw 0 1 \; load_send
-form_freq_lfo rate 6 \; load_send form_bitred wet 1 1 \; load_send
-form_bitred dry 0.420168 1 \; load_send form_bitred bits 0.0756303
-32 \; load_send form mod 0.260504 4 \; load_send form_chan master 0
-\; load_send form_chan amp_R 1 \; load_send form_chan amp_L 1 \; load_send
-form_chan amp 0.535354 \; load_send form_chan on 1 \; load_send ff
-wet 0.327731 1 \; load_send ff dry 0 1 \; load_send ff q 0.705882 3
-\; load_send ff vowel 0 \; load_send ff voice 4 \; load_send ff glide
-0 \; load_send ff freq -209 \; load_send effectsasymtan asym 9 \; load_send
-effectsasymtan amp 24 \; load_send effectdly fdbk 0.512605 \; load_send
-effectdly wet 0.319328 \; load_send effectdly dry 0.722689 \; load_send
-effectdly preamp 1 \; load_send effectdly pitch 6 \; load_send effectdly
-ms 0.10084 250 \; load_send effectsbitred wet 0.235294 1 \; load_send
-effectsbitred dry 1 1 \; load_send effectsbitred bits 1 3 \; load_send
-sn filt2_freq 1 555 0 0 0 0 \; load_send sn dry_amp 1 1 0 0 0 0 \;
-load_send sn filt1_to_filt2 0.353659 1 0 0 0 0 \; load_send sn filt2_pitch_follow
+#X msg 43 38 \; load_send scope1 gain 0.5 \; load_send scope1 beat
+0.2 \; load_send scope1 hz 2.02 \; load_send form gate_pulse_width
+0.554622 \; load_send form gate_pulse_rate 0.25 \; load_send aesynth_chan
+a 0.121212 \; load_send aesynth_chan b 0 \; load_send aesynth_chan
+master 0.737374 \; load_send aesynth_chan b_R 1 \; load_send aesynth_chan
+b_L 1 \; load_send aesynth_chan a_R 1 \; load_send aesynth_chan a_L
+1 \; load_send aesynth_chan amp_R 1 \; load_send aesynth_chan amp_L
+1 \; load_send aesynth_chan amp 1 \; load_send aesynth_chan on 1 \;
+load_send aesynth_seq extend 0 \; load_send aesynth_seq rate 0.5 \;
+load_send aesynth_seq length 32 \; load_send aesynth_seq offset 0 \;
+load_send aesynth filt2_freq 1 555 0 0 0 0 \; load_send aesynth dry_amp
+0 1 0 0 0 0 \; load_send aesynth filt1_to_filt2 0.22561 1 0 0 0 0 \;
+load_send aesynth filt2_pitch_follow 1 \; load_send aesynth amp_env_ms
+1000 0 0 0 0 \; load_send aesynth amp_env_pow 3 0 0 0 0 \; load_send
+aesynth amp_env_s 0.873832 0 0 0 0 \; load_send aesynth amp_env_d 0.5
+0 0 0 0 \; load_send aesynth amp_env_r 0.5 0 0 0 0 \; load_send aesynth
+amp_env_amount 1 0 0 0 0 \; load_send aesynth amp_env_a 0 0 0 0 0 \;
+load_send aesynth amp_pitch_follow 1 0 0 0 0 \; load_send aesynth filt2_amp
+1 1 0 0 0 0 \; load_send aesynth filt1_type 1 \; load_send aesynth
+filt1_poles 2 \; load_send aesynth filt1_env_r 0.509346 0 0 0 0 \;
+load_send aesynth filt1_env_a 0 0 0 0 0 \; load_send aesynth filt1_env_ms
+500 0 0 0 0 \; load_send aesynth filt1_env_pow_a -3 0 0 0 0 \; load_send
+aesynth filt1_env_pow_b 4 0 0 0 0 \; load_send aesynth filt1_env_amount
+1 0 2222 0 0 \; load_send aesynth filt1_freq 0.0853659 11111 0 0 0
+0 \; load_send aesynth filt1_pitch_follow 1 \; load_send aesynth filt1_amp
+1 1 0 0 0 0 \; load_send aesynth filt1_mod 0.77439 3 0 0 0 0 \; load_send
+aesynth pitch_env_amount 0 0 0 0 0 \; load_send aesynth pitch_env_pow
+7 0 0 0 0 \; load_send aesynth pitch_env_ms 222 0 0 0 0 \; load_send
+aesynth pitch_env_r 0.46729 0 0 0 0 \; load_send aesynth pitch_env_a
+0 0 0 0 0 \; load_send aesynth noise_noenv 0 0 0 0 0 \; load_send aesynth
+noise_dry 0 0 0 0 0 \; load_send aesynth noise_filt1 0 0 0 0 0 \; load_send
+aesynth noise_filt2 0 0 0 0 0 \; load_send aesynth noise_ds_pitch_env
+0 0 0 0 0 \; load_send aesynth noise_env_r 0.5 0 0 0 0 \; load_send
+aesynth noise_env_a 0 0 0 0 0 \; load_send aesynth noise_env_ms 500
+0 0 0 0 \; load_send aesynth noise_env_pow_a -3 0 0 0 0 \; load_send
+aesynth noise_env_pow_b 3 0 0 0 0 \; load_send aesynth noise_env_amount
+1 0 0 0 0 \; load_send aesynth noise_ds 0 0 0 0 0 \; load_send aesynth
+osc_a_pitch_env 1 1 0 0 0 0 \; load_send aesynth osc_a_nomod 0.5 0
+0 0 0 \; load_send aesynth osc_a_sync 1 0 0 0 0 \; load_send aesynth
+osc_a_freq 0 0 0 0 0 \; load_send aesynth osc_a_pitch -0.05 0 0 0.13
+0 \; load_send aesynth osc_a_pitched 1 \; load_send aesynth osc_a_phase_start
+0 \; load_send aesynth osc_a_glide 0 0 0 0 0 \; load_send aesynth osc_a_reset
+1 \; load_send aesynth osc_a_noenv 1 1 0 0 0 0 \; load_send aesynth
+osc_a_asym 0.271028 0 0 0 0 \; load_send aesynth osc_a_wet 0.5 0 0
+0 0 \; load_send aesynth osc_a_mod_env_amount 0.5 0 0 0 0 \; load_send
+aesynth osc_a_mod_env_pow 3 0 0 0 0 \; load_send aesynth osc_a_mod_env_ms
+1000 0 0 0 0 \; load_send aesynth osc_a_mod_env_r 0.5 0 0 0 0 \; load_send
+aesynth osc_a_mod_env_a 0 0 0 0 0 \; load_send aesynth osc_a_env_r
+0.5 0 0 0 0 \; load_send aesynth osc_a_env_a 0 0 0 0 0 \; load_send
+aesynth osc_a_env_ms 500 0 0 0 0 \; load_send aesynth osc_a_env_pow_a
+-3 0 0 0 0 \; load_send aesynth osc_a_env_pow_b 3 0 0 0 0 \; load_send
+aesynth osc_a_env_amount 1 0 0 0 0 \; load_send aesynth osc_a_filt1
+1 0 0 0 0 \; load_send aesynth osc_a_filt2 0 0 0 0 0 \; load_send aesynth
+osc_a_dry 0.088785 0 0 0 0 \; load_send aesynth osc_a_mod 0.313084
+0 0 0 0 \; load_send aesynth osc_b_pitch_env 0 1 0 0 0 0 \; load_send
+aesynth osc_b_freq 0 0 0 0 0 \; load_send aesynth osc_b_pitched 1 \;
+load_send aesynth osc_b_noenv 0.490654 0 0 0 0 \; load_send aesynth
+osc_b_mod_env_amount 0.4 0 0 0 0 \; load_send aesynth osc_b_mod_env_pow
+3 0 0 0 0 \; load_send aesynth osc_b_mod_env_ms 1000 0 0 0 0 \; load_send
+aesynth osc_b_mod_env_r 0.5 0 0 0 0 \; load_send aesynth osc_b_mod_env_a
+0 0 0 0 0 \; load_send aesynth osc_b_phase_start 0 \; load_send aesynth
+osc_b_type 0 \; load_send aesynth osc_b_env_r 0.5 0 0 0 0 \; load_send
+aesynth osc_b_env_a 0 0 0 0 0 \; load_send aesynth osc_b_env_ms 500
+0 0 0 0 \; load_send aesynth osc_b_env_pow_a -3 0 0 0 0 \; load_send
+aesynth osc_b_env_pow_b 3 0 0 0 0 \; load_send aesynth osc_b_env_amount
+1 0 0 0 0 \; load_send aesynth osc_b_filt1 0.523364 0 0 0 0 \; load_send
+aesynth osc_b_filt2 0 0 0 0 0 \; load_send aesynth osc_b_dry 0 0 0
+0 0 \; load_send aesynth osc_b_sync 10 0 0 0 0 \; load_send aesynth
+osc_b_glide 0 0 0 0 0 \; load_send aesynth osc_b_mod 0.429907 0 0 0
+0 \; load_send aesynth osc_b_reset 1 \; load_send aesynth osc_b_pitch
+12 0 0 0 0 \; load_send aesynth fm 1 10 0 0 0 0 \; load_send aesynth
+pitch 12 0 0 0 0 \; load_send aesynth_seq 30 28 \; load_send aesynth_seq
+29 32 \; load_send aesynth_seq 28 0 \; load_send aesynth_seq 27 0 \;
+load_send aesynth_seq 26 32 \; load_send aesynth_seq 25 28 \; load_send
+aesynth_seq 24 25 \; load_send aesynth_seq 22 28 \; load_send aesynth_seq
+21 0 \; load_send aesynth_seq 20 0 \; load_send aesynth_seq 19 0 \;
+load_send aesynth_seq 18 31 \; load_send aesynth_seq 17 28 \; load_send
+aesynth_seq 16 24 \; load_send aesynth_seq 23 31 \; load_send aesynth_seq
+31 0 \; load_send aesynth_seq 14 0 \; load_send aesynth_seq 13 0 \;
+load_send aesynth_seq 12 0 \; load_send aesynth_seq 11 0 \; load_send
+aesynth_seq 10 31 \; load_send aesynth_seq 9 29 \; load_send aesynth_seq
+8 26 \; load_send aesynth_seq 6 0 \; load_send aesynth_seq 5 0 \; load_send
+aesynth_seq 4 0 \; load_send aesynth_seq 3 0 \; load_send aesynth_seq
+2 33 \; load_send aesynth_seq 1 29 \; load_send aesynth_seq 0 26 \;
+load_send aesynth_seq 7 33 \; load_send aesynth_seq 15 31 \; load_send
+bellmid asym 0 \; load_send bellmid amp 1 \; load_send bellmid high_amp
+1 1 \; load_send bellmid mid_amp 1 1 \; load_send bellmid low_amp 1
+1 \; load_send bellmid high_freq 1000 \; load_send bellmid low_freq
+220 \; load_send effectsasymtan asym 9 \; load_send effectsasymtan
+amp 24 \; load_send effectdly fdbk 0.621849 \; load_send effectdly
+wet 0.319328 \; load_send effectdly dry 0.722689 \; load_send effectdly
+preamp 1 \; load_send effectdly pitch 6 \; load_send effectdly ms 0.10084
+250 \; load_send effectsbitred wet 0.226891 1 \; load_send effectsbitred
+dry 1 1 \; load_send effectsbitred bits 1 3 \; load_send form asym
+0.672269 1 \; load_send form_freq_lfo rev 0 \; load_send form_freq_lfo
+sync 0 1 \; load_send form_freq_lfo pow 0.521008 4 \; load_send form_freq_lfo
+add 1 1 \; load_send form_freq_lfo mult 0.240169 434 \; load_send form_freq_lfo
+sin 1 1 \; load_send form_freq_lfo sqr 0 1 \; load_send form_freq_lfo
+saw 0 1 \; load_send form_freq_lfo rate 2 \; load_send form_bitred
+wet 1 1 \; load_send form_bitred dry 0.420168 1 \; load_send form_bitred
+bits 0.0756303 32 \; load_send form mod 0.260504 4 \; load_send form_chan
+master 0.393939 \; load_send form_chan amp_R 1 \; load_send form_chan
+amp_L 1 \; load_send form_chan amp 0.292929 \; load_send form_chan
+on 1 \; load_send ff wet 0.327731 1 \; load_send ff dry 0 1 \; load_send
+ff q 0.705882 3 \; load_send ff vowel 1 \; load_send ff voice 4 \;
+load_send ff glide 115 \; load_send ff freq -199.25 \; load_send sn
+filt2_freq 1 555 0 0 0 0 \; load_send sn dry_amp 1 1 0 0 0 0 \; load_send
+sn filt1_to_filt2 0.353659 1 0 0 0 0 \; load_send sn filt2_pitch_follow
 1 \; load_send sn amp_env_ms 1000 0 0 0 0 \; load_send sn amp_env_pow
 3 0 0 0 0 \; load_send sn amp_env_s 0 0 0 0 0 \; load_send sn amp_env_d
 0.5 0 0 0 0 \; load_send sn amp_env_r 0.5 0 0 0 0 \; load_send sn amp_env_amount
@@ -89,30 +179,29 @@ sn noise_ds_pitch_env 0 0 0 0 0 \; load_send sn noise_env_r 0.5 0 0
 0 0 \; load_send sn noise_env_a 0 0 0 0 0 \; load_send sn noise_env_ms
 500 0 0 0 0 \; load_send sn noise_env_pow_a -3 0 0 0 0 \; load_send
 sn noise_env_pow_b 3 0 0 0 0 \; load_send sn noise_env_amount 1 0 0
-0 0 \; load_send sn noise_ds 0 0 0 0 0 \; load_send sn osc_a_nomod
-0 0 0 0 0 \; load_send sn osc_a_sync 1 0 0 0 0 \; load_send sn osc_a_pitch_env
-0 1 0 0 0 0 \; load_send sn osc_a_freq 0 0 0 0 0 \; load_send sn osc_a_pitch
+0 0 \; load_send sn noise_ds 0 0 0 0 0 \; load_send sn osc_a_pitch_env
+0 1 0 0 0 0 \; load_send sn osc_a_nomod 0 0 0 0 0 \; load_send sn osc_a_sync
+1 0 0 0 0 \; load_send sn osc_a_freq 0 0 0 0 0 \; load_send sn osc_a_pitch
 0 0 0 0 0 \; load_send sn osc_a_pitched 1 \; load_send sn osc_a_phase_start
-0 \; load_send sn osc_a_type 1 \; load_send sn osc_a_glide 0 0 0 0
-0 \; load_send sn osc_a_reset 1 \; load_send sn osc_a_noenv 0.817073
-1 0 0 0 0 \; load_send sn osc_a_asym 0 0 0 0 0 \; load_send sn osc_a_wet
-1 0 0 0 0 \; load_send sn osc_a_mod_env_amount 1 0 0 0 0 \; load_send
-sn osc_a_mod_env_pow 3 0 0 0 0 \; load_send sn osc_a_mod_env_ms 1000
-0 0 0 0 \; load_send sn osc_a_mod_env_r 0.5 0 0 0 0 \; load_send sn
-osc_a_mod_env_a 0 0 0 0 0 \; load_send sn osc_a_env_r 0.5 0 0 0 0 \;
-load_send sn osc_a_env_a 0 0 0 0 0 \; load_send sn osc_a_env_ms 500
-0 0 0 0 \; load_send sn osc_a_env_pow_a -3 0 0 0 0 \; load_send sn
-osc_a_env_pow_b 3 0 0 0 0 \; load_send sn osc_a_env_amount 1 0 0 0
-0 \; load_send sn osc_a_filt1 1 0 0 0 0 \; load_send sn osc_a_filt2
+0 \; load_send sn osc_a_glide 0 0 0 0 0 \; load_send sn osc_a_reset
+1 \; load_send sn osc_a_noenv 0.817073 1 0 0 0 0 \; load_send sn osc_a_asym
+0 0 0 0 0 \; load_send sn osc_a_wet 1 0 0 0 0 \; load_send sn osc_a_mod_env_amount
+1 0 0 0 0 \; load_send sn osc_a_mod_env_pow 3 0 0 0 0 \; load_send
+sn osc_a_mod_env_ms 1000 0 0 0 0 \; load_send sn osc_a_mod_env_r 0.5
+0 0 0 0 \; load_send sn osc_a_mod_env_a 0 0 0 0 0 \; load_send sn osc_a_env_r
+0.5 0 0 0 0 \; load_send sn osc_a_env_a 0 0 0 0 0 \; load_send sn osc_a_env_ms
+500 0 0 0 0 \; load_send sn osc_a_env_pow_a -3 0 0 0 0 \; load_send
+sn osc_a_env_pow_b 3 0 0 0 0 \; load_send sn osc_a_env_amount 1 0 0
+0 0 \; load_send sn osc_a_filt1 1 0 0 0 0 \; load_send sn osc_a_filt2
 0 0 0 0 0 \; load_send sn osc_a_dry 0.271028 0 0 0 0 \; load_send sn
-osc_a_mod 0.780374 0 0 0 0 \; load_send sn osc_b_freq 0 0 0 0 0 \;
-load_send sn osc_b_pitched 1 \; load_send sn osc_b_noenv 0 0 0 0 0
-\; load_send sn osc_b_mod_env_amount 1 0 0 0 0 \; load_send sn osc_b_mod_env_pow
-3 0 0 0 0 \; load_send sn osc_b_mod_env_ms 1000 0 0 0 0 \; load_send
-sn osc_b_mod_env_r 0.5 0 0 0 0 \; load_send sn osc_b_mod_env_a 0 0
-0 0 0 \; load_send sn osc_b_phase_start 0 \; load_send sn osc_b_type
-1 \; load_send sn osc_b_pitch_env 0 1 0 0 0 0 \; load_send sn osc_b_env_r
-0.5 0 0 0 0 \; load_send sn osc_b_env_a 0 0 0 0 0 \; load_send sn osc_b_env_ms
+osc_a_mod 0.780374 0 0 0 0 \; load_send sn osc_b_pitch_env 0 1 0 0
+0 0 \; load_send sn osc_b_freq 0 0 0 0 0 \; load_send sn osc_b_pitched
+1 \; load_send sn osc_b_noenv 0 0 0 0 0 \; load_send sn osc_b_mod_env_amount
+1 0 0 0 0 \; load_send sn osc_b_mod_env_pow 3 0 0 0 0 \; load_send
+sn osc_b_mod_env_ms 1000 0 0 0 0 \; load_send sn osc_b_mod_env_r 0.5
+0 0 0 0 \; load_send sn osc_b_mod_env_a 0 0 0 0 0 \; load_send sn osc_b_phase_start
+0 \; load_send sn osc_b_type 1 \; load_send sn osc_b_env_r 0.5 0 0
+0 0 \; load_send sn osc_b_env_a 0 0 0 0 0 \; load_send sn osc_b_env_ms
 500 0 0 0 0 \; load_send sn osc_b_env_pow_a -3 0 0 0 0 \; load_send
 sn osc_b_env_pow_b 3 0 0 0 0 \; load_send sn osc_b_env_amount 1 0 0
 0 0 \; load_send sn osc_b_filt1 0 0 0 0 0 \; load_send sn osc_b_filt2
@@ -127,118 +216,134 @@ snchan on 1 \; load_send hhfreqlfo rev 0 \; load_send hhfreqlfo sync
 0 1 \; load_send hhfreqlfo mult 1 1 \; load_send hhfreqlfo sin 1 1
 \; load_send hhfreqlfo sqr 0 1 \; load_send hhfreqlfo saw 0 1 \; load_send
 hhfreqlfo rate 12 \; load_send hh_chan master 0 \; load_send hh_chan
-amp_R 1 \; load_send hh_chan amp_L 1 \; load_send hh_chan amp 0.59596
-\; load_send hh_chan on 1 \; load_send hh freq 0.0229187 178 \; load_send
+amp_R 1 \; load_send hh_chan amp_L 1 \; load_send hh_chan amp 0.494949
+\; load_send hh_chan on 0 \; load_send hh freq 0.489349 178 \; load_send
 hh b_amp 50 \; load_send hh osc_b 0.1 1 \; load_send hh osc_a 1 1 \;
-load_send hh noise_env_amount 2 \; load_send hh noise_env_pow 5 \;
+load_send hh noise_env_amount 1 \; load_send hh noise_env_pow 3 \;
 load_send hh noise_env_ms 232 \; load_send hh noise_env_a 0 \; load_send
 hh noise_env_r 0.5 \; load_send hh noise_env_d 0.5 \; load_send hh
 noise_env_s 0 \; load_send hh osc_b_env_amount 1 \; load_send hh osc_b_env_pow
 3 \; load_send hh osc_b_env_ms 232 \; load_send hh osc_b_env_a 0 \;
 load_send hh osc_b_env_r 0.5 \; load_send hh osc_b_env_d 0.5 \; load_send
 hh osc_b_env_s 0 \; load_send hh osc_a_env_amount 1 \; load_send hh
-osc_a_env_pow 1 \; load_send hh osc_a_env_ms 232 \; load_send hh osc_a_env_a
+osc_a_env_pow 1 \; load_send hh osc_a_env_ms 327 \; load_send hh osc_a_env_a
 0 \; load_send hh osc_a_env_r 0.5 \; load_send hh osc_a_env_d 0.470588
 \; load_send hh osc_a_env_s 0 \; load_send hh random_pitch 0.907563
 \; load_send hh amp 0.25 1 \; load_send hh a_amp 50 \; load_send hh
-osc_b_freq 1588 \; load_send hh osc_a_freq 869 \; load_send hh fm 0.823529
-6 \; load_send bdseq 14 0 \; load_send bdseq 13 0 \; load_send bdseq
-12 0 \; load_send bdseq 11 0 \; load_send bdseq 10 0 \; load_send bdseq
-9 0 \; load_send bdseq 8 26 \; load_send bdseq 6 0 \; load_send bdseq
-5 0 \; load_send bdseq 4 0 \; load_send bdseq 3 26 \; load_send bdseq
-2 0 \; load_send bdseq 1 0 \; load_send bdseq 0 26 \; load_send bdseq
-7 0 \; load_send bdseq 15 0 \; load_send bd sync 1 1 \; load_send bd
-noise_env_amount 1 \; load_send bd noise_env_pow 3 \; load_send bd
-noise_env_ms 33 \; load_send bd noise_env_a 0 \; load_send bd noise_env_r
+osc_b_freq 1588 \; load_send hh osc_a_freq 469 \; load_send hh fm 0.823529
+6 \; load_send bd_chan master 0.363636 \; load_send bd_chan amp_R 1
+\; load_send bd_chan amp_L 1 \; load_send bd_chan amp 0.515152 \; load_send
+bd_chan on 1 \; load_send bdseq 14 0 \; load_send bdseq 13 0 \; load_send
+bdseq 12 0 \; load_send bdseq 11 0 \; load_send bdseq 10 0 \; load_send
+bdseq 9 0 \; load_send bdseq 8 26 \; load_send bdseq 6 0 \; load_send
+bdseq 5 0 \; load_send bdseq 4 0 \; load_send bdseq 3 26 \; load_send
+bdseq 2 0 \; load_send bdseq 1 0 \; load_send bdseq 0 26 \; load_send
+bdseq 7 0 \; load_send bdseq 15 0 \; load_send bd sync 1 1 \; load_send
+bd noise_env_amount 1 \; load_send bd noise_env_pow 3 \; load_send
+bd noise_env_ms 33 \; load_send bd noise_env_a 0 \; load_send bd noise_env_r
 0.5 \; load_send bd noise_env_d 0.336134 \; load_send bd noise_env_s
-0 \; load_send bd asym 0 30 \; load_send bd wet 0.5 \; load_send bd
-dry 0.5 \; load_send bd amp_pitch_follow 0 \; load_send bd mod_env_amount
+0 \; load_send bd asym 0 30 \; load_send bd wet 1 \; load_send bd dry
+0 \; load_send bd amp_pitch_follow 0 \; load_send bd mod_env_amount
 1 \; load_send bd mod_env_ms 500 \; load_send bd mod_env_pow 3 \; load_send
 bd mod_env_a 0 \; load_send bd mod_env_r 0.5 \; load_send bd pitch
 0 \; load_send bd preamp 1 \; load_send bd amp_env_amount 1 \; load_send
-bd amp_env_pow 3 \; load_send bd amp_env_ms 1000 \; load_send bd amp_env_a
+bd amp_env_pow 3 \; load_send bd amp_env_ms 666 \; load_send bd amp_env_a
 0 \; load_send bd amp_env_r 0.5 \; load_send bd amp_env_d 0.5 \; load_send
-bd amp_env_s 0 \; load_send bd glide 0 \; load_send bd mod 0 \; load_send
-bd pitch_env_amount 139 \; load_send bd pitch_env_ms 500 \; load_send
-bd pitch_env_pow 11 \; load_send bd pitch_env_a 0 \; load_send bd pitch_env_r
-0.361345 \; load_send 0 master 0.242424 \; load_send 0 amp_R 1 \; load_send
-0 amp_L 1 \; load_send 0 amp 1 \; load_send 0 on 1 \; load_send bd_seq
-rate 0.25 \; load_send bd_seq length 16 \; load_send bd_seq offset
-0 \; load_send bd_seq steps 16 \; load_send synth_seq 30 0 \; load_send
-synth_seq 29 0 \; load_send synth_seq 28 0 \; load_send synth_seq 27
-0 \; load_send synth_seq 26 0 \; load_send synth_seq 25 0 \; load_send
-synth_seq 24 0 \; load_send synth_seq 22 24 \; load_send synth_seq
-21 0 \; load_send synth_seq 20 0 \; load_send synth_seq 19 0 \; load_send
-synth_seq 18 0 \; load_send synth_seq 17 0 \; load_send synth_seq 16
-36 \; load_send synth_seq 23 0 \; load_send synth_seq 31 0 \; load_send
-synth_seq 14 0 \; load_send synth_seq 13 0 \; load_send synth_seq 12
-0 \; load_send synth_seq 11 0 \; load_send synth_seq 10 0 \; load_send
-synth_seq 9 0 \; load_send synth_seq 8 0 \; load_send synth_seq 6 0
-\; load_send synth_seq 5 0 \; load_send synth_seq 4 38 \; load_send
-synth_seq 3 0 \; load_send synth_seq 2 0 \; load_send synth_seq 1 0
-\; load_send synth_seq 0 26 \; load_send synth_seq 7 0 \; load_send
-synth_seq 15 0 \; load_send synth_chan master 0.707071 \; load_send
-synth_chan amp_R 1 \; load_send synth_chan amp_L 1 \; load_send synth_chan
-amp 0.585859 \; load_send synth_chan on 1 \; load_send synth lfo_rate
-0 0 0 0 0 \; load_send synth mod_env_r 0.266355 0 0 0 0 \; load_send
-synth mod_env_a 0 0 0 0 0 \; load_send synth mod_env_ms 500 0 0 0 0
-\; load_send synth mod_env_pow_a -3 0 0 0 0 \; load_send synth mod_env_pow_b
-3 0 0 0 0 \; load_send synth mod_env_amount 1 0 0 0 0 \; load_send
-synth lfo_sin 1 1 0 0 0 0 \; load_send synth lfo_note_reset 0 \; load_send
-synth lfo_pow 1 1 0 0 0 0 \; load_send synth lfo_saw 0 1 0 0 0 0 \;
-load_send synth filt_amp 1 1 0 0 0 0 0 0 \; load_send synth filt_mod
-0.585366 5 0 0 0 0 0 0 \; load_send synth filt_freq 0 1111 0 0 0 0
-5555 1111 \; load_send synth filt_pitch_follow 1 \; load_send synth
-amp_env_amount 1 0 0 0 0 0 0 \; load_send synth amp_env_pow 3 0 0 0
-0 \; load_send synth amp_env_ms 1000 0 0 0 0 \; load_send synth amp_env_r
-0.5 0 0 0 0 \; load_send synth amp_env_s 1 0 0 0 0 \; load_send synth
-amp_env_d 0.5 0 0 0 0 \; load_send synth amp_env_a 0 0 0 0 0 \; load_send
-synth amp_pitch_follow 1 \; load_send synth dry_amp 1 0 0 0 0 0 0 \;
-load_send synth osc_b_pitch_env 1 \; load_send synth osc_b_reset 1
-\; load_send synth osc_b_filt 1 0 0 0 0 0 0 \; load_send synth osc_b_type
-1 \; load_send synth osc_b_mod_env_amount 1 0 0 0 0 0 0 \; load_send
-synth osc_b_mod_env_pow 3 0 0 0 0 \; load_send synth osc_b_mod_env_ms
-1000 0 0 0 0 \; load_send synth osc_b_mod_env_r 0.5 0 0 0 0 \; load_send
-synth osc_b_mod_env_a 0 0 0 0 0 \; load_send synth osc_b_dry 0.247664
-0 0 0 0 0 0 \; load_send synth osc_b_sync 1 0 0 0 0 0 0 \; load_send
-synth osc_b_mod 0.88785 0 0 0 0 0 0 \; load_send synth osc_b_pitch
-11.82 0 0 0.11 0 0 0 \; load_send synth fm 0.792683 5 0 0 2 0 0 0 \;
-load_send synth noise_filt 0 0 0 0 0 0 0 \; load_send synth pitch 0
-\; load_send synth noise_ds 0 0 0 0 0 0 0 \; load_send synth noise_dry
-0 0 0 0 0 0 0 \; load_send synth pitch_env_amount 257 0 0 0 0 0 0 \;
-load_send synth pitch_env_pow 3 0 0 0 0 \; load_send synth pitch_env_ms
-2222 0 0 0 0 \; load_send synth pitch_env_r 0.5 0 0 0 0 \; load_send
-synth pitch_env_a 0.28972 0 0 0 0 \; load_send synth osc_a_pitch_env
-1 \; load_send synth osc_a_reset 1 \; load_send synth osc_a_filt 1
-0 0 0 0 0 0 \; load_send synth osc_a_type 1 \; load_send synth osc_a_mod_env_amount
-1 0 0 0 0 0 0 \; load_send synth osc_a_mod_env_pow 3 0 0 0 0 \; load_send
-synth osc_a_mod_env_ms 1000 0 0 0 0 \; load_send synth osc_a_mod_env_r
-0.5 0 0 0 0 \; load_send synth osc_a_mod_env_a 0 0 0 0 0 \; load_send
-synth osc_a_dry 0.411215 0 0 0 0 0 0 \; load_send synth osc_a_sync
-11.4975 0 0 0 0 0 0 \; load_send synth osc_a_mod 0 0 0 0 0 0 0 \; load_send
-synth osc_a_pitch -0.06 0 0 0.08 0 0.12 0 \; load_send synth_seq rate
-0.25 \; load_send synth_seq length 32 \; load_send synth_seq offset
-0 \; load_send synth_seq steps 32 \; load_send global tempo 120 \;
-;
+bd amp_env_s 0 \; load_send bd glide 0 \; load_send bd mod 0.210084
+\; load_send bd pitch_env_amount 139 \; load_send bd pitch_env_ms 500
+\; load_send bd pitch_env_pow 11 \; load_send bd pitch_env_a 0 \; load_send
+bd pitch_env_r 0.361345 \; load_send bd_seq rate 0.25 \; load_send
+bd_seq length 16 \; load_send bd_seq offset 0 \; load_send bd_seq steps
+16 \; load_send synth_seq2 30 0 \; load_send synth_seq2 29 0 \; load_send
+synth_seq2 28 0 \; load_send synth_seq2 27 0 \; load_send synth_seq2
+26 0 \; load_send synth_seq2 25 0 \; load_send synth_seq2 24 0 \; load_send
+synth_seq2 22 0 \; load_send synth_seq2 21 0 \; load_send synth_seq2
+20 26 \; load_send synth_seq2 19 0 \; load_send synth_seq2 18 0 \;
+load_send synth_seq2 17 0 \; load_send synth_seq2 16 0 \; load_send
+synth_seq2 23 0 \; load_send synth_seq2 31 0 \; load_send synth_seq2
+14 0 \; load_send synth_seq2 13 0 \; load_send synth_seq2 12 0 \; load_send
+synth_seq2 11 26 \; load_send synth_seq2 10 0 \; load_send synth_seq2
+9 0 \; load_send synth_seq2 8 0 \; load_send synth_seq2 6 0 \; load_send
+synth_seq2 5 0 \; load_send synth_seq2 4 26 \; load_send synth_seq2
+3 0 \; load_send synth_seq2 2 0 \; load_send synth_seq2 1 0 \; load_send
+synth_seq2 0 0 \; load_send synth_seq2 7 0 \; load_send synth_seq2
+15 0 \; load_send synth_seq 30 0 \; load_send synth_seq 29 0 \; load_send
+synth_seq 28 0 \; load_send synth_seq 27 0 \; load_send synth_seq 26
+0 \; load_send synth_seq 25 0 \; load_send synth_seq 24 0 \; load_send
+synth_seq 22 24 \; load_send synth_seq 21 0 \; load_send synth_seq
+20 0 \; load_send synth_seq 19 0 \; load_send synth_seq 18 0 \; load_send
+synth_seq 17 0 \; load_send synth_seq 16 36 \; load_send synth_seq
+23 0 \; load_send synth_seq 31 0 \; load_send synth_seq 14 0 \; load_send
+synth_seq 13 0 \; load_send synth_seq 12 0 \; load_send synth_seq 11
+0 \; load_send synth_seq 10 0 \; load_send synth_seq 9 0 \; load_send
+synth_seq 8 0 \; load_send synth_seq 6 0 \; load_send synth_seq 5 0
+\; load_send synth_seq 4 38 \; load_send synth_seq 3 0 \; load_send
+synth_seq 2 0 \; load_send synth_seq 1 0 \; load_send synth_seq 0 26
+\; load_send synth_seq 7 0 \; load_send synth_seq 15 0 \; load_send
+synth_chan master 0.535354 \; load_send synth_chan amp_R 1 \; load_send
+synth_chan amp_L 1 \; load_send synth_chan amp 0.484848 \; load_send
+synth_chan on 0 \; load_send synth lfo_rev 0 \; load_send synth lfo_note_reset
+0 \; load_send synth lfo_sync 0 1 0 0 0 0 \; load_send synth lfo_pow
+1 1 0 0 0 0 \; load_send synth lfo_add 0 1 0 0 0 0 \; load_send synth
+lfo_mult 1 1 0 0 0 0 \; load_send synth lfo_sin 1 1 0 0 0 0 \; load_send
+synth lfo_sqr 0 1 0 0 0 0 \; load_send synth lfo_saw 0 1 0 0 0 0 \;
+load_send synth lfo_rate 0 0 0 0 0 \; load_send synth mod_env_r 0.266355
+0 0 0 0 \; load_send synth mod_env_a 0 0 0 0 0 \; load_send synth mod_env_ms
+500 0 0 0 0 \; load_send synth mod_env_pow_a -3 0 0 0 0 \; load_send
+synth mod_env_pow_b 3 0 0 0 0 \; load_send synth mod_env_amount 1 0
+0 0 0 \; load_send synth filt_amp 1 1 0 0 0 0 0 0 \; load_send synth
+filt_mod 0.585366 5 0 0 0 0 0 0 \; load_send synth filt_freq 0 1111
+0 0 0 0 5555 1111 \; load_send synth filt_pitch_follow 1 \; load_send
+synth amp_env_amount 1 0 0 0 0 0 0 \; load_send synth amp_env_pow 3
+0 0 0 0 \; load_send synth amp_env_ms 1000 0 0 0 0 \; load_send synth
+amp_env_r 0.5 0 0 0 0 \; load_send synth amp_env_s 1 0 0 0 0 \; load_send
+synth amp_env_d 0.5 0 0 0 0 \; load_send synth amp_env_a 0 0 0 0 0
+\; load_send synth amp_pitch_follow 1 \; load_send synth dry_amp 1
+0 0 0 0 0 0 \; load_send synth osc_b_pitch_env 1 \; load_send synth
+osc_b_reset 1 \; load_send synth osc_b_filt 1 0 0 0 0 0 0 \; load_send
+synth osc_b_type 1 \; load_send synth osc_b_mod_env_amount 1 0 0 0
+0 0 0 \; load_send synth osc_b_mod_env_pow 3 0 0 0 0 \; load_send synth
+osc_b_mod_env_ms 1000 0 0 0 0 \; load_send synth osc_b_mod_env_r 0.5
+0 0 0 0 \; load_send synth osc_b_mod_env_a 0 0 0 0 0 \; load_send synth
+osc_b_dry 0.247664 0 0 0 0 0 0 \; load_send synth osc_b_sync 1 0 0
+0 0 0 0 \; load_send synth osc_b_mod 0.88785 0 0 0 0 0 0 \; load_send
+synth osc_b_pitch 11.82 0 0 0.11 0 0 0 \; load_send synth fm 0.792683
+5 0 0 2 0 0 0 \; load_send synth noise_filt 0 0 0 0 0 0 0 \; load_send
+synth pitch -36 \; load_send synth noise_ds 0 0 0 0 0 0 0 \; load_send
+synth noise_dry 0 0 0 0 0 0 0 \; load_send synth pitch_env_amount 257
+0 0 0 0 0 0 \; load_send synth pitch_env_pow 3 0 0 0 0 \; load_send
+synth pitch_env_ms 2222 0 0 0 0 \; load_send synth pitch_env_r 0.5
+0 0 0 0 \; load_send synth pitch_env_a 0.28972 0 0 0 0 \; load_send
+synth osc_a_pitch_env 1 \; load_send synth osc_a_reset 1 \; load_send
+synth osc_a_filt 1 0 0 0 0 0 0 \; load_send synth osc_a_type 1 \; load_send
+synth osc_a_mod_env_amount 1 0 0 0 0 0 0 \; load_send synth osc_a_mod_env_pow
+3 0 0 0 0 \; load_send synth osc_a_mod_env_ms 1000 0 0 0 0 \; load_send
+synth osc_a_mod_env_r 0.5 0 0 0 0 \; load_send synth osc_a_mod_env_a
+0 0 0 0 0 \; load_send synth osc_a_dry 0.411215 0 0 0 0 0 0 \; load_send
+synth osc_a_sync 6.79164 0 0 0 0 0 0 \; load_send synth osc_a_mod 0
+0 0 0 0 0 0 \; load_send synth osc_a_pitch -0.06 0 0 0.08 0 0.12 0
+\; load_send synth_seq rate 0.25 \; load_send synth_seq length 32 \;
+load_send synth_seq offset 0 \; load_send synth_seq steps 32 \; load_send
+global tempo 120 \;;
 #X connect 0 0 1 0;
 #X restore 402 99 pd msgbx;
 #X obj 42 159 global_transport;
-#X obj 502 259 catcher~ master;
-#X obj 502 319 tanhx~;
-#X obj 562 319 tanhx~;
+#X obj 502 429 catcher~ master;
+#X obj 502 489 tanhx~;
+#X obj 562 489 tanhx~;
 #X obj 42 69 metronome_60;
-#X obj 302 389 writesf_global~ 2;
-#X obj 502 349 hip~ 3;
-#X obj 562 349 hip~ 3;
-#X obj 502 489 dac~;
-#X obj 502 459 tline~;
-#X obj 562 459 tline~;
-#X obj 97 391 hsl 180 40 0 1 0 1 empty empty empty -2 -8 0 10 -262144
+#X obj 302 559 writesf_global~ 2;
+#X obj 502 519 hip~ 3;
+#X obj 562 519 hip~ 3;
+#X obj 502 659 dac~;
+#X obj 502 629 tline~;
+#X obj 562 629 tline~;
+#X obj 97 561 hsl 180 40 0 1 0 1 empty empty empty -2 -8 0 10 -262144
 -1 -1 17900 0;
-#X obj 242 469 peak_stick2~;
-#X obj 242 479 peak_stick2~;
-#X text 97 375 ||||||||||||||||||||||||||||;
-#X obj 302 329 tgl 40 1 empty empty Record 17 7 0 10 -262144 -36352
+#X obj 242 639 peak_stick2~;
+#X obj 242 649 peak_stick2~;
+#X text 97 545 ||||||||||||||||||||||||||||;
+#X obj 302 499 tgl 40 1 empty empty Record 17 7 0 10 -262144 -36352
 -1 0 1;
 #X obj 202 159 bar_readout;
 #N canvas 0 50 450 300 dspon 0;
@@ -247,8 +352,8 @@ synth osc_a_pitch -0.06 0 0 0.08 0 0.12 0 \; load_send synth_seq rate
 #X obj 37 81 s pd;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
-#X restore 42 449 pd dspon;
-#N canvas 0 50 927 564 synth 0;
+#X restore 42 619 pd dspon;
+#N canvas 0 50 1102 564 synth 0;
 #X obj 37 37 seq_count_vvcm synth_seq;
 #X obj 37 317 sysk_nv_vvcm~ 3 sentinel synth;
 #X obj 37 347 chan_1x2_vvcm~ synth_chan;
@@ -259,15 +364,19 @@ synth osc_a_pitch -0.06 0 0 0.08 0 0.12 0 \; load_send synth_seq rate
 #X obj 47 197 b2n -3;
 #X obj 37 507 outlet~;
 #X obj 107 507 outlet~;
-#X obj 177 177 b2n 2;
-#X obj 207 207 rrandom;
-#X obj 207 249 * 24;
-#X obj 207 270 + 1;
-#X obj 207 291 s synth_osc_a_sync_r;
-#X obj 207 228 linesc 500;
+#X obj 37 537 b2n 2;
+#X obj 67 567 rrandom;
+#X obj 67 609 * 24;
+#X obj 67 630 + 1;
+#X obj 67 651 s synth_osc_a_sync_r;
+#X obj 67 588 linesc 500;
 #X floatatom 138 255 5 0 0 0 - - -;
 #X obj 37 287 f2nv 1 127 1;
+#X obj 197 287 f2nv 1 127 1;
+#X obj 197 167 f_32x synth_seq2;
+#X obj 657 37 nbx_32x_vvc synth_seq2;
 #X connect 0 0 3 0;
+#X connect 0 0 19 0;
 #X connect 1 0 2 0;
 #X connect 2 0 8 0;
 #X connect 2 1 9 0;
@@ -280,23 +389,49 @@ synth osc_a_pitch -0.06 0 0 0.08 0 0.12 0 \; load_send synth_seq rate
 #X connect 13 0 14 0;
 #X connect 15 0 12 0;
 #X connect 16 0 17 3;
+#X connect 16 0 18 3;
 #X connect 17 0 1 0;
+#X connect 19 0 18 0;
 #X restore 502 179 pd synth;
 #N canvas 0 50 826 515 bd 0;
-#X obj 42 177 f_16x bdseq;
+#X obj 42 327 f_16x bdseq;
 #X obj 42 46 seq_count_vvcm bd_seq;
-#X obj 42 267 chan_1x2_vvcm~;
-#X obj 42 207 f2nv;
-#X obj 42 237 sysk_nv_vvcm~ 2 rewbd bd;
-#X obj 332 47 nbx_16x_vvc bdseq;
-#X obj 42 427 outlet~;
-#X obj 132 427 outlet~;
-#X connect 0 0 3 0;
+#X obj 42 357 f2nv;
+#X obj 42 387 sysk_nv_vvcm~ 2 rewbd bd;
+#X obj 422 47 nbx_16x_vvc bdseq;
+#X obj 42 607 outlet~;
+#X obj 132 607 outlet~;
+#X obj 42 447 chan_1x2_vvcm~ bd_chan;
+#X obj 132 177 b2n 0.25;
+#X obj 132 207 rrandom;
+#X obj 132 237 moses 0.1;
+#X obj 132 267 b;
+#X obj 42 417 *~ 3;
+#X obj 132 297 f 26;
+#X floatatom 281 222 5 0 0 0 - - -;
+#X obj 222 238 /;
+#X obj 222 208 swap 1;
+#X obj 222 178 u2fseq 8 1 1 1 3 4 6 8 9 16 32;
+#X obj 373 223 vsl 30 65 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X connect 0 0 2 0;
 #X connect 1 0 0 0;
-#X connect 2 0 6 0;
-#X connect 2 1 7 0;
-#X connect 3 0 4 0;
-#X connect 4 0 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 12 0;
+#X connect 7 0 5 0;
+#X connect 7 1 6 0;
+#X connect 8 0 9 0;
+#X connect 9 0 10 0;
+#X connect 10 0 11 0;
+#X connect 11 0 13 0;
+#X connect 12 0 7 0;
+#X connect 13 0 2 0;
+#X connect 14 0 16 0;
+#X connect 15 0 8 0;
+#X connect 16 0 15 0;
+#X connect 16 1 15 1;
+#X connect 17 0 16 0;
+#X connect 18 0 17 0;
 #X restore 562 179 pd bd;
 #N canvas 0 50 826 515 hh 0;
 #X obj 32 96 u2fseq 5 0 1 -6 0.5 0.25 0.125 -3;
@@ -333,45 +468,24 @@ synth osc_a_pitch -0.06 0 0 0.08 0 0.12 0 \; load_send synth_seq rate
 #X connect 2 0 1 0;
 #X connect 5 0 0 0;
 #X restore 652 179 pd sn;
-#N canvas 0 50 974 578 effects 0;
-#X obj 54 48 inlet~;
-#X obj 54 78 bit_red_vvcm~ effectsbitred;
-#X obj 384 48 inlet~;
-#X obj 384 78 bit_red_vv~ effectsbitred;
-#X obj 54 518 outlet~;
-#X obj 514 518 outlet~;
-#X obj 54 358 delay_ms_pitch_vvcm~ effectdly;
-#X obj 514 358 delay_ms_pitch_vv~ effectdly;
-#X obj 64 238 asym_tanh_vvcm~ effectsasymtan;
-#X obj 514 238 asym_tanh_vv~ effectsasymtan;
-#X connect 0 0 1 0;
-#X connect 1 0 8 0;
-#X connect 2 0 3 0;
-#X connect 3 0 9 0;
-#X connect 6 0 4 0;
-#X connect 7 0 5 0;
-#X connect 8 0 6 0;
-#X connect 9 0 7 0;
-#X restore 502 219 pd effects;
 #N canvas 4 14 871 637 form 0;
 #X obj 42 536 formant_filter_vvcm~ ff;
-#X obj 42 924 chan_1x2_vvcm~ form_chan;
+#X obj 42 944 chan_1x2_vvcm~ form_chan;
 #X obj 42 156 rrandom;
 #X obj 42 186 pow 4;
 #X obj 42 336 satm~, f 13;
 #X obj 222 276 hslxnbx_vvc form mod;
-#X obj 42 1114 outlet~;
-#X obj 272 1114 outlet~;
+#X obj 42 1134 outlet~;
+#X obj 272 1134 outlet~;
 #X floatatom 7 276 5 0 0 0 - - -;
 #X obj 93 141 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 42 775 hip~ 2;
 #X obj 42 366 bit_red_vvcm~ form_bitred;
-#X obj 172 16 lfou_vvcm form_freq_lfo;
+#X obj 472 16 lfou_vvcm form_freq_lfo;
 #X obj 362 276 hslxnbx_vvc form asym;
 #X obj 42 306 vlinesc~ 2;
 #X obj 42 246 s form_freq_lfo_mult_r;
-#X obj 42 126 b2n 6;
 #X obj 42 216 + 0.05;
 #X obj 42 884 tline~;
 #X obj 92 775 r global_play;
@@ -379,34 +493,96 @@ synth osc_a_pitch -0.06 0 0 0.08 0 0.12 0 \; load_send synth_seq rate
 #X obj 182 775 r global_stop;
 #X obj 182 796 f 0;
 #X obj 261 861 vsl 30 65 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 6400 1;
-#X obj 167 854 rev;
-#X obj 172 824 b2p 192 0.6666;
+-1 -1 0 1;
+#X obj 377 854 rev;
+#X obj 362 156 rrandom;
+#X floatatom 18 83 5 0 0 0 - - -;
+#X obj 362 216 - 200;
+#X obj 362 246 s ff_freq_r;
+#X obj 362 186 * 0.75;
+#X obj 222 126 rrandom;
+#X obj 222 156 moses 0.7;
+#X obj 222 246 s ff_vowel_r;
+#X obj 222 186 b;
+#X obj 282 186 b;
+#X obj 222 216 f 0;
+#X obj 282 216 f 1;
+#X obj 222 96 b2n 1.7;
+#X obj 82 36 rrandom;
+#X obj 82 96 s form_freq_lfo_rate_r;
+#X obj 41 24 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 82 6 b2n 32;
+#X obj 42 126 b2n;
+#X obj 342 6 moses 0.5;
+#X obj 342 31 b;
+#X obj 342 52 f 16;
+#X obj 392 31 b;
+#X obj 342 73 rr;
+#X obj 82 66 u2fseq 6 0 0 0.25 0.5 1 2 6 6 6;
+#X floatatom 342 94 5 0 0 0 - - -;
+#X obj 392 52 f 48;
+#X obj 377 794 inlet;
+#X obj 427 794 inlet;
+#X obj 377 824 b2p;
+#X obj 42 914 pitch_shift~;
+#X floatatom 171 825 5 0 0 0 - - -;
 #X connect 0 0 10 0;
 #X connect 1 0 6 0;
 #X connect 1 1 7 0;
 #X connect 2 0 3 0;
-#X connect 3 0 17 0;
+#X connect 3 0 16 0;
 #X connect 4 0 11 0;
 #X connect 5 0 4 2;
 #X connect 8 0 14 0;
-#X connect 10 0 18 0;
+#X connect 10 0 17 0;
 #X connect 11 0 0 0;
 #X connect 12 0 14 0;
+#X connect 12 0 28 0;
 #X connect 13 0 4 3;
 #X connect 14 0 4 0;
-#X connect 16 0 2 0;
-#X connect 16 0 9 0;
-#X connect 17 0 15 0;
-#X connect 18 0 1 0;
-#X connect 19 0 20 0;
-#X connect 20 0 18 1;
-#X connect 21 0 22 0;
-#X connect 22 0 18 1;
-#X connect 24 0 18 1;
-#X connect 24 0 23 0;
-#X connect 25 0 24 0;
-#X restore 422 179 pd form;
+#X connect 16 0 15 0;
+#X connect 17 0 53 0;
+#X connect 18 0 19 0;
+#X connect 19 0 17 1;
+#X connect 20 0 21 0;
+#X connect 21 0 17 1;
+#X connect 23 0 22 0;
+#X connect 23 0 17 1;
+#X connect 24 0 28 0;
+#X connect 26 0 27 0;
+#X connect 28 0 26 0;
+#X connect 29 0 30 0;
+#X connect 30 0 32 0;
+#X connect 30 1 33 0;
+#X connect 32 0 34 0;
+#X connect 33 0 35 0;
+#X connect 34 0 31 0;
+#X connect 35 0 31 0;
+#X connect 36 0 29 0;
+#X connect 37 0 42 0;
+#X connect 37 0 47 0;
+#X connect 39 0 37 0;
+#X connect 40 0 37 0;
+#X connect 41 0 2 0;
+#X connect 41 0 9 0;
+#X connect 42 0 43 0;
+#X connect 42 1 45 0;
+#X connect 43 0 44 0;
+#X connect 44 0 46 0;
+#X connect 45 0 49 0;
+#X connect 46 0 40 0;
+#X connect 46 0 48 0;
+#X connect 47 0 38 0;
+#X connect 47 0 25 0;
+#X connect 47 0 41 0;
+#X connect 49 0 46 0;
+#X connect 50 0 52 0;
+#X connect 51 0 52 1;
+#X connect 52 0 23 0;
+#X connect 53 0 1 0;
+#X connect 54 0 53 1;
+#X restore 712 269 pd form;
 #N canvas 0 50 794 502 declares 0;
 #X obj 42 456 declare -path ./vv;
 #X obj 42 396 declare -path ./synth;
@@ -455,6 +631,77 @@ synth osc_a_pitch -0.06 0 0 0.08 0 0.12 0 \; load_send synth_seq rate
 library is in searchpath (automatic when installed via deken) or the
 patch is in the root of the library or a subdirectory of the root;
 #X restore 402 129 pd declares;
+#N canvas 0 50 974 578 dist+delay 0;
+#X obj 54 48 inlet~;
+#X obj 54 78 bit_red_vvcm~ effectsbitred;
+#X obj 384 48 inlet~;
+#X obj 384 78 bit_red_vv~ effectsbitred;
+#X obj 54 518 outlet~;
+#X obj 514 518 outlet~;
+#X obj 54 358 delay_ms_pitch_vvcm~ effectdly;
+#X obj 514 358 delay_ms_pitch_vv~ effectdly;
+#X obj 64 238 asym_tanh_vvcm~ effectsasymtan;
+#X obj 514 238 asym_tanh_vv~ effectsasymtan;
+#X obj 104 48 catcher~ a;
+#X connect 0 0 1 0;
+#X connect 1 0 8 0;
+#X connect 2 0 3 0;
+#X connect 3 0 9 0;
+#X connect 6 0 4 0;
+#X connect 7 0 5 0;
+#X connect 8 0 6 0;
+#X connect 9 0 7 0;
+#X connect 10 0 1 0;
+#X connect 10 1 3 0;
+#X restore 502 319 pd dist+delay;
+#N canvas 200 100 806 422 bellmid_eq 0;
+#X obj 50 30 inlet~;
+#X obj 50 360 outlet~;
+#X obj 50 60 bellmid_3band_vvcm~ bellmid;
+#X obj 430 30 inlet~;
+#X obj 430 360 outlet~;
+#X obj 430 60 bellmid_3band_vv~ bellmid;
+#X connect 0 0 2 0;
+#X connect 2 0 1 0;
+#X connect 3 0 5 0;
+#X connect 5 0 4 0;
+#X restore 502 374 pd bellmid_eq;
+#N canvas 0 50 927 564 aesynth 0;
+#X obj 77 227 f;
+#X obj 117 197 sel 0;
+#X obj 47 197 b2n -3;
+#X obj 207 207 rrandom;
+#X obj 207 249 * 24;
+#X obj 207 270 + 1;
+#X obj 207 228 linesc 500;
+#X floatatom 138 255 5 0 0 0 - - -;
+#X obj 37 287 f2nv 1 127 1;
+#X obj 317 37 nbx_32x_vvc aesynth_seq;
+#X obj 37 167 f_32x aesynth_seq;
+#X obj 37 317 sysk_nv_vvcm~ 3 imp aesynth;
+#X obj 37 37 seq_counter_vvcm aesynth_seq;
+#X obj 177 177 b2n 0.125;
+#X obj 207 291 s aesynth_osc_b_sync_r;
+#X obj 37 517 chan_ab_1x2_vvcm~ aesynth_chan;
+#X connect 1 1 0 1;
+#X connect 2 0 0 0;
+#X connect 3 0 6 0;
+#X connect 4 0 5 0;
+#X connect 6 0 4 0;
+#X connect 7 0 8 3;
+#X connect 8 0 11 0;
+#X connect 10 0 8 0;
+#X connect 11 0 15 0;
+#X connect 12 0 10 0;
+#X connect 13 0 3 0;
+#X restore 392 319 pd aesynth;
+#X text 583 93 bd flutter;
+#X text 603 133 aesynth melodies and mod;
+#X obj 712 219 nbx_vvc form gate_pulse_rate;
+#X obj 892 219 hsl_vvc form gate_pulse_width;
+#X obj 642 340 oscope_vvcm~ scope1;
+#X text 593 113 form beat change \, gating \, pitch shift;
+#X text 573 73 synth octaves \, f2nv ggate \, seqs;
 #X connect 0 0 3 0;
 #X connect 2 0 1 0;
 #X connect 4 0 0 0;
@@ -475,15 +722,20 @@ patch is in the root of the library or a subdirectory of the root;
 #X connect 18 0 16 1;
 #X connect 18 0 24 0;
 #X connect 22 0 12 2;
-#X connect 25 0 29 0;
-#X connect 25 1 29 1;
-#X connect 26 0 29 0;
-#X connect 26 1 29 1;
-#X connect 27 0 29 0;
-#X connect 27 1 29 1;
-#X connect 28 0 29 0;
-#X connect 28 1 29 1;
-#X connect 29 0 8 0;
-#X connect 29 1 8 1;
-#X connect 30 0 29 0;
-#X connect 30 1 29 1;
+#X connect 25 0 31 0;
+#X connect 25 1 31 1;
+#X connect 26 0 31 0;
+#X connect 26 1 31 1;
+#X connect 27 0 31 0;
+#X connect 27 1 31 1;
+#X connect 28 0 31 0;
+#X connect 28 1 31 1;
+#X connect 29 0 31 0;
+#X connect 29 1 31 1;
+#X connect 31 0 32 0;
+#X connect 31 0 38 0;
+#X connect 31 1 32 1;
+#X connect 32 0 8 0;
+#X connect 32 1 8 1;
+#X connect 36 0 29 0;
+#X connect 37 0 29 1;

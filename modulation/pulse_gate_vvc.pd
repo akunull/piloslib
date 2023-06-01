@@ -1,0 +1,7 @@
+#N canvas -1 50 971 484 10;
+#X obj 110 120 nbx_vvc \$1 rate;
+#X obj 250 120 hslxnbx_vvc \$1 amp_a 1 1;
+#X obj 250 180 hslxnbx_vvc \$1 amp_b;
+#X obj 110 160 hsl_vvc \$1 width 0.5;
+#X obj 110 210 bng_hide_vvc \$1 reset;
+#X coords 0 -1 1 1 310 160 1 100 100;

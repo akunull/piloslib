@@ -146,7 +146,7 @@
 #X connect 30 0 10 0;
 #X connect 30 0 12 0;
 #X restore 25 178 pd diffusor-left;
-#N canvas 312 366 778 367 combfilters-left2 0;
+#N canvas 281 252 778 367 combfilters-left2 0;
 #X obj 46 244 +~;
 #X obj 61 219 *~ 0.3;
 #X obj 61 194 lop~ 1000;
@@ -466,7 +466,7 @@
 #X obj 614 24 inlet;
 #X obj 382 24 inlet;
 #X obj 464 26 inlet;
-#N canvas 0 50 207 150 room 0;
+#N canvas 0 50 207 196 room 0;
 #X obj 32 35 inlet;
 #X obj 32 63 * 0.28;
 #X obj 32 94 + 0.7;
@@ -479,7 +479,7 @@
 #X connect 2 0 3 0;
 #X connect 2 0 6 0;
 #X restore 552 55 pd room;
-#N canvas 684 169 244 357 frequency 0;
+#N canvas 684 169 244 338 frequency 0;
 #X obj 60 222 samplerate~;
 #X obj 33 8 inlet;
 #X obj 33 194 t f b;
@@ -537,7 +537,7 @@
 #X text 377 56 combfilter tunings right;
 #X text 71 360 allpass tunings left;
 #X text 383 355 allpass tunings right;
-#N canvas 243 170 195 176 sampstoms 0;
+#N canvas 243 170 195 157 sampstoms 0;
 #X obj 27 21 inlet;
 #X obj 54 86 samplerate~;
 #X obj 27 111 /;

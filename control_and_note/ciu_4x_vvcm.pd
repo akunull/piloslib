@@ -1,0 +1,14 @@
+#N canvas 270 11 614 514 10;
+#X obj 110 190 outlet;
+#X obj 200 190 outlet;
+#X obj 290 190 outlet;
+#X obj 380 190 outlet;
+#X obj 380 120 ciu_vvcm \$1_3;
+#X obj 290 120 ciu_vvcm \$1_2;
+#X obj 200 120 ciu_vvcm \$1_1;
+#X obj 110 120 ciu_vvcm \$1_0;
+#X connect 4 0 3 0;
+#X connect 5 0 2 0;
+#X connect 6 0 1 0;
+#X connect 7 0 0 0;
+#X coords 0 -1 1 1 370 70 1 100 100;

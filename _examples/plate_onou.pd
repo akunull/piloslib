@@ -1,0 +1,1079 @@
+#N canvas -8 -8 1280 677 10;
+#X declare -path ./vv;
+#X declare -path ./synth;
+#X declare -path ./shortcut;
+#X declare -path ./sampler;
+#X declare -path ./oscillator;
+#X declare -path ./modulation;
+#X declare -path ./misc;
+#X declare -path ./conversion;
+#X declare -path ./audio_routing;
+#X declare -path ./audio_effect;
+#X declare -path ./control_and_note;
+#X declare -path ./seq;
+#X declare -path ./timing;
+#X declare -path ../audio_effect;
+#X declare -path ../audio_routing;
+#X declare -path ../control_and_note;
+#X declare -path ../conversion;
+#X declare -path ../misc;
+#X declare -path ../modulation;
+#X declare -path ../oscillator;
+#X declare -path ../sampler;
+#X declare -path ../seq;
+#X declare -path ../shortcut;
+#X declare -path ../synth;
+#X declare -path ../timing;
+#X declare -path ../vv;
+#X declare -path piloslib/audio_effect;
+#X declare -path piloslib/audio_routing;
+#X declare -path piloslib/control_and_note;
+#X declare -path piloslib/conversion;
+#X declare -path piloslib/misc;
+#X declare -path piloslib/modulation;
+#X declare -path piloslib/oscillator;
+#X declare -path piloslib/sampler;
+#X declare -path piloslib/seq;
+#X declare -path piloslib/shortcut;
+#X declare -path piloslib/synth;
+#X declare -path piloslib/timing;
+#X declare -path piloslib/vv;
+#X obj 312 79 bng 45 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 212 139 s global_save;
+#X obj 212 79 bng 45 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 312 139 s global_load;
+#X obj 312 49 loadbang;
+#X obj 402 79 sl_control;
+#A saved 0.115855 3;
+#A saved 0.748064 3;
+#N canvas 665 208 450 300 msgbx 0;
+#X obj 43 13 inlet;
+#X msg 43 38 \; load_send sn_sync_ci 15 4 \; load_send sn_fm_ci 14
+4 \; load_send sn_oscasym_ci 13 4 \; load_send sn_oscamod_ci 12 4 \;
+load_send sn_chan a 0 \; load_send sn_chan b 0 \; load_send sn_chan
+master 0.474747 \; load_send sn_chan b_R 1 \; load_send sn_chan b_L
+1 \; load_send sn_chan a_R 1 \; load_send sn_chan a_L 1 \; load_send
+sn_chan amp_R 1 \; load_send sn_chan amp_L 1 \; load_send sn_chan amp
+0.838384 \; load_send sn_chan on 1 \; load_send sn filt2_freq 0.628049
+555 0 0 0 0 \; load_send sn dry_amp 1 1 0 0 0 0 \; load_send sn filt1_to_filt2
+1 1 0 0 0 0 \; load_send sn filt2_pitch_follow 1 \; load_send sn amp_env_ms
+1000 0 0 0 0 \; load_send sn amp_env_pow 3 0 0 0 0 \; load_send sn
+amp_env_s 0.668224 0 0.47619 0 0 \; load_send sn amp_env_d 0.5 0 0
+0 0 \; load_send sn amp_env_r 0.5 0 0 0 0 \; load_send sn amp_env_amount
+1 0 0.75 0 0 \; load_send sn amp_env_a 0 0 0 0 0 \; load_send sn amp_pitch_follow
+1 0 0 0 0 \; load_send sn filt2_amp 1 1 0 0 0 0 \; load_send sn filt1_type
+0 \; load_send sn filt1_poles 1 \; load_send sn filt1_env_r 0.5 0 0
+0 0 \; load_send sn filt1_env_a 0 0 0 0 0 \; load_send sn filt1_env_ms
+333 0 0 0 0 \; load_send sn filt1_env_pow_a -3 0 0 0 0 \; load_send
+sn filt1_env_pow_b 5 0 0 0 0 \; load_send sn filt1_env_amount 1111
+0 3333 0 0 \; load_send sn filt1_freq 0.347561 11111 0 0 0 0 \; load_send
+sn filt1_pitch_follow 1 \; load_send sn filt1_amp 1 0 0 0 0 0 \; load_send
+sn filt1_mod 0.390244 3 0 0 0 0 \; load_send sn pitch_env_amount 20
+0 0 0 0 \; load_send sn pitch_env_pow 7 0 0 0 0 \; load_send sn pitch_env_ms
+555 0 0 0 0 \; load_send sn pitch_env_r 0.5 0 0 0 0 \; load_send sn
+pitch_env_a 0 0 0 0 0 \; load_send sn noise_noenv 0 0 0 0 0 \; load_send
+sn noise_dry 0 0 0 0 0 \; load_send sn noise_filt1 1 0 0 0 0 \; load_send
+sn noise_filt2 0 0 0 0 0 \; load_send sn noise_ds_pitch_env 0.420561
+0 0 0 0 \; load_send sn noise_env_r 0.5 0 0 0 0 \; load_send sn noise_env_a
+0 0 0 0 0 \; load_send sn noise_env_ms 500 0 0 0 0 \; load_send sn
+noise_env_pow_a -3 0 0 0 0 \; load_send sn noise_env_pow_b 5 0 0 0
+0 \; load_send sn noise_env_amount 0.25 0 0.9 0 0 \; load_send sn noise_ds
+0 0 0 0 0 \; load_send sn osc_a_pitch_env 1 1 0 0 0 0 \; load_send
+sn osc_a_nomod 0 0 0 0 0 \; load_send sn osc_a_sync 2.41732 0 0 0 0
+\; load_send sn osc_a_freq 0 0 0 0 0 \; load_send sn osc_a_pitch 0
+0 0 0 0 \; load_send sn osc_a_pitched 1 \; load_send sn osc_a_phase_start
+0 \; load_send sn osc_a_glide 0 0 0 0 0 \; load_send sn osc_a_reset
+1 \; load_send sn osc_a_noenv 1 1 0 2 0 0 \; load_send sn osc_a_asym
+0 0 0 0 0 \; load_send sn osc_a_wet 1 0 0 0 0 \; load_send sn osc_a_mod_env_amount
+0 0 0 0 0 \; load_send sn osc_a_mod_env_pow 5 0 0 0 0 \; load_send
+sn osc_a_mod_env_ms 666 0 0 0 0 \; load_send sn osc_a_mod_env_r 0.5
+0 0 0 0 \; load_send sn osc_a_mod_env_a 0 0 0 0 0 \; load_send sn osc_a_env_r
+0.5 0 0 0 0 \; load_send sn osc_a_env_a 0 0 0 0 0 \; load_send sn osc_a_env_ms
+777 0 0 0 0 \; load_send sn osc_a_env_pow_a -3 0 0 0 0 \; load_send
+sn osc_a_env_pow_b 3 0 0 0 0 \; load_send sn osc_a_env_amount 0.5 0
+0.5 0 0 \; load_send sn osc_a_filt1 0.0373832 0 0.428571 0 0 \; load_send
+sn osc_a_filt2 0 0 0 0 0 \; load_send sn osc_a_dry 0 0 0 0 0 \; load_send
+sn osc_a_mod 0.362205 0 0 0 0 \; load_send sn osc_b_pitch_env 0 1 0
+0 0 0 \; load_send sn osc_b_freq 0 0 0 0 0 \; load_send sn osc_b_pitched
+1 \; load_send sn osc_b_noenv 0.182243 0 0 0 0 \; load_send sn osc_b_mod_env_amount
+1 0 0 0 0 \; load_send sn osc_b_mod_env_pow 3 0 0 0 0 \; load_send
+sn osc_b_mod_env_ms 500 0 0 0 0 \; load_send sn osc_b_mod_env_r 0.5
+0 0 0 0 \; load_send sn osc_b_mod_env_a 0 0 0 0 0 \; load_send sn osc_b_phase_start
+0 \; load_send sn osc_b_type 1 \; load_send sn osc_b_env_r 0.5 0 0
+0 0 \; load_send sn osc_b_env_a 0 0 0 0 0 \; load_send sn osc_b_env_ms
+777 0 0 0 0 \; load_send sn osc_b_env_pow_a -3 0 0 0 0 \; load_send
+sn osc_b_env_pow_b 7 0 0 0 0 \; load_send sn osc_b_env_amount 1 0 0
+0 0 \; load_send sn osc_b_filt1 0 0 0.119048 0 0 \; load_send sn osc_b_filt2
+0 0 0 0 0 \; load_send sn osc_b_dry 0 0 0 0 0 \; load_send sn osc_b_sync
+1 0 0 0 0 \; load_send sn osc_b_glide 0 0 0 0 0 \; load_send sn osc_b_mod
+0 0 0 0 0 \; load_send sn osc_b_reset 1 \; load_send sn osc_b_pitch
+10 0 0 0 0 \; load_send sn fm 0 14 0 0 0 0 \; load_send sn pitch -12
+0 0 0 0 \; load_send bd_rate 12 4 \; load_send bd_chan a 0 \; load_send
+bd_chan b 0 \; load_send bd_chan master 1 \; load_send bd_chan b_R
+1 \; load_send bd_chan b_L 1 \; load_send bd_chan a_R 1 \; load_send
+bd_chan a_L 1 \; load_send bd_chan amp_R 1 \; load_send bd_chan amp_L
+1 \; load_send bd_chan amp 1 \; load_send bd_chan on 1 \; load_send
+bd sync 1 0 0 0 0 0 0 \; load_send bd asym 0 30 0 0 0 0 0 0 \; load_send
+bd lfo_rev 0 \; load_send bd lfo_note_reset 0 \; load_send bd lfo_sync
+0 1 0 0 0 0 \; load_send bd lfo_pow 1 1 0 0 0 0 \; load_send bd lfo_add
+0 1 0 0 0 0 \; load_send bd lfo_mult 1 1 0 0 0 0 \; load_send bd lfo_sin
+0 1 0 0 0 0 \; load_send bd lfo_sqr 0 1 0 0 0 0 \; load_send bd lfo_saw
+0 1 0 0 0 0 \; load_send bd lfo_rate 1 0 0 0 0 \; load_send bd mod_env_r
+0.5 0 0 0 0 \; load_send bd mod_env_a 0 0 0 0 0 \; load_send bd mod_env_ms
+250 0 0 0 0 \; load_send bd mod_env_pow_a -3 0 0 0 0 \; load_send bd
+mod_env_pow_b 3 0 0 0 0 \; load_send bd mod_env_amount 1 0 0 0 0 \;
+load_send bd noise_ds 0 0 0 0 0 0 0 \; load_send bd glide 0 0 0 0 0
+\; load_send bd amp_env_amount 1 0 0 0 0 0 0 \; load_send bd amp_env_pow
+3 0 0 0 0 \; load_send bd amp_env_ms 1000 0 0 0 0 \; load_send bd amp_env_r
+0.5 0 0 0 0 \; load_send bd amp_env_s 0 0 0 0 0 \; load_send bd amp_env_d
+0.5 0 0 0 0 \; load_send bd amp_env_a 0 0 0 0 0 \; load_send bd wet
+0.5 0 0 0 0 0 0 \; load_send bd dry 0.5 0 0 0 0 0 0 \; load_send bd
+noise_env_amount 0.2 0 0 0 0 0 0 \; load_send bd noise_env_pow 3 0
+0 0 0 \; load_send bd noise_env_ms 333 0 0 0 0 \; load_send bd noise_env_r
+0.5 0 0 0 0 \; load_send bd noise_env_s 0 0 0 0 0 \; load_send bd noise_env_d
+0.5 0 0 0 0 \; load_send bd noise_env_a 0 0 0 0 0 \; load_send bd amp_pitch_follow
+0 0 0 0 0 0 0 \; load_send bd mod_env_amount 1 0 0 0 0 0 0 \; load_send
+bd mod_env_pow 5 0 0 0 0 \; load_send bd mod_env_ms 250 0 0 0 0 \;
+load_send bd mod_env_r 0.5 0 0 0 0 \; load_send bd mod_env_a 0 0 0
+0 0 \; load_send bd pitch 0 0 0 0 0 0 0 \; load_send bd preamp 1 0
+0 0 0 0 0 \; load_send bd mod 0 0 0 0 0 0 0 \; load_send bd pitch_env_amount
+60 0 0 0 0 0 0 \; load_send bd pitch_env_pow 3 0 0 0 0 \; load_send
+bd pitch_env_ms 1000 0 0 0 0 \; load_send bd pitch_env_r 0.5 0 0 0
+0 \; load_send bd pitch_env_a 0 0 0 0 0 \; load_send clk_zero 72 4
+\; load_send tap_tempo 77 4 \; load_send rem_stop 74 4 \; load_send
+rem_play 75 4 \; load_send staa_lop freq 0.411765 1111 \; load_send
+staa_lop wet 0.512605 5 \; load_send staa_lop dry 0.5 1 \; load_send
+staa_asymtan asym 0 \; load_send staa_asymtan amp 2 \; load_send staaci1_0
+8 4 \; load_send staaci1_1 9 4 \; load_send staaci1_2 10 4 \; load_send
+staaci1_3 11 4 \; load_send staa_seq 14 0 \; load_send staa_seq 13
+0 \; load_send staa_seq 12 0 \; load_send staa_seq 11 0 \; load_send
+staa_seq 10 0 \; load_send staa_seq 9 0 \; load_send staa_seq 8 0 \;
+load_send staa_seq 6 28 \; load_send staa_seq 5 25 \; load_send staa_seq
+4 21 \; load_send staa_seq 3 18 \; load_send staa_seq 2 25 \; load_send
+staa_seq 1 21 \; load_send staa_seq 0 18 \; load_send staa_seq 7 32
+\; load_send staa_seq 15 0 \; load_send staa_seq extend 3 \; load_send
+staa_seq rate 0.0859375 \; load_send staa_seq length 8 \; load_send
+staa_seq offset 0 \; load_send staa_chan a 0 \; load_send staa_chan
+b 0.79798 \; load_send staa_chan master 0 \; load_send staa_chan b_R
+1 \; load_send staa_chan b_L 1 \; load_send staa_chan a_R 1 \; load_send
+staa_chan a_L 1 \; load_send staa_chan amp_R 1 \; load_send staa_chan
+amp_L 1 \; load_send staa_chan amp 0.282828 \; load_send staa_chan
+on 1 \; load_send fish_lfo_octave rev 0 \; load_send fish_lfo_octave
+sync 0 1 \; load_send fish_lfo_octave pow 0.521008 2 \; load_send fish_lfo_octave
+add 0 1 \; load_send fish_lfo_octave mult 1 1 \; load_send fish_lfo_octave
+sin 1 0.5 \; load_send fish_lfo_octave sqr 0 1 \; load_send fish_lfo_octave
+saw 1 0.5 \; load_send fish_lfo_octave rate 24.4 \; load_send fish_vel_lfo
+rev 0 \; load_send fish_vel_lfo sync 0 1 \; load_send fish_vel_lfo
+pow 0.487395 1 \; load_send fish_vel_lfo add 1 27 \; load_send fish_vel_lfo
+mult 1 100 \; load_send fish_vel_lfo sin 1 1 \; load_send fish_vel_lfo
+sqr 0 1 \; load_send fish_vel_lfo saw 0 1 \; load_send fish_vel_lfo
+rate 6 \; load_send fish_seq 30 0 \; load_send fish_seq 29 0 \; load_send
+fish_seq 28 62 \; load_send fish_seq 27 0 \; load_send fish_seq 26
+0 \; load_send fish_seq 25 62 \; load_send fish_seq 24 0 \; load_send
+fish_seq 22 50 \; load_send fish_seq 21 0 \; load_send fish_seq 20
+0 \; load_send fish_seq 19 42 \; load_send fish_seq 18 0 \; load_send
+fish_seq 17 0 \; load_send fish_seq 16 42 \; load_send fish_seq 23
+0 \; load_send fish_seq 31 54 \; load_send fish_seq 14 0 \; load_send
+fish_seq 13 0 \; load_send fish_seq 12 54 \; load_send fish_seq 11
+0 \; load_send fish_seq 10 0 \; load_send fish_seq 9 54 \; load_send
+fish_seq 8 0 \; load_send fish_seq 6 56 \; load_send fish_seq 5 0 \;
+load_send fish_seq 4 0 \; load_send fish_seq 3 57 \; load_send fish_seq
+2 0 \; load_send fish_seq 1 0 \; load_send fish_seq 0 57 \; load_send
+fish_seq 7 0 \; load_send fish_seq 15 54 \; load_send fish_del_vcf
+freq 0.260504 11111 \; load_send fish_del_vcf type 0 \; load_send fish_del_vcf
+poles 1 \; load_send fish_del_vcf q 0.159664 4 \; load_send fish_del_vcf
+wet 0.563025 1 \; load_send fish_del_vcf dry 0 1 \; load_send fish_del
+fdbk 0.865546 \; load_send fish_del wet 0.621849 \; load_send fish_del
+dry 1 \; load_send fish_del ms 1 250 \; load_send fish_del preamp 1
+\; load_send fish_bitred wet 0.268908 0.5 \; load_send fish_bitred
+dry 1 1 \; load_send fish_bitred bits 1 4 \; load_send fish_chan a
+0 \; load_send fish_chan b 0.494949 \; load_send fish_chan master 0.222222
+\; load_send fish_chan b_R 1 \; load_send fish_chan b_L 1 \; load_send
+fish_chan a_R 1 \; load_send fish_chan a_L 1 \; load_send fish_chan
+amp_R 1 \; load_send fish_chan amp_L 1 \; load_send fish_chan amp 1
+\; load_send fish_chan on 0 \; load_send fish_asymt amp 43 \; load_send
+fish_asymt dry 0.168067 1 \; load_send fish_asymt wet 0.5 1 \; load_send
+fish_asymt asym 0.344538 10 \; load_send fish_vcf freq 0.151261 11111
+\; load_send fish_vcf type 0 \; load_send fish_vcf poles 2 \; load_send
+fish_vcf q 0.411765 3 \; load_send fish_vcf wet 0.470588 1 \; load_send
+fish_vcf dry 0.697479 1 \; load_send fish fdbk 0.481707 0.6 0 0.38
+0 0 0 0 \; load_send fish noise_nodelay 0 0 0 0 0 0 0 \; load_send
+fish noise_ds_pitch_env 0 1 0 0 0 0 0 0 \; load_send fish noise_env_d
+0.5 0 0 0 0 \; load_send fish noise_env_s 0.046729 0 0.0952381 0 0
+\; load_send fish noise_env_r 0 0 0 0 0 \; load_send fish noise_env_amount
+1 0 0 0 0 0 0 \; load_send fish noise_env_pow_b 5 0 0 0 0 \; load_send
+fish noise_env_pow_a -3 0 0 0 0 \; load_send fish noise_env_ms 2 0
+50 0 0 \; load_send fish noise_env_a 0 0 0 0 0 \; load_send fish noise_ds
+0.107477 0 -0.309524 0 0 0 0 \; load_send fish fm_fdbk 0 5 0 0 0 0
+0 0 \; load_send fish pitch_lfo_rev 0 \; load_send fish pitch_lfo_note_reset
+1 \; load_send fish pitch_lfo_sync 0 1 0 0 0 0 0 0 \; load_send fish
+pitch_lfo_pow 1 1 0 0 0 0 0 0 \; load_send fish pitch_lfo_add 0 1 0
+0 0.08 0 0 0 \; load_send fish pitch_lfo_mult 1 1 0 0 0 0 0 0 \; load_send
+fish pitch_lfo_sin 0.20122 1 0 0 0 0 0 0 \; load_send fish pitch_lfo_sqr
+0 1 0 0 0 0 0 0 \; load_send fish pitch_lfo_saw 0 1 0 0 0 0 0 0 \;
+load_send fish pitch_lfo_rate 0.305 0 0 0 0 0 0 \; load_send fish glide
+0 1 0 0 0 0 \; load_send fish pitch_env_amount 0 0 0 0 0 0 0 \; load_send
+fish pitch_env_pow 2 0 0 0 0 \; load_send fish pitch_env_ms 125 0 125
+0 0 \; load_send fish pitch_env_r 0.5 0 0 0 0 \; load_send fish pitch_env_a
+0.214953 0 -0.166667 0 0 \; load_send fish pitch -24 0 0 0 0 0 0 \;
+load_send fish filt2_pitch_follow 0 \; load_send fish filt2_freq 0.0731707
+1111 0 0 0 0 0 0 \; load_send fish filt2_dry 0 1 0 0 0 0 0 0 \; load_send
+fish filt1_pitch_follow 1 \; load_send fish filt1_dry 0 1 0 0 0 0 0
+0 \; load_send fish filt1_wet 1 1 0 0 0 0 0 0 \; load_send fish filt1_q
+0.689024 4.8 0 0.4 0 0 0 0 \; load_send fish filt1_freq 0.103659 1111
+0 518 0 0 936 0 \; load_send fish filt2_wet 1 0.5 0 0 0 0 0 0 \; load_send
+fish amp_pitch_follow 1 0 0 0 0 0 0 \; load_send fish lfo_rev 0 \;
+load_send fish lfo_note_reset 0 \; load_send fish lfo_sync 0 1 0 0
+0 0 \; load_send fish lfo_pow 1 1 0 0 0 0 \; load_send fish lfo_add
+0 1 0 0 0 0 \; load_send fish lfo_mult 1 1 0 0 0 0 \; load_send fish
+lfo_sin 0.0365854 1 0 0 0 0 \; load_send fish lfo_sqr 0 1 0 0 0 0 \;
+load_send fish lfo_saw 0 1 0 0 0 0 \; load_send fish lfo_rate 0.77
+0.18 0 0 0 \; load_send fish mod_env_r 0.5 0 0 0 0 \; load_send fish
+mod_env_a 0 0 0 0 0 \; load_send fish mod_env_ms 500 0 0 0 0 \; load_send
+fish mod_env_pow_a -3 0 0 0 0 \; load_send fish mod_env_pow_b 3 0 0
+0 0 \; load_send fish mod_env_amount 0.5 0 0.5 0 0 \; load_send fish_seq
+extend 0 \; load_send fish_seq rate 0.25 \; load_send fish_seq length
+32 \; load_send fish_seq offset 0 \; load_send syno_del2 fdbk 0.828125
+\; load_send syno_del2 wet 0.578125 \; load_send syno_del2 dry 1 \;
+load_send syno_del2 ms 1.0642 250 \; load_send syno_del2 preamp 1 \;
+load_send syno_del1_lfo rev 0 \; load_send syno_del1_lfo sync 0 1 \;
+load_send syno_del1_lfo pow 1 1 \; load_send syno_del1_lfo add 0.773109
+1 \; load_send syno_del1_lfo mult 1 1 \; load_send syno_del1_lfo sin
+0.403361 1 \; load_send syno_del1_lfo sqr 0 1 \; load_send syno_del1_lfo
+saw 0 1 \; load_send syno_del1_lfo rate 5.2 \; load_send syno_del1
+fdbk 0.828125 \; load_send syno_del1 wet 0.578125 \; load_send syno_del1
+dry 1 \; load_send syno_del1 ms 1.0642 250 \; load_send syno_del1 preamp
+1 \; load_send b_amp_gate_rate_sync_ci 40 4 8 \; load_send b_amp_gate_rate_ci
+23 4 \; load_send b_amp_gate_glide_ci 22 4 \; load_send b_amp_gate_width_ci
+21 4 \; load_send b_amp_gate_amp_b_ci 20 4 \; load_send b_amp_gate
+amp_a 1 1 \; load_send b_amp_gate amp_b 0 1 \; load_send b_out_chan
+master 1 \; load_send b_out_chan amp_R 1 \; load_send b_out_chan amp_L
+1 \; load_send b_out_chan amp 1 \; load_send b_out_chan on 1 \; load_send
+b_amp_gate glide 0.05 0 \; load_send b_amp_gate reset_rate 4 \; load_send
+b_amp_gate width 0.551181 \; load_send b_amp_gate rate -6 \; load_send
+onou_asymt amp 1 \; load_send onou_asymt dry 0.504202 1 \; load_send
+onou_asymt wet 0.5 1 \; load_send onou_asymt asym 0 30 \; load_send
+onou_vcf q 0.5 3 \; load_send onou_vcf freq 0.117647 22150 \; load_send
+onou_vcf wet 1 1 \; load_send onou_vcf dry 0.176471 1 \; load_send
+onou_vel_lfo rev 0 \; load_send onou_vel_lfo sync 0 1 \; load_send
+onou_vel_lfo pow 1 7 \; load_send onou_vel_lfo add 0.226891 128 \;
+load_send onou_vel_lfo mult 0.915966 127 \; load_send onou_vel_lfo
+sin 0.871127 1 \; load_send onou_vel_lfo sqr 0 1 \; load_send onou_vel_lfo
+saw 0.257745 1 \; load_send onou_vel_lfo rate 16 \; load_send onou_seq
+14 25 \; load_send onou_seq 13 25 \; load_send onou_seq 12 26 \; load_send
+onou_seq 11 28 \; load_send onou_seq 10 16 \; load_send onou_seq 9
+18 \; load_send onou_seq 8 30 \; load_send onou_seq 6 30 \; load_send
+onou_seq 5 23 \; load_send onou_seq 4 47 \; load_send onou_seq 3 42
+\; load_send onou_seq 2 49 \; load_send onou_seq 1 23 \; load_send
+onou_seq 0 18 \; load_send onou_seq 7 28 \; load_send onou_seq 15 18
+\; load_send onou_chan a 0 \; load_send onou_chan b 0.393939 \; load_send
+onou_chan master 0.555556 \; load_send onou_chan b_R 1 \; load_send
+onou_chan b_L 1 \; load_send onou_chan a_R 1 \; load_send onou_chan
+a_L 1 \; load_send onou_chan amp_R 1 \; load_send onou_chan amp_L 1
+\; load_send onou_chan amp 0.59596 \; load_send onou_chan on 0 \; load_send
+onou filt2_freq 1 555 0 0 0 0 \; load_send onou dry_amp 1 1 0 0 0 0
+\; load_send onou filt1_to_filt2 1 1 0 0 0 0 \; load_send onou filt2_pitch_follow
+1 \; load_send onou amp_env_ms 1000 0 0 0 0 \; load_send onou amp_env_pow
+3 0 0 0 0 \; load_send onou amp_env_s 0.5 0 0 0 0 \; load_send onou
+amp_env_d 0.5 0 0 0 0 \; load_send onou amp_env_r 0.5 0 0 0 0 \; load_send
+onou amp_env_amount 1 0 0 0 0 \; load_send onou amp_env_a 0 0 0 0 0
+\; load_send onou amp_pitch_follow 1 0 0 0 0 \; load_send onou filt2_amp
+0 1 0 0 0 0 \; load_send onou filt1_type 0 \; load_send onou filt1_poles
+4 \; load_send onou filt1_env_r 0.196262 0 0 0 0 \; load_send onou
+filt1_env_a 0 0 0 0 0 \; load_send onou filt1_env_ms 500 0 0 0 0 \;
+load_send onou filt1_env_pow_a -3 0 0 0 0 \; load_send onou filt1_env_pow_b
+5 0 0 0 0 \; load_send onou filt1_env_amount 5555 0 0 0 0 \; load_send
+onou filt1_freq 0 1 0 0 0 0 \; load_send onou filt1_pitch_follow 1
+\; load_send onou filt1_amp 0 1 0 0 0 0 \; load_send onou filt1_mod
+0.701219 3 0 0 0 0 \; load_send onou pitch_env_amount 0 0 0 0 0 \;
+load_send onou pitch_env_pow 3 0 0 0 0 \; load_send onou pitch_env_ms
+555 0 0 0 0 \; load_send onou pitch_env_r 0.224299 0 0 0 0 \; load_send
+onou pitch_env_a 0 0 0 0 0 \; load_send onou noise_noenv 0 0 0 0 0
+\; load_send onou noise_dry 0 0 0 0 0 \; load_send onou noise_filt1
+0 0 0 0 0 \; load_send onou noise_filt2 0 0 0 0 0 \; load_send onou
+noise_ds_pitch_env 0 0 0 0 0 \; load_send onou noise_env_r 0.5 0 0
+0 0 \; load_send onou noise_env_a 0 0 0 0 0 \; load_send onou noise_env_ms
+500 0 0 0 0 \; load_send onou noise_env_pow_a -3 0 0 0 0 \; load_send
+onou noise_env_pow_b 3 0 0 0 0 \; load_send onou noise_env_amount 1
+0 0 0 0 \; load_send onou noise_ds 0 0 0 0 0 \; load_send onou osc_a_pitch_env
+1 1 0 0 0 0 \; load_send onou osc_a_nomod 0 0 0 0 0 \; load_send onou
+osc_a_sync 1 0 0 0 0 \; load_send onou osc_a_freq 0 0 0 0 0 \; load_send
+onou osc_a_pitch -0.05 0 0 0.1 0 \; load_send onou osc_a_pitched 1
+\; load_send onou osc_a_phase_start 0 \; load_send onou osc_a_glide
+0 0 0 0 0 \; load_send onou osc_a_reset 1 \; load_send onou osc_a_noenv
+1 1 0 0 0 0 \; load_send onou osc_a_asym 0 0 0 0 0 \; load_send onou
+osc_a_wet 1 0 0 0 0 \; load_send onou osc_a_mod_env_amount 0 0 0 0
+0 \; load_send onou osc_a_mod_env_pow 3 0 0 0 0 \; load_send onou osc_a_mod_env_ms
+1000 0 0 0 0 \; load_send onou osc_a_mod_env_r 0.5 0 0 0 0 \; load_send
+onou osc_a_mod_env_a 0 0 0 0 0 \; load_send onou osc_a_env_r 0.5 0
+0 0 0 \; load_send onou osc_a_env_a 0 0 0 0 0 \; load_send onou osc_a_env_ms
+500 0 0 0 0 \; load_send onou osc_a_env_pow_a -3 0 0 0 0 \; load_send
+onou osc_a_env_pow_b 3 0 0 0 0 \; load_send onou osc_a_env_amount 1
+0 0 0 0 \; load_send onou osc_a_filt1 1 0 0 0 0 \; load_send onou osc_a_filt2
+0 0 0 0 0 \; load_send onou osc_a_dry 0.761682 0 0 0 0 \; load_send
+onou osc_a_mod 0.462617 0 0.380952 0 0 \; load_send onou osc_b_pitch_env
+0 1 0 0 0 0 \; load_send onou osc_b_freq 0 0 0 0 0 \; load_send onou
+osc_b_pitched 1 \; load_send onou osc_b_noenv 1 0 0 0 0 \; load_send
+onou osc_b_mod_env_amount 0 0 0 0 0 \; load_send onou osc_b_mod_env_pow
+3 0 0 0 0 \; load_send onou osc_b_mod_env_ms 1000 0 0 0 0 \; load_send
+onou osc_b_mod_env_r 0.5 0 0 0 0 \; load_send onou osc_b_mod_env_a
+0 0 0 0 0 \; load_send onou osc_b_phase_start 0 \; load_send onou osc_b_type
+0 \; load_send onou osc_b_env_r 0.5 0 0 0 0 \; load_send onou osc_b_env_a
+0 0 0 0 0 \; load_send onou osc_b_env_ms 500 0 0 0 0 \; load_send onou
+osc_b_env_pow_a -3 0 0 0 0 \; load_send onou osc_b_env_pow_b 3 0 0
+0 0 \; load_send onou osc_b_env_amount 1 0 0 0 0 \; load_send onou
+osc_b_filt1 0.635514 0 0 0 0 \; load_send onou osc_b_filt2 0 0 0 0
+0 \; load_send onou osc_b_dry 0.551402 0 0 0 0 \; load_send onou osc_b_sync
+1 0 0 0 0 \; load_send onou osc_b_glide 0 0 0 0 0 \; load_send onou
+osc_b_mod 1 0 0 0 0 \; load_send onou osc_b_reset 1 \; load_send onou
+osc_b_pitch -0.05 0 0.1 0 0 \; load_send onou fm 0 10 0 2 0 0 \; load_send
+onou pitch -12 0 0 0 0 \; load_send onou_seq extend 5 \; load_send
+onou_seq rate 0.367801 \; load_send onou_seq length 16 \; load_send
+onou_seq offset 6 \; load_send syno_onou_lfo rev 0 \; load_send syno_onou_lfo
+sync 0 1 \; load_send syno_onou_lfo pow 1 1 \; load_send syno_onou_lfo
+add 0.10084 1 \; load_send syno_onou_lfo mult 1 1 \; load_send syno_onou_lfo
+sin 0.277311 1 \; load_send syno_onou_lfo sqr 0 1 \; load_send syno_onou_lfo
+saw 0 1 \; load_send syno_onou_lfo rate 8.97 \; load_send onou_del1
+fdbk 0.94958 \; load_send onou_del1 wet 0.87395 \; load_send onou_del1
+dry 1 \; load_send onou_del1 ms 0.265484 250 \; load_send onou_del1
+preamp 1 \; load_send syno_note_octci 52 4 4 \; load_send syno_note_length
+48 4 4 \; load_send syno_asymtan asym 0 \; load_send syno_asymtan amp
+1.5 \; load_send syno_filt_ci 16 4 \; load_send syno_fm_c_to_b_ci 19
+4 \; load_send syno_fm_c_to_a_ci 18 4 \; load_send syno_fm__ci 17 4
+\; load_send syno_chan a 0 \; load_send syno_chan b 1 \; load_send
+syno_chan master 0 \; load_send syno_chan b_R 1 \; load_send syno_chan
+b_L 1 \; load_send syno_chan a_R 1 \; load_send syno_chan a_L 1 \;
+load_send syno_chan amp_R 1 \; load_send syno_chan amp_L 1 \; load_send
+syno_chan amp 0.383838 \; load_send syno_chan on 1 \; load_send syno
+lfo_rev 0 \; load_send syno lfo_note_reset 0 \; load_send syno lfo_sync
+0 1 0 0 0 0 \; load_send syno lfo_pow 1 1 0 0 0 0 \; load_send syno
+lfo_add 0 1 0 0 0 0 \; load_send syno lfo_mult 1 1 0 0 0 0 \; load_send
+syno lfo_sin 0 1 0 0 0 0 \; load_send syno lfo_sqr 0 1 0 0 0 0 \; load_send
+syno lfo_saw 0 1 0 0 0 0 \; load_send syno lfo_rate 1 0 0 0 0 \; load_send
+syno mod_env_r 0.5 0 0 0 0 \; load_send syno mod_env_a 0 0 0 0 0 \;
+load_send syno mod_env_ms 1250 0 0 0 0 \; load_send syno mod_env_pow_a
+-3 0 0 0 0 \; load_send syno mod_env_pow_b 3 0 0 0 0 \; load_send syno
+mod_env_amount 1 0 0 0 0 \; load_send syno dry_amp 1 1 0 0 0 0 0 0
+\; load_send syno filt1_freq 0.220472 11111 0 0 0 0 0 0 \; load_send
+syno filt1_type 0 \; load_send syno filt1_poles 4 \; load_send syno
+filt1_env_r 0.5 0 0 0 0 \; load_send syno filt1_env_a 0 0 0 0 0 \;
+load_send syno filt1_env_ms 500 0 0 0 0 \; load_send syno filt1_env_pow_a
+-3 0 0 0 0 \; load_send syno filt1_env_pow_b 3 0 0 0 0 \; load_send
+syno filt1_env_amount 0.25 0 0 0 0 0 0 \; load_send syno filt1_pitch_follow
+1 \; load_send syno filt1_amp 1 1 0 0 0 0 0 0 \; load_send syno filt1_mod
+0.5 3 0 0 0 0 0 0 \; load_send syno filt1_to_filt2 1 1 0 0 0 0 0 0
+\; load_send syno filt2_pitch_follow 1 \; load_send syno filt2_freq
+1 1111 0 0 0 0 0 0 \; load_send syno amp_pitch_follow 1 0 0 0 0 0 0
+\; load_send syno filt2_amp 1 1 0 0 0 0 0 0 \; load_send syno fm_c_to_b
+0.551181 29 0 0 0 0 0 0 \; load_send syno osc_ds 0 0.5 0 0 0 0 0 0
+\; load_send syno fm_c_to_a 0.551181 30 0 0 0 0 0 0 \; load_send syno
+osc_c_pitch_env 0 1 0 0 0 0 \; load_send syno osc_c_pitched 1 \; load_send
+syno osc_c_freq 0 0 0 0 0 0 0 \; load_send syno osc_c_env_d 0.5 0 0
+0 0 \; load_send syno osc_c_env_s 1 0 0 0 0 \; load_send syno osc_c_env_r
+0.242991 0 0 0 0 \; load_send syno osc_c_env_amount 1 0 0 0 0 0 0 \;
+load_send syno osc_c_env_pow_b 3 0 0 0 0 \; load_send syno osc_c_env_pow_a
+-3 0 0 0 0 \; load_send syno osc_c_env_ms 2000 0 0 0 0 \; load_send
+syno osc_c_env_a 0 0 0 0 0 \; load_send syno osc_c_phase_start 0 \;
+load_send syno osc_c_type 0 \; load_send syno osc_c_filt1 0 0 0 0 0
+0 0 \; load_send syno osc_c_filt2 0 0 0 0 0 0 0 \; load_send syno osc_c_dry
+1 0 0 0 0 0 0 \; load_send syno osc_c_sync 1 0 0 0 0 0 0 \; load_send
+syno osc_c_glide 0 0 0 0 0 \; load_send syno osc_c_mod 0.546729 0 0
+0 0 0 0 \; load_send syno osc_c_reset 1 \; load_send syno osc_c_pitch
+0 0 0 0 0 0 0 \; load_send syno noise_env_d 0.5 0 0 0 0 \; load_send
+syno noise_env_s 0 0 0 0 0 \; load_send syno noise_env_r 0.5 0 0 0
+0 \; load_send syno noise_env_amount 1 0 0 0 0 0 0 \; load_send syno
+noise_env_pow_b 3 0 0 0 0 \; load_send syno noise_env_pow_a -3 0 0
+0 0 \; load_send syno noise_env_ms 500 0 0 0 0 \; load_send syno noise_env_a
+0 0 0 0 0 \; load_send syno noise_dry 0 0 0 0 0 0 0 \; load_send syno
+noise_filt1 0 0 0 0 0 0 0 \; load_send syno noise_filt2 0 0 0 0 0 0
+0 \; load_send syno noise_ds 0 0 0 0 0 0 0 \; load_send syno osc_a_pitch_env
+1 1 0 0 0 0 0 0 \; load_send syno osc_a_mix 1 0 0 0 0 0 0 \; load_send
+syno osc_a_pitched 1 \; load_send syno osc_a_freq 0 0 0 0 0 0 0 \;
+load_send syno osc_a_asym 0 1 0 0 0 0 0 0 \; load_send syno osc_a_env_d
+0.5 0 0 0 0 \; load_send syno osc_a_env_s 1 0 0 0 0 \; load_send syno
+osc_a_env_r 0 0 0 0 0 \; load_send syno osc_a_env_amount 1 0 0 0 0
+0 0 \; load_send syno osc_a_env_pow_b 3 0 0 0 0 \; load_send syno osc_a_env_pow_a
+-3 0 0 0 0 \; load_send syno osc_a_env_ms 10011 0 0 0 0 \; load_send
+syno osc_a_env_a 0 0 0 0 0 \; load_send syno osc_a_phase_start 0 \;
+load_send syno osc_a_filt1 1 0 0 0 0 0 0 \; load_send syno osc_a_filt2
+0 0 0 0 0 0 0 \; load_send syno osc_a_dry 1 0 0 0 0 0 0 \; load_send
+syno osc_a_sync 1 0 0 0 0 0 0 \; load_send syno osc_a_glide 0 0 0 0
+0 0 0 \; load_send syno osc_a_mod 0 0 0 0 0 0 0 \; load_send syno osc_a_reset
+1 \; load_send syno osc_a_pitch 0 0 0 0 0 0 0 \; load_send syno osc_b_pitch_env
+1 1 0 0 0 0 \; load_send syno osc_b_pitched 1 \; load_send syno osc_b_freq
+0 0 0 0 0 0 0 \; load_send syno osc_b_env_d 0.5 0 0 0 0 \; load_send
+syno osc_b_env_s 1 0 0 0 0 \; load_send syno osc_b_env_r 0.247664 0
+0 0 0 \; load_send syno osc_b_env_amount 1 0 0 0 0 0 0 \; load_send
+syno osc_b_env_pow_b 3 0 0 0 0 \; load_send syno osc_b_env_pow_a -3
+0 0 0 0 \; load_send syno osc_b_env_ms 2000 0 0 0 0 \; load_send syno
+osc_b_env_a 0 0 0 0 0 \; load_send syno osc_b_phase_start 0 \; load_send
+syno osc_b_type 1 \; load_send syno osc_b_filt1 0.934579 0 0 0 0 0
+0 \; load_send syno osc_b_filt2 0 0 0 0 0 0 0 \; load_send syno osc_b_dry
+0.598131 0 0 0 0 0 0 \; load_send syno osc_b_sync 1 0 0 0 0 0 0 \;
+load_send syno osc_b_glide 0 0 0 0 0 \; load_send syno osc_b_mod 0.817757
+0 0 0 0 0 0 \; load_send syno osc_b_reset 1 \; load_send syno osc_b_pitch
+12 0 0 0 0 0 0 \; load_send syno fm 0.566929 22 0 0 0 0 0 0 \; load_send
+syno pitch_env_amount 112 0 0 0 0 0 0 \; load_send syno pitch_env_pow
+5 0 0 0 0 \; load_send syno pitch_env_ms 500 0 0 0 0 \; load_send syno
+pitch_env_r 0.5 0 0 0 0 \; load_send syno pitch_env_a 0 0 0 0 0 \;
+load_send syno pitch -24 0 0 0 0 0 0 \; load_send global tempo 70 \;
+;
+#X connect 0 0 1 0;
+#X restore 402 109 pd msgbx;
+#X obj 42 169 global_transport;
+#X obj 502 269 catcher~ master;
+#X obj 502 329 tanhx~;
+#X obj 562 329 tanhx~;
+#X obj 42 79 metronome_60;
+#X obj 302 399 writesf_global~ 2;
+#X obj 502 359 hip~ 3;
+#X obj 562 359 hip~ 3;
+#X obj 502 499 dac~;
+#X obj 502 469 tline~;
+#X obj 562 469 tline~;
+#X obj 97 401 hsl 180 40 0 1 0 1 empty empty empty -2 -8 0 10 -262144
+-1 -1 17900 0;
+#X obj 242 479 peak_stick2~;
+#X obj 242 489 peak_stick2~;
+#X text 97 385 ||||||||||||||||||||||||||||;
+#X obj 302 339 tgl 40 1 empty empty Record 17 7 0 10 -262144 -36352
+-1 0 1;
+#X obj 202 169 bar_readout;
+#N canvas 0 50 450 300 dspon 0;
+#X obj 37 37 inlet;
+#X msg 37 59 dsp 1;
+#X obj 37 81 s pd;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X restore 42 459 pd dspon;
+#N canvas 0 50 794 502 declares 0;
+#X obj 42 456 declare -path ./vv;
+#X obj 42 396 declare -path ./synth;
+#X obj 42 366 declare -path ./shortcut;
+#X obj 42 306 declare -path ./sampler;
+#X obj 42 276 declare -path ./oscillator;
+#X obj 42 246 declare -path ./modulation;
+#X obj 42 216 declare -path ./misc;
+#X obj 42 186 declare -path ./conversion;
+#X obj 42 126 declare -path ./audio_routing;
+#X obj 42 96 declare -path ./audio_effect;
+#X obj 42 156 declare -path ./control_and_note;
+#X obj 42 336 declare -path ./seq;
+#X obj 42 426 declare -path ./timing;
+#X text 39 81 For when in root:;
+#X text 249 81 For when in a subdirectory:;
+#X obj 252 96 declare -path ../audio_effect;
+#X obj 252 126 declare -path ../audio_routing;
+#X obj 252 156 declare -path ../control_and_note;
+#X obj 252 186 declare -path ../conversion;
+#X obj 252 216 declare -path ../misc;
+#X obj 252 246 declare -path ../modulation;
+#X obj 252 276 declare -path ../oscillator;
+#X obj 252 306 declare -path ../sampler;
+#X obj 252 336 declare -path ../seq;
+#X obj 252 366 declare -path ../shortcut;
+#X obj 252 396 declare -path ../synth;
+#X obj 252 426 declare -path ../timing;
+#X obj 252 456 declare -path ../vv;
+#X obj 472 96 declare -path piloslib/audio_effect;
+#X obj 472 126 declare -path piloslib/audio_routing;
+#X obj 472 156 declare -path piloslib/control_and_note;
+#X obj 472 186 declare -path piloslib/conversion;
+#X obj 472 216 declare -path piloslib/misc;
+#X obj 472 246 declare -path piloslib/modulation;
+#X obj 472 276 declare -path piloslib/oscillator;
+#X obj 472 306 declare -path piloslib/sampler;
+#X obj 472 336 declare -path piloslib/seq;
+#X obj 472 366 declare -path piloslib/shortcut;
+#X obj 472 396 declare -path piloslib/synth;
+#X obj 472 426 declare -path piloslib/timing;
+#X obj 472 456 declare -path piloslib/vv;
+#X text 469 81 For when in a folder in searchpath called piloslib:
+;
+#X text 29 21 Includes necessary directories. Patches only work if
+library is in searchpath (automatic when installed via deken) or the
+patch is in the root of the library or a subdirectory of the root;
+#X restore 402 139 pd declares;
+#N canvas 395 45 677 557 syno 0;
+#X obj 42 276 sysk_nv_vvcm~ 3 ajah syno;
+#X obj 42 426 chan_ab_1x2_vvcm~ syno_chan;
+#X obj 402 16 ciu_vvcm syno_fm__ci;
+#X obj 402 76 s syno_fm_r;
+#X obj 552 16 ciu_vvcm syno_fm_c_to_a_ci;
+#X obj 552 76 s syno_fm_c_to_a_r;
+#X obj 722 76 s syno_fm_c_to_b_r;
+#X obj 722 16 ciu_vvcm syno_fm_c_to_b_ci;
+#X obj 262 16 ciu_vvcm syno_filt_ci;
+#X obj 262 76 s syno_filt1_freq_r;
+#X obj 102 306 asym_tanh_vvcm~ syno_asymtan;
+#X obj 42 246 f2nv 4;
+#X obj 42 76 b2f 8 42;
+#X obj 252 106 ci_strip_vvcm syno_note_length;
+#X obj 252 186 /;
+#X floatatom 183 253 5 0 0 0 - - -;
+#X obj 252 216 u2fseq 4 1 0 2 4 6 7;
+#X obj 42 186 +;
+#X obj 52 161 * 12;
+#X obj 52 106 ci_strip_vvcm syno_note_octci;
+#X obj 22 46 nip_mod_chan 1;
+#X obj 11 95 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 52 217 + 12;
+#X obj 42 306 lop~ 444;
+#X connect 0 0 10 0;
+#X connect 0 0 23 0;
+#X connect 2 0 3 0;
+#X connect 4 0 5 0;
+#X connect 7 0 6 0;
+#X connect 8 0 9 0;
+#X connect 10 0 1 0;
+#X connect 11 0 0 0;
+#X connect 12 0 17 0;
+#X connect 13 0 14 0;
+#X connect 13 3 14 1;
+#X connect 14 0 16 0;
+#X connect 16 0 11 2;
+#X connect 16 0 15 0;
+#X connect 17 0 11 0;
+#X connect 17 0 22 0;
+#X connect 18 0 17 1;
+#X connect 19 0 18 0;
+#X connect 20 0 0 0;
+#X connect 20 0 21 0;
+#X connect 22 0 11 0;
+#X connect 23 0 10 0;
+#X restore 502 139 pd syno;
+#N canvas 357 54 853 586 onou 0;
+#X obj 42 416 f2nv, f 18;
+#N canvas 200 100 853 485 del 0;
+#X obj 50 70 inlet~;
+#X obj 50 380 outlet~;
+#X obj 350 320 hip~ 444;
+#X obj 50 100 delay_extfb_vvcm~ onou_del1;
+#X obj 520 90 lfou_vvcm syno_onou_lfo;
+#X obj 520 331 s onou_del1_ms_r;
+#X obj 410 320 hip~ 888;
+#X obj 350 350 *~ 0.5;
+#X obj 350 410 throw~ onou_del1_in;
+#X obj 350 380 lop~ 5555;
+#X connect 0 0 3 0;
+#X connect 2 0 7 0;
+#X connect 3 0 1 0;
+#X connect 3 1 2 0;
+#X connect 3 1 6 0;
+#X connect 4 0 5 0;
+#X connect 6 0 7 0;
+#X connect 7 0 9 0;
+#X connect 9 0 8 0;
+#X restore 42 476 pd del;
+#X obj 42 16 seq_counter_vvcm onou_seq;
+#X obj 42 446 sysk_nv_vvcm~ 3 imp onou;
+#X obj 42 826 chan_ab_1x2_vvcm~ onou_chan;
+#X obj 42 146 f_16x onou_seq;
+#X obj 382 106 nbx_16x_vvc onou_seq;
+#N canvas 0 50 1004 460 onou_vel_seq 0;
+#X obj 68 47 lfou_vvcm onou_vel_lfo;
+#X obj 68 278 outlet;
+#X obj 128 278 b2n 2;
+#X obj 128 308 rrandom;
+#X obj 128 338 s onou_vel_lfo_saw_r;
+#X obj 68 398 s onou_vel_lfo_sin_r;
+#X obj 68 368 rev;
+#X obj 68 338 * 0.5;
+#X connect 0 0 1 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 3 0 7 0;
+#X connect 6 0 5 0;
+#X connect 7 0 6 0;
+#X restore 152 146 pd onou_vel_seq;
+#X obj 192 176 nip_mod_chan 1;
+#N canvas 634 230 1004 460 onou_seq_rate_mod 0;
+#X obj 78 78 rrandom;
+#X obj 298 78 rrandom;
+#X obj 68 308 s onou_seq_rate_r;
+#X obj 78 288 outlet;
+#X obj 78 48 b2n 8;
+#X obj 298 48 eob2n 4;
+#X obj 58 108 t b a;
+#X obj 78 168 f;
+#X obj 278 103 t b a;
+#X obj 298 158 f;
+#X obj 78 378 s onou_seq_reset;
+#X obj 128 198 b2u 8;
+#X obj 78 258 ptbf;
+#X obj 78 198 t a a;
+#X obj 78 348 b2n 4;
+#X obj 128 258 *;
+#X floatatom 27 166 5 0 0 0 - - -;
+#X obj 78 138 u2fseq 3 0 0 4 2 1 1.5 0.75;
+#X obj 298 128 u2fseq 4 0 0 0.1 0.125 0.25 0.05;
+#X obj 124 228 * 0.5;
+#X connect 0 0 6 0;
+#X connect 1 0 8 0;
+#X connect 4 0 0 0;
+#X connect 5 0 1 0;
+#X connect 6 0 7 0;
+#X connect 6 1 17 0;
+#X connect 7 0 13 0;
+#X connect 8 0 9 0;
+#X connect 8 1 18 0;
+#X connect 9 0 13 0;
+#X connect 11 0 15 0;
+#X connect 12 0 3 0;
+#X connect 12 0 2 0;
+#X connect 13 0 12 0;
+#X connect 13 1 19 0;
+#X connect 14 0 10 0;
+#X connect 15 0 12 1;
+#X connect 17 0 7 0;
+#X connect 17 0 16 0;
+#X connect 18 0 9 0;
+#X connect 19 0 15 1;
+#X restore 252 146 pd onou_seq_rate_mod;
+#X obj 42 506 vcf_mix_vvcm~ onou_vcf;
+#X obj 42 386 +;
+#X obj 284 339 vsl 30 65 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X floatatom 10 389 5 0 0 0 - - -;
+#X floatatom 72 377 5 0 0 0 - - -;
+#X obj 42 666 asym_tanh_dw_vvcm~ onou_asymt;
+#X obj 72 176 b2n 4;
+#X obj 72 206 rrandom;
+#X obj 72 326 clip 0 1;
+#X obj 193 228 vsl 30 65 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 6400 1;
+#X obj 72 296 linesc 1500;
+#X obj 72 266 - 0.5;
+#X obj 72 236 * 2;
+#X obj 72 356 u2fseq 7 0 0 12 12 24 36 48 60 72;
+#X connect 0 0 3 0;
+#X connect 1 0 10 0;
+#X connect 2 0 5 0;
+#X connect 3 0 1 0;
+#X connect 5 0 11 0;
+#X connect 7 0 0 1;
+#X connect 9 0 0 2;
+#X connect 10 0 15 0;
+#X connect 11 0 0 0;
+#X connect 11 0 13 0;
+#X connect 12 0 23 0;
+#X connect 15 0 4 0;
+#X connect 16 0 17 0;
+#X connect 17 0 22 0;
+#X connect 18 0 23 0;
+#X connect 20 0 18 0;
+#X connect 20 0 19 0;
+#X connect 21 0 20 0;
+#X connect 22 0 21 0;
+#X connect 23 0 11 1;
+#X connect 23 0 14 0;
+#X restore 562 139 pd onou;
+#N canvas 0 50 829 572 b 0;
+#X obj 42 316 catcher~ b;
+#X obj 22 146 nbx_vvc b_amp_gate rate;
+#X obj 402 196 hsl_vvc b_amp_gate width 0.5;
+#X obj 42 376 tline~ 1 5;
+#X obj 132 376 tline~ 1 5;
+#X obj 122 196 b2u_r;
+#X obj 122 226 >= 0.5;
+#X obj 192 196 * 1.00001;
+#X obj 122 256 sel 0 1;
+#X obj 122 286 f 0;
+#X obj 152 286 f 1;
+#X obj 122 316 rr;
+#X obj 272 136 b2n;
+#X obj 272 166 spigot;
+#X obj 312 136 rr;
+#X obj 352 76 nbx_vvc b_amp_gate reset_rate;
+#X obj 402 256 hslxnbx_vvc b_amp_gate glide 5 1;
+#X obj 42 436 chan_2x2_vvcm~ b_out_chan;
+#X obj 192 286 hslxnbx_vvc b_amp_gate amp_b;
+#X obj 192 226 hslxnbx_vvc b_amp_gate amp_a 1 1;
+#X obj 322 346 ciu_vvcm b_amp_gate_amp_b_ci;
+#X obj 502 346 ciu_vvcm b_amp_gate_width_ci;
+#X obj 602 196 ciu_vvcm b_amp_gate_glide_ci;
+#X obj 602 166 + 0.1;
+#X obj 602 46 ciu_vvcm b_amp_gate_rate_ci;
+#X obj 602 256 * 0.92;
+#X obj 602 136 * 0.9;
+#X obj 602 91 pow 2;
+#X obj 602 286 + 0.05;
+#X text 577 425 1 gate;
+#X text 577 445 2 width;
+#X text 577 465 3 glide;
+#X text 577 485 4 rate;
+#X msg 122 91 1;
+#X msg 182 91 -3;
+#X msg 152 91 0.75;
+#X msg 212 91 0.25;
+#X obj 52 6 ci_strip_vvcm b_amp_gate_rate_sync_ci;
+#X msg 52 91 2;
+#X msg 82 91 1.5;
+#X msg 282 91 0.125;
+#X msg 242 91 -6;
+#X obj 52 61 sel 0 1 2 3 4 5 6 7;
+#N canvas 200 100 853 485 del 1;
+#X obj 50 70 inlet~;
+#X obj 50 380 outlet~;
+#X obj 50 100 delay_extfb_vvcm~ syno_del1;
+#X obj 330 320 hip~ 444;
+#X obj 330 350 throw~ syno_del1_in;
+#X obj 420 430 lfou_vvcm syno_del1_lfo;
+#X obj 420 671 s syno_del1_ms_r;
+#X obj 460 70 inlet~;
+#X obj 460 380 outlet~;
+#X obj 740 320 hip~ 444;
+#X obj 460 100 delay_extfb_vvcm~ syno_del2;
+#X obj 740 350 throw~ syno_del2_in;
+#X obj 410 691 s syno_del2_ms_r;
+#X obj 224 517 vsl 30 65 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 240 611 s syno_del1_fdbk_r;
+#X obj 230 631 s syno_del2_fdbk_r;
+#X connect 0 0 2 0;
+#X connect 2 0 1 0;
+#X connect 2 1 3 0;
+#X connect 3 0 4 0;
+#X connect 5 0 6 0;
+#X connect 5 0 12 0;
+#X connect 7 0 10 0;
+#X connect 9 0 11 0;
+#X connect 10 0 8 0;
+#X connect 10 1 9 0;
+#X connect 13 0 14 0;
+#X connect 13 0 15 0;
+#X restore 42 406 pd del;
+#X obj 72 256 <;
+#X obj 72 226 t a a;
+#X obj 72 286 sel 1;
+#X obj 23 285 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X connect 0 0 3 0;
+#X connect 0 1 4 0;
+#X connect 1 0 5 0;
+#X connect 2 0 7 0;
+#X connect 3 0 43 0;
+#X connect 4 0 43 1;
+#X connect 5 0 6 0;
+#X connect 5 0 45 0;
+#X connect 6 0 8 0;
+#X connect 7 0 6 1;
+#X connect 8 0 9 0;
+#X connect 8 1 10 0;
+#X connect 9 0 11 0;
+#X connect 10 0 11 0;
+#X connect 11 0 3 1;
+#X connect 11 0 4 1;
+#X connect 12 0 13 0;
+#X connect 13 0 5 1;
+#X connect 14 0 13 1;
+#X connect 14 0 12 0;
+#X connect 15 0 14 0;
+#X connect 16 0 4 2;
+#X connect 16 0 3 2;
+#X connect 18 0 10 1;
+#X connect 19 0 9 1;
+#X connect 20 0 18 0;
+#X connect 21 0 2 0;
+#X connect 22 0 25 0;
+#X connect 23 0 1 0;
+#X connect 24 0 27 0;
+#X connect 25 0 28 0;
+#X connect 26 0 23 0;
+#X connect 27 0 26 0;
+#X connect 28 0 16 0;
+#X connect 33 0 1 0;
+#X connect 34 0 1 0;
+#X connect 35 0 1 0;
+#X connect 36 0 1 0;
+#X connect 37 0 42 0;
+#X connect 38 0 1 0;
+#X connect 39 0 1 0;
+#X connect 40 0 1 0;
+#X connect 41 0 1 0;
+#X connect 42 0 38 0;
+#X connect 42 1 39 0;
+#X connect 42 2 33 0;
+#X connect 42 3 35 0;
+#X connect 42 4 34 0;
+#X connect 42 5 36 0;
+#X connect 42 6 41 0;
+#X connect 42 7 40 0;
+#X connect 43 0 17 0;
+#X connect 43 1 17 1;
+#X connect 44 0 46 0;
+#X connect 45 0 44 1;
+#X connect 45 1 44 0;
+#X connect 46 0 47 0;
+#X connect 46 0 5 1;
+#X restore 502 239 pd b;
+#N canvas 357 54 853 586 fish 0;
+#X obj 42 236 +;
+#X obj 284 249 vsl 30 65 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X floatatom 72 227 5 0 0 0 - - -;
+#X obj 42 16 seq_counter_vvcm fish_seq;
+#X obj 42 296 sysk_nv_vvcm~ 7 matsya fish;
+#X obj 62 356 vcf_npnp_mix_vvcm~ fish_vcf;
+#X obj 62 556 asym_tanh_dw_vvcm~ fish_asymt;
+#X obj 62 746 chan_ab_1x2_vvcm~ fish_chan;
+#X obj 305 212 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 42 176 sel 0;
+#N canvas 200 100 853 485 bitred 0;
+#X obj 50 70 inlet~;
+#X obj 50 380 outlet~;
+#X obj 350 320 hip~ 444;
+#X obj 410 320 hip~ 888;
+#X obj 350 350 *~ 0.5;
+#X obj 350 410 throw~ onou_del1_in;
+#X obj 350 380 lop~ 5555;
+#X obj 50 100 bit_red_vvcm~ fish_bitred;
+#X connect 0 0 7 0;
+#X connect 2 0 4 0;
+#X connect 3 0 4 0;
+#X connect 4 0 6 0;
+#X connect 6 0 5 0;
+#X connect 7 0 1 0;
+#X restore 42 326 pd bitred;
+#N canvas 200 100 714 493 del 0;
+#X obj 50 70 inlet~;
+#X obj 50 320 outlet~;
+#X obj 50 105 delay_extfb_vvcm~ fish_del;
+#X obj 370 320 throw~ fish_del_in;
+#X obj 370 80 hip~ 55;
+#X obj 370 110 vcf_npnp_mix_vvcm~ fish_del_vcf;
+#X connect 0 0 2 0;
+#X connect 2 0 1 0;
+#X connect 2 1 4 0;
+#X connect 4 0 5 0;
+#X connect 5 0 3 0;
+#X restore 62 721 pd del;
+#X obj 122 236 nip_mod_chan 1;
+#X obj 412 16 nbx_32x_vvc fish_seq;
+#X obj 42 146 f_32x fish_seq;
+#X obj 72 206 u2fseq 5 0 0 -12 0 12 24 36;
+#N canvas 0 50 1004 460 fish_vel_lfo 0;
+#X obj 68 278 outlet;
+#X obj 128 278 b2n 2;
+#X obj 128 308 rrandom;
+#X obj 128 338 s onou_vel_lfo_saw_r;
+#X obj 68 398 s onou_vel_lfo_sin_r;
+#X obj 68 368 rev;
+#X obj 68 338 * 0.5;
+#X obj 68 47 lfou_vvcm fish_vel_lfo;
+#X connect 2 0 6 0;
+#X connect 6 0 5 0;
+#X connect 7 0 0 0;
+#X restore 152 146 pd fish_vel_lfo;
+#N canvas 634 230 1004 460 fish_octaver 0;
+#X obj 68 308 s onou_seq_rate_r;
+#X obj 78 288 outlet;
+#X obj 78 378 s onou_seq_reset;
+#X obj 78 348 b2n 4;
+#X floatatom 14 283 5 0 0 0 - - -;
+#X obj 78 48 lfou_vvcm fish_lfo_octave;
+#X connect 5 0 1 0;
+#X restore 252 146 pd fish_octaver;
+#X obj 42 266 f2nv 1, f 18;
+#X connect 0 0 18 0;
+#X connect 1 0 15 0;
+#X connect 3 0 14 0;
+#X connect 4 0 10 0;
+#X connect 5 0 6 0;
+#X connect 6 0 11 0;
+#X connect 9 1 0 0;
+#X connect 10 0 5 0;
+#X connect 11 0 7 0;
+#X connect 12 0 8 0;
+#X connect 12 0 4 0;
+#X connect 14 0 9 0;
+#X connect 15 0 0 1;
+#X connect 15 0 2 0;
+#X connect 16 0 18 1;
+#X connect 18 0 4 0;
+#X restore 622 139 pd fish;
+#X text 564 61 f# minor;
+#N canvas 357 123 853 586 staa 0;
+#X obj 304 339 vsl 30 65 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 42 906 chan_ab_1x2_vvcm~ staa_chan;
+#X obj 42 446 satm~, f 11;
+#X obj 42 416 vlinesc~;
+#X obj 42 146 f_16x staa_seq;
+#X obj 42 16 seq_counter_vvcm staa_seq;
+#X obj 382 16 nbx_16x_vvc staa_seq;
+#X obj 162 356 sel 0;
+#X obj 162 416 0;
+#X obj 192 416 b;
+#X obj 192 446 1;
+#X obj 42 876 tline~;
+#X obj 102 386 vlinesc~;
+#X obj 344 339 vsl 30 65 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 42 476 hip~ 3;
+#X obj 42 326 +, f 18;
+#X obj 334 139 vsl 30 65 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 212 356 r global_stop;
+#X obj 212 386 r global_play;
+#X obj 42 356 mtof;
+#X obj 82 296 u2fseq 6 0 0 0 12 24 36 48 60;
+#X obj 42 386 * 4;
+#X obj 102 356 * 2;
+#X obj 82 196 ciu_4x_vvcm staaci1;
+#X obj 42 841 tline~ 1;
+#X obj 62 806 r staa_preamp;
+#X obj 82 271 s staa_preamp;
+#X obj 42 678 asym_tanh_vvcm~ staa_asymtan;
+#X obj 42 507 lop_mix_vvcm~ staa_lop;
+#X connect 0 0 22 0;
+#X connect 2 0 14 0;
+#X connect 3 0 2 0;
+#X connect 4 0 7 0;
+#X connect 4 0 15 0;
+#X connect 5 0 4 0;
+#X connect 7 0 8 0;
+#X connect 7 1 9 0;
+#X connect 8 0 11 1;
+#X connect 9 0 10 0;
+#X connect 10 0 11 1;
+#X connect 11 0 1 0;
+#X connect 12 0 2 2;
+#X connect 13 0 2 3;
+#X connect 14 0 28 0;
+#X connect 15 0 19 0;
+#X connect 16 0 20 0;
+#X connect 17 0 8 0;
+#X connect 18 0 9 0;
+#X connect 19 0 21 0;
+#X connect 20 0 15 1;
+#X connect 21 0 3 0;
+#X connect 22 0 12 0;
+#X connect 23 0 26 0;
+#X connect 23 1 20 0;
+#X connect 23 2 22 0;
+#X connect 23 3 2 3;
+#X connect 24 0 11 0;
+#X connect 25 0 24 1;
+#X connect 27 0 24 0;
+#X connect 28 0 27 0;
+#X restore 682 139 pd staa;
+#N canvas 430 31 722 359 midi 0;
+#X obj 142 89 s global_repl_r;
+#X obj 272 89 s global_stop_r;
+#X obj 142 39 cin_vvcm rem_play;
+#X obj 272 39 cin_vvcm rem_stop;
+#X obj 532 39 cin_vvcm tap_tempo;
+#X obj 532 89 s global_tap_r;
+#X obj 402 39 cin_vvcm clk_zero;
+#X obj 402 89 f 0;
+#X obj 402 119 s global_clk;
+#X connect 2 0 0 0;
+#X connect 3 0 1 0;
+#X connect 4 0 5 0;
+#X connect 6 0 7 0;
+#X connect 7 0 8 0;
+#X restore 502 110 pd midi;
+#N canvas 255 54 470 577 bd 1;
+#X obj 42 216 sysk_nv_vvcm~ 3 rhibd bd;
+#X obj 42 246 rr~;
+#X obj 42 276 chan_ab_1x2_vvcm~ bd_chan;
+#X obj 42 186 f2nv 1;
+#X obj 42 126 b2f 2 18;
+#X obj 42 16 ciu_vvcm bd_rate;
+#X obj 42 156 spigot;
+#X obj 42 96 sel 0;
+#X obj 42 66 u2fseq 5 0 1 2 1 -3 0.25 0.1;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 3 0 0 0;
+#X connect 4 0 6 0;
+#X connect 5 0 8 0;
+#X connect 6 0 3 0;
+#X connect 7 1 6 1;
+#X connect 7 1 4 0;
+#X connect 8 0 7 0;
+#X connect 8 1 6 1;
+#X restore 502 169 pd bd;
+#N canvas 255 54 470 577 sn 0;
+#X obj 42 186 sysk_nv_vvcm~ 3 imp sn;
+#X obj 42 246 chan_ab_1x2_vvcm~ sn_chan;
+#X obj 42 96 eob2n;
+#X obj 42 156 f2nv 1;
+#X obj 42 126 f 30;
+#X obj 42 216 tanhx~;
+#X obj 122 96 b2n 0.75;
+#N canvas 0 50 707 450 sn_mod 0;
+#X obj 76 123 ciu_vvcm sn_oscamod_ci;
+#X obj 76 174 s sn_osc_a_mod_r;
+#X obj 226 123 ciu_vvcm sn_oscasym_ci;
+#X obj 376 174 s sn_fm_r;
+#X obj 376 123 ciu_vvcm sn_fm_ci;
+#X obj 496 123 ciu_vvcm sn_sync_ci;
+#X obj 496 174 * 12;
+#X obj 496 204 + 1;
+#X obj 496 264 s sn_osc_a_sync_r;
+#X obj 496 234 linesc 15;
+#X obj 226 174 s sn_filt1_to_filt2_r;
+#X connect 2 0 10 0;
+#X connect 4 0 3 0;
+#X connect 5 0 6 0;
+#X connect 6 0 7 0;
+#X connect 7 0 9 0;
+#X connect 9 0 8 0;
+#X restore 12 6 pd sn_mod;
+#X floatatom 95 117 5 0 0 0 - - -;
+#X obj 122 156 f2nv 0.01 64;
+#X obj 222 126 spigot;
+#X obj 122 126 f 18;
+#X obj 222 96 b2f 0.125 30;
+#X obj 222 6 b2n;
+#X obj 222 36 rrandom;
+#X floatatom 180 92 5 0 0 0 - - -;
+#X obj 222 66 u2fseq 6 0 0 0.125 0.25 -3 0.01 -6 -9;
+#X msg 192 45 -9;
+#X obj 302 96 b2p 3 0.75;
+#X obj 222 156 f2nv 0.01 64;
+#X connect 0 0 5 0;
+#X connect 2 0 4 0;
+#X connect 3 0 0 0;
+#X connect 4 0 3 0;
+#X connect 5 0 1 0;
+#X connect 6 0 11 0;
+#X connect 8 0 3 2;
+#X connect 9 0 0 0;
+#X connect 10 0 19 0;
+#X connect 12 0 10 0;
+#X connect 13 0 14 0;
+#X connect 14 0 16 0;
+#X connect 16 0 12 0;
+#X connect 16 0 15 0;
+#X connect 17 0 12 0;
+#X connect 18 0 10 1;
+#X connect 19 0 0 0;
+#X restore 562 169 pd sn;
+#X text 574 81 remove/move fish;
+#X connect 0 0 3 0;
+#X connect 2 0 1 0;
+#X connect 4 0 0 0;
+#X connect 5 0 6 0;
+#X connect 8 0 9 0;
+#X connect 8 1 10 0;
+#X connect 9 0 13 0;
+#X connect 10 0 14 0;
+#X connect 13 0 12 0;
+#X connect 13 0 16 0;
+#X connect 13 0 19 0;
+#X connect 14 0 12 1;
+#X connect 14 0 17 0;
+#X connect 14 0 20 0;
+#X connect 16 0 15 0;
+#X connect 17 0 15 1;
+#X connect 18 0 17 1;
+#X connect 18 0 16 1;
+#X connect 18 0 24 0;
+#X connect 22 0 12 2;

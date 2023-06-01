@@ -1,0 +1,9 @@
+#N canvas 0 0 450 300 10;
+#X obj 0 180 outlet;
+#X obj 0 120 inlet;
+#X obj 110 120 nbx_vvc \$1 bangs;
+#X obj 220 120 beat_dt_vvc \$1 delay;
+#X obj 0 150 arp_int_vv \$1;
+#X connect 1 0 4 0;
+#X connect 4 0 0 0;
+#X coords 0 -1 1 1 330 90 1 100 100;

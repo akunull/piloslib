@@ -1,0 +1,13 @@
+#N canvas -8 -8 1280 677 10;
+#X obj 110 130 nbx_4m_vvc \$1 \$2_rate 1;
+#X obj 290 130 hslxnbx_4m_vvc \$1 \$2_saw;
+#X obj 290 240 hslxnbx_4m_vvc \$1 \$2_sqr;
+#X obj 290 350 hslxnbx_4m_vvc \$1 \$2_sin;
+#X obj 470 240 hslxnbx_4m_vvc \$1 \$2_mult 1 1;
+#X obj 470 350 hslxnbx_4m_vvc \$1 \$2_add;
+#X obj 470 130 hslxnbx_4m_vvc \$1 \$2_pow 1 1;
+#X obj 110 350 hslxnbx_4m_vvc \$1 \$2_sync;
+#X obj 110 290 bng_hide_vvc \$1 \$2_reset;
+#X obj 110 230 tgl_hide_vvc \$1 \$2_note_reset;
+#X obj 200 290 tgl_hide_vvc \$1 \$2_rev 0;
+#X coords 0 -1 1 1 550 370 1 100 100;
